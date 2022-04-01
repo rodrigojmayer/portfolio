@@ -407,9 +407,20 @@ svg {
   max-width: var(--max-width);
 }
 
+.footer{
+  background-color: var(--third-color);
+  color: var(--white-color);
+  padding: 0.4rem;
+  text-align: center;
+  height: 2rem;
+  width: 100%;
+  margin-bottom: var(--header-height);
+}
+
 .gray-scale {
   filter: grayscale(1);
 }
+
 .none {
   display: none;
 }
@@ -497,6 +508,10 @@ svg {
 }
 
 @media screen and (min-width: 1024px) {
+  .footer{
+    margin-bottom: 0;
+  }
+  
   .full-lg-screen {
     display: flex;
     justify-content: center;
@@ -913,7 +928,7 @@ svg {
   .contact-form input[type="submit"] {
     margin-left: 0;
   }
-  
+
   .header {
     position: sticky;
     top: 0;
