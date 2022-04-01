@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Documet</title>
+</head>
+
+<body>
+  <header class="header">
+    <section class="container">
+      <div class="logo">
+        <a href="index.html">RodrigoJMayer</a>
+      </div>
+      <button class="menu-btn">
+        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.33337 8H26.6667V10.6667H5.33337V8ZM5.33337 14.6667H26.6667V17.3333H5.33337V14.6667ZM5.33337 21.3333H26.6667V24H5.33337V21.3333Z" />
+        </svg>
+        <svg class="none" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21.1987 8L15.5413 13.656L9.88533 8L8 9.88533L13.656 15.5413L8 21.1973L9.88533 23.0827L15.5413 17.4267L21.1987 23.0827L23.084 21.1973L17.428 15.5413L23.084 9.88533L21.1987 8Z" />
+        </svg>
+
+      </button>
+      <nav class="menu">
+        <a href="#inicio">Home</a>
+        <a href="#acerca">About</a>
+        <a href="#servicios">Services</a>
+        <a href="#portafolio">Projects</a>
+        <a href="#contacto">Contact</a>
+      </nav>
+    </section>
+  </header>
+
+  <section id="inicio" class="home">
+    <article class="hero-image" style="--hero-image: url('assets/hero-image-home.jpg');
+      --hero-attachment: fixed;">
+      <aside class="hero-image-opacity" style="--hero-opacity-color: var(--black-alpha-color)" ;>
+        <div class="hero-image-content">
+          <h2 class="hero-image-title" style="--hero-text-color: var(--white-color)">
+            Hi <br>I'm Rodrigo Mayer <br>Welcome to my website
+          </h2>
+          <article class="center-content">
+            <a href="#contacto" class="btn">Contact me!</a>
+          </article>
+        </div>
+      </aside>
+    </article>
+  </section>
+  <div class="separator-5"></div>
+  <section id="acerca" class="about section full-lg-screen ">
+    <section class="container center-content">
+      <article>
+        <aside class=" text-center">
+          <h1>Full Stack Web Developer</h1>
+        </aside>
+      </article>
+      <section id="acerca" class="about-columns">
+        <article class=" text-center text-lg-right">
+          <p>I have been developing websites, mobile first and responsive designs, for more than 3 years.
+            Most my experience lies in full stack development and linux server administration.
+            I am proficient in technologies such as HTML/CSS, Javascript/NodeJS/ReactJS, PHP, Python/Django and
+            Bootstrap.
+            I consider myself very detailed and I love using logic to facilitate all kinds of processes.</p>
+        </article>
+        <!-- <article class="center-content"> -->
+        <article class="center-content">
+
+          <img class="gray-scale " src="assets/rodrigojmayer.png" alt="rodrigojmayer">
+        </article>
+      </section>
+      <div>
+        <a class="btn" href="https://curriculim" target="_blank" rel="noopen">Download my CV</a>
+      </div>
+    </section>
+  </section>
+  <div class="separator-2"></div>
+  <section id="servicios" class="services section ">
+    <div class="container full-lg-screen">
+      <h2 class="section-title">Services</h2>
+      <article class="service-card">
+        <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M26.6666 4H5.33329C3.86263 4 2.66663 5.196 2.66663 6.66667V25.3333C2.66663 26.804 3.86263 28 5.33329 28H26.6666C28.1373 28 29.3333 26.804 29.3333 25.3333V6.66667C29.3333 5.196 28.1373 4 26.6666 4ZM5.33329 25.3333V9.33333H26.6666L26.6693 25.3333H5.33329Z" />
+          <path
+            d="M12.3907 12.3907L7.448 17.3333L12.3907 22.276L14.276 20.3907L11.2187 17.3333L14.276 14.276L12.3907 12.3907ZM19.6093 12.3907L17.724 14.276L20.7813 17.3333L17.724 20.3907L19.6093 22.276L24.552 17.3333L19.6093 12.3907Z" />
+        </svg>
+        <h3>Web Programming</h3>
+        <p> Development of sites and applications for Web platforms. Frontend, Backend and Database.</p>
+      </article>
+      <article class="service-card">
+        <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M26.6666 4H9.33329C7.86263 4 6.66663 5.196 6.66663 6.66667V9.33333H5.33329C3.86263 9.33333 2.66663 10.5293 2.66663 12V25.3333C2.66663 26.804 3.86263 28 5.33329 28H13.3333C14.804 28 16 26.804 16 25.3333H26.6666C28.1373 25.3333 29.3333 24.1373 29.3333 22.6667V6.66667C29.3333 5.196 28.1373 4 26.6666 4ZM7.99996 12H13.3333L13.3293 24H5.33329V12H7.99996ZM16 22.6667V12C16 10.5293 14.804 9.33333 13.3333 9.33333H9.33329V6.66667H24V22.6667H16Z" />
+        </svg>
+        <h3>Web Design</h3>
+        <p> I prototype and layout static designs and convert them into responsive, optimal and accessible web sites and
+          applications.</p>
+      </article>
+      <article class="service-card">
+        <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 29.3333C17.4728 29.3333 18.6667 28.1394 18.6667 26.6667C18.6667 25.1939 17.4728 24 16 24C14.5273 24 13.3334 25.1939 13.3334 26.6667C13.3334 28.1394 14.5273 29.3333 16 29.3333Z" />
+          <path
+            d="M16 8C17.4728 8 18.6667 6.80609 18.6667 5.33333C18.6667 3.86057 17.4728 2.66666 16 2.66666C14.5273 2.66666 13.3334 3.86057 13.3334 5.33333C13.3334 6.80609 14.5273 8 16 8Z" />
+          <path
+            d="M8.45732 26.2093C9.93008 26.2093 11.124 25.0154 11.124 23.5427C11.124 22.0699 9.93008 20.876 8.45732 20.876C6.98456 20.876 5.79065 22.0699 5.79065 23.5427C5.79065 25.0154 6.98456 26.2093 8.45732 26.2093Z" />
+          <path
+            d="M23.5426 11.124C25.0154 11.124 26.2093 9.93009 26.2093 8.45733C26.2093 6.98457 25.0154 5.79066 23.5426 5.79066C22.0699 5.79066 20.876 6.98457 20.876 8.45733C20.876 9.93009 22.0699 11.124 23.5426 11.124Z" />
+          <path
+            d="M5.33328 18.668C6.80678 18.668 8.00128 17.4735 8.00128 16C8.00128 14.5265 6.80678 13.332 5.33328 13.332C3.85979 13.332 2.66528 14.5265 2.66528 16C2.66528 17.4735 3.85979 18.668 5.33328 18.668Z" />
+          <path
+            d="M26.6667 18.6667C28.1394 18.6667 29.3333 17.4728 29.3333 16C29.3333 14.5272 28.1394 13.3333 26.6667 13.3333C25.1939 13.3333 24 14.5272 24 16C24 17.4728 25.1939 18.6667 26.6667 18.6667Z" />
+          <path
+            d="M8.45732 11.1253C9.93008 11.1253 11.124 9.93143 11.124 8.45867C11.124 6.98591 9.93008 5.792 8.45732 5.792C6.98456 5.792 5.79065 6.98591 5.79065 8.45867C5.79065 9.93143 6.98456 11.1253 8.45732 11.1253Z" />
+          <path
+            d="M23.5426 26.2107C25.0154 26.2107 26.2093 25.0168 26.2093 23.544C26.2093 22.0712 25.0154 20.8773 23.5426 20.8773C22.0699 20.8773 20.876 22.0712 20.876 23.544C20.876 25.0168 22.0699 26.2107 23.5426 26.2107Z" />
+        </svg>
+        <h3>WPO</h3>
+        <p> Web Performance Optimization, improve loading and response time of websites and web applications.</p>
+      </article>
+      <article class="service-card">
+        <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.3334 24C15.7 23.9995 17.9984 23.2072 19.8627 21.7493L25.724 27.6107L27.6094 25.7253L21.748 19.864C23.2067 17.9995 23.9995 15.7006 24 13.3333C24 7.452 19.2147 2.66666 13.3334 2.66666C7.45202 2.66666 2.66669 7.452 2.66669 13.3333C2.66669 19.2147 7.45202 24 13.3334 24ZM13.3334 5.33333C17.7454 5.33333 21.3334 8.92133 21.3334 13.3333C21.3334 17.7453 17.7454 21.3333 13.3334 21.3333C8.92135 21.3333 5.33335 17.7453 5.33335 13.3333C5.33335 8.92133 8.92135 5.33333 13.3334 5.33333Z" />
+          <path
+            d="M15.216 11.448C15.7213 11.9547 16 12.624 16 13.3333H18.6666C18.6678 12.6326 18.5301 11.9385 18.2614 11.2913C17.9927 10.6441 17.5984 10.0566 17.1013 9.56267C15.0826 7.54667 11.5826 7.54667 9.56531 9.56267L11.448 11.4507C12.4613 10.44 14.208 10.4427 15.216 11.448Z" />
+        </svg>
+        <h3>SEO</h3>
+        <p> Search Engine Optimization, Optimize websites and web applications to improve search engine position
+          organically.</p>
+      </article>
+      <article class="service-card">
+        <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M26.6667 4H5.33335C4.62611 4 3.94783 4.28095 3.44774 4.78105C2.94764 5.28115 2.66669 5.95942 2.66669 6.66667V12C2.66669 12.7072 2.94764 13.3855 3.44774 13.8856C3.94783 14.3857 4.62611 14.6667 5.33335 14.6667H26.6667C27.3739 14.6667 28.0522 14.3857 28.5523 13.8856C29.0524 13.3855 29.3334 12.7072 29.3334 12V6.66667C29.3334 5.95942 29.0524 5.28115 28.5523 4.78105C28.0522 4.28095 27.3739 4 26.6667 4ZM5.33335 12V6.66667H26.6667V12H5.33335ZM26.6667 17.3333H5.33335C4.62611 17.3333 3.94783 17.6143 3.44774 18.1144C2.94764 18.6145 2.66669 19.2928 2.66669 20V25.3333C2.66669 26.0406 2.94764 26.7189 3.44774 27.219C3.94783 27.719 4.62611 28 5.33335 28H26.6667C27.3739 28 28.0522 27.719 28.5523 27.219C29.0524 26.7189 29.3334 26.0406 29.3334 25.3333V20C29.3334 19.2928 29.0524 18.6145 28.5523 18.1144C28.0522 17.6143 27.3739 17.3333 26.6667 17.3333ZM5.33335 25.3333V20H26.6667V25.3333H5.33335Z" />
+          <path
+            d="M22.6667 8H25.3334V10.6667H22.6667V8ZM18.6667 8H21.3334V10.6667H18.6667V8ZM22.6667 21.3333H25.3334V24H22.6667V21.3333ZM18.6667 21.3333H21.3334V24H18.6667V21.3333Z" />
+        </svg>
+        <h3>Web Hosting</h3>
+        <p> Configuration and maintenance of domain service and web hosting.</p>
+      </article>
+    </div>
+  </section>
+  <div class="separator-1"></div>
+  <section id="portafolio" class="portfolio section  bg-gray-dark">
+    <div class="container full-lg-screen-portfolio">
+      <h2 class="section-title">Projects</h2>
+      <!-- <a href="#project-1" class="portfolio-card" onclick="lockScroll();" > -->
+      <div onclick="lockScroll();">
+        <a href="#project-1" class="portfolio-card">
+          <img src="assets/Frame project 1 - Wiki.png" alt="Project Wiki">
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Project 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus sed arcu sagittis sed egestas. Tincidunt
+                eu egestas nulla
+                lorem risus.</p>
+            </div>
+          </aside>
+        </a>
+      </div>
+      <div onclick="lockScroll();">
+        <a href="#project-2" class="portfolio-card">
+          <img src="assets/Frame project 2 - Commerce.png" alt="Project Commerce">
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Project 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus sed arcu sagittis sed egestas. Tincidunt
+                eu egestas nulla
+                lorem risus.</p>
+            </div>
+          </aside>
+        </a>
+      </div>
+      <div onclick="lockScroll();">
+        <a href="#project-3" class="portfolio-card">
+          <img src="assets/Frame project 3 - Mail.png" alt="Project Mail">
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Project 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus sed arcu sagittis sed egestas. Tincidunt
+                eu egestas nulla
+                lorem risus.</p>
+            </div>
+          </aside>
+        </a>
+      </div>
+      <div onclick="lockScroll();">
+        <a href="#project-4" class="portfolio-card">
+          <img src="assets/Frame project 4 - Network.png" alt="Project Network">
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Project 4</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus sed arcu sagittis sed egestas. Tincidunt
+                eu egestas nulla
+                lorem risus.</p>
+            </div>
+          </aside>
+        </a>
+      </div>
+    </div>
+  </section>
+  <article class="modal" id="project-1">
+    <div class="modal-content">
+      <div class="modal-content-2">
+        <div class="modal-back-svg"></div>
+
+        <a href="#close" class="modal-close" onclick="unLockScroll();">
+          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.3333 3C8.98133 3 3 8.98133 3 16.3333C3 23.6853 8.98133 29.6667 16.3333 29.6667C23.6853 29.6667 29.6667 23.6853 29.6667 16.3333C29.6667 8.98133 23.6853 3 16.3333 3ZM21.9427 20.0573L20.0573 21.9427L16.3333 18.2187L12.6093 21.9427L10.724 20.0573L14.448 16.3333L10.724 12.6093L12.6093 10.724L16.3333 14.448L20.0573 10.724L21.9427 12.6093L18.2187 16.3333L21.9427 20.0573Z" />
+          </svg>
+        </a>
+        <article class="portfolio-modal">
+          <img src="assets/Frame project 1 - Wiki.png" alt="Project Wiki">
+          <div class="portfolio-info">
+            <h3>Project Wiki</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere ea in quis nemo sed aliquam
+              obcaecati repellendus ratione praesentium odio sapiente fugiat pariatur aspernatur eum necessitatibus,
+              consectetur perferendis quia!</p>
+            <aside class="portfolio-details">
+              <small class="b-small">Client: </small>
+              <small>CS50 Harvard</small>
+              <small class="b-small">Date: </small>
+              <small></small>
+              <small class="b-small">Type: </small>
+              <small></small>
+              <small class="b-small">Link: </small>
+              <small><a href="https://rodrigojmayer.com" target="_blank"
+                  rel="noopener">https://rodrigojmayer.com</a></small>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </div>
+  </article>
+  <article class="modal" id="project-2">
+    <div class="modal-content">
+      <div class="modal-content-2">
+        <div class="modal-back-svg"></div>
+        <a href="#close" class="modal-close" onclick="unLockScroll();">
+          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.3333 3C8.98133 3 3 8.98133 3 16.3333C3 23.6853 8.98133 29.6667 16.3333 29.6667C23.6853 29.6667 29.6667 23.6853 29.6667 16.3333C29.6667 8.98133 23.6853 3 16.3333 3ZM21.9427 20.0573L20.0573 21.9427L16.3333 18.2187L12.6093 21.9427L10.724 20.0573L14.448 16.3333L10.724 12.6093L12.6093 10.724L16.3333 14.448L20.0573 10.724L21.9427 12.6093L18.2187 16.3333L21.9427 20.0573Z" />
+          </svg>
+        </a>
+        <article class="portfolio-modal">
+          <img src="assets/Frame project 2 - Commerce.png" alt="Project Commerce">
+          <div class="portfolio-info">
+            <h3>Project Commerce</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere ea in quis nemo sed aliquam
+              obcaecati repellendus ratione praesentium odio sapiente fugiat pariatur aspernatur eum necessitatibus,
+              consectetur perferendis quia!</p>
+            <aside class="portfolio-details">
+              <small class="b-small">Client: </small>
+              <small>CS50 Harvard</small>
+              <small class="b-small">Date: </small>
+              <small></small>
+              <small class="b-small">Type: </small>
+              <small></small>
+              <small class="b-small">Link: </small>
+              <small><a href="https://rodrigojmayer.com" target="_blank"
+                  rel="noopener">https://rodrigojmayer.com</a></small>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </div>
+  </article>
+  <article class="modal" id="project-3">
+    <div class="modal-content">
+      <div class="modal-content-2">
+        <div class="modal-back-svg"></div>
+
+        <a href="#close" class="modal-close" onclick="unLockScroll();">
+          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.3333 3C8.98133 3 3 8.98133 3 16.3333C3 23.6853 8.98133 29.6667 16.3333 29.6667C23.6853 29.6667 29.6667 23.6853 29.6667 16.3333C29.6667 8.98133 23.6853 3 16.3333 3ZM21.9427 20.0573L20.0573 21.9427L16.3333 18.2187L12.6093 21.9427L10.724 20.0573L14.448 16.3333L10.724 12.6093L12.6093 10.724L16.3333 14.448L20.0573 10.724L21.9427 12.6093L18.2187 16.3333L21.9427 20.0573Z" />
+          </svg>
+        </a>
+        <article class="portfolio-modal">
+          <img src="assets/Frame project 3 - Mail.png" alt="Project Mail">
+          <div class="portfolio-info">
+            <h3>Project Mail</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere ea in quis nemo sed aliquam
+              obcaecati repellendus ratione praesentium odio sapiente fugiat pariatur aspernatur eum necessitatibus,
+              consectetur perferendis quia!</p>
+            <aside class="portfolio-details">
+              <small class="b-small">Client: </small>
+              <small>CS50 Harvard</small>
+              <small class="b-small">Date: </small>
+              <small></small>
+              <small class="b-small">Type: </small>
+              <small></small>
+              <small class="b-small">Link: </small>
+              <small><a href="https://rodrigojmayer.com" target="_blank"
+                  rel="noopener">https://rodrigojmayer.com</a></small>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </div>
+  </article>
+  <article class="modal" id="project-4">
+    <div class="modal-content">
+      <div class="modal-content-2">
+        <div class="modal-back-svg"></div>
+        <a href="#close" class="modal-close" onclick="unLockScroll();">
+          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.3333 3C8.98133 3 3 8.98133 3 16.3333C3 23.6853 8.98133 29.6667 16.3333 29.6667C23.6853 29.6667 29.6667 23.6853 29.6667 16.3333C29.6667 8.98133 23.6853 3 16.3333 3ZM21.9427 20.0573L20.0573 21.9427L16.3333 18.2187L12.6093 21.9427L10.724 20.0573L14.448 16.3333L10.724 12.6093L12.6093 10.724L16.3333 14.448L20.0573 10.724L21.9427 12.6093L18.2187 16.3333L21.9427 20.0573Z" />
+          </svg>
+        </a>
+        <article class="portfolio-modal">
+          <img src="assets/Frame project 4 - Network.png" alt="Project Network">
+          <div class="portfolio-info">
+            <h3>Project Network</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere ea in quis nemo sed aliquam
+              obcaecati repellendus ratione praesentium odio sapiente fugiat pariatur aspernatur eum necessitatibus,
+              consectetur perferendis quia!</p>
+            <aside class="portfolio-details">
+              <small class="b-small">Client: </small>
+              <small>CS50 Harvard</small>
+              <small class="b-small">Date: </small>
+              <small></small>
+              <small class="b-small">Type: </small>
+              <small></small>
+              <small class="b-small">Link: </small>
+              <small><a href="https://rodrigojmayer.com" target="_blank"
+                  rel="noopener">https://rodrigojmayer.com</a></small>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </div>
+  </article>
+  <div class="separator-7"></div>
+  <section id="contacto" class="contact section full-lg-screen">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <article class="contact-cards">
+        <aside class="contact-card box-shadow-1">
+          <svg width="37" height="28" viewBox="0 0 37 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.5 7.3125L7 16.8125V27C7 27.5625 7.4375 28 8 28H15C15.5 28 15.9375 27.5625 15.9375 27V21C15.9375 20.5 16.4375 20 16.9375 20H20.9375C21.5 20 21.9375 20.5 21.9375 21V27C21.9375 27.5625 22.4375 28 22.9375 28H30C30.5 28 31 27.5625 31 27V16.75L19.4375 7.3125C19.3125 7.1875 19.125 7.125 19 7.125C18.8125 7.125 18.625 7.1875 18.5 7.3125ZM36.6875 13.75L31.5 9.4375V0.8125C31.5 0.375 31.125 0.0625 30.75 0.0625H27.25C26.8125 0.0625 26.5 0.375 26.5 0.8125V5.3125L20.875 0.6875C20.375 0.3125 19.6875 0.0625 19 0.0625C18.25 0.0625 17.5625 0.3125 17.0625 0.6875L1.25 13.75C1.0625 13.875 0.9375 14.125 0.9375 14.3125C0.9375 14.5 1.0625 14.6875 1.125 14.8125L2.75 16.75C2.875 16.9375 3.0625 17 3.3125 17C3.5 17 3.6875 16.9375 3.8125 16.8125L18.5 4.75C18.625 4.625 18.8125 4.5625 19 4.5625C19.125 4.5625 19.3125 4.625 19.4375 4.75L34.125 16.8125C34.25 16.9375 34.4375 17 34.625 17C34.875 17 35.0625 16.9375 35.1875 16.75L36.8125 14.8125C36.9375 14.6875 37 14.5 37 14.3125C37 14.125 36.875 13.875 36.6875 13.75Z" />
+          </svg>
+          <h5>LOCATION</h5>
+          <small>Copenhagen, Denmark</small>
+        </aside>
+        <aside class="contact-card box-shadow-1">
+          <svg width="32" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.375 7.9375C29.9375 9.0625 28.125 10.4375 21.75 15.0625C20.5 16 18.1875 18.0625 16 18.0625C13.75 18.0625 11.5 16 10.1875 15.0625C3.8125 10.4375 2 9.0625 0.5625 7.9375C0.3125 7.75 0 7.9375 0 8.25V21C0 22.6875 1.3125 24 3 24H29C30.625 24 32 22.6875 32 21V8.25C32 7.9375 31.625 7.75 31.375 7.9375ZM16 16C17.4375 16.0625 19.5 14.1875 20.5625 13.4375C28.875 7.4375 29.5 6.875 31.375 5.375C31.75 5.125 32 4.6875 32 4.1875V3C32 1.375 30.625 0 29 0H3C1.3125 0 0 1.375 0 3V4.1875C0 4.6875 0.1875 5.125 0.5625 5.375C2.4375 6.875 3.0625 7.4375 11.375 13.4375C12.4375 14.1875 14.5 16.0625 16 16Z" />
+          </svg>
+          <h5>EMAIL</h5>
+          <small>rodrigojmayer@gmail.com</small>
+        </aside>
+        <aside class="contact-card box-shadow-1">
+          <svg width="30" height="28" viewBox="0 0 30 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M28.5 9.4375L28.9375 6.9375C29.0625 6.4375 28.6875 6 28.1875 6H23.5625L24.4375 0.9375C24.5625 0.4375 24.1875 0 23.6875 0H21.1875C20.8125 0 20.5 0.3125 20.4375 0.625L19.5 6H13.3125L14.25 0.9375C14.3125 0.4375 13.9375 0 13.5 0H10.9375C10.5625 0 10.25 0.3125 10.1875 0.625L9.25 6H4.3125C3.9375 6 3.625 6.3125 3.5625 6.625L3.125 9.125C3.0625 9.625 3.375 10 3.875 10H8.5625L7.125 18H2.1875C1.8125 18 1.5 18.3125 1.4375 18.625L1 21.125C0.875 21.625 1.25 22 1.75 22H6.375L5.5 27.125C5.375 27.625 5.75 28 6.25 28H8.75C9.125 28 9.4375 27.75 9.5 27.4375L10.4375 22H16.625L15.6875 27.125C15.625 27.625 16 28 16.4375 28H19C19.375 28 19.6875 27.75 19.75 27.4375L20.6875 22H25.625C26 22 26.3125 21.75 26.375 21.4375L26.8125 18.9375C26.875 18.4375 26.5625 18 26.0625 18H21.375L22.8125 10H27.75C28.125 10 28.4375 9.75 28.5 9.4375ZM17.3125 18H11.1875L12.625 10H18.75L17.3125 18Z" />
+          </svg>
+          <h5>SOCIAL MEDIA</h5>
+          <small class="social-media">
+            <a href="https://www.linkedin.com/in/rodrigojmayer/" target="_blank" rel="noopener">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.5 0.75H1.46094C0.796875 0.75 0.25 1.33594 0.25 2.03906V17C0.25 17.7031 0.796875 18.25 1.46094 18.25H16.5C17.1641 18.25 17.75 17.7031 17.75 17V2.03906C17.75 1.33594 17.1641 0.75 16.5 0.75ZM5.52344 15.75H2.94531V7.42969H5.52344V15.75ZM4.23438 6.25781C3.375 6.25781 2.71094 5.59375 2.71094 4.77344C2.71094 3.95312 3.375 3.25 4.23438 3.25C5.05469 3.25 5.71875 3.95312 5.71875 4.77344C5.71875 5.59375 5.05469 6.25781 4.23438 6.25781ZM15.25 15.75H12.6328V11.6875C12.6328 10.75 12.6328 9.5 11.3047 9.5C9.9375 9.5 9.74219 10.5547 9.74219 11.6484V15.75H7.16406V7.42969H9.625V8.5625H9.66406C10.0156 7.89844 10.875 7.19531 12.125 7.19531C14.7422 7.19531 15.25 8.95312 15.25 11.1797V15.75Z"
+                  fill="#333333" />
+              </svg>
+            </a>
+            <a href="https://github.com/rodrigojmayer" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.75781 16.0469C6.75781 15.9688 6.67969 15.8906 6.5625 15.8906C6.44531 15.8906 6.36719 15.9688 6.36719 16.0469C6.36719 16.125 6.44531 16.2031 6.5625 16.1641C6.67969 16.1641 6.75781 16.125 6.75781 16.0469ZM5.54688 15.8516C5.54688 15.9297 5.625 16.0469 5.74219 16.0469C5.82031 16.0859 5.9375 16.0469 5.97656 15.9688C5.97656 15.8906 5.9375 15.8125 5.82031 15.7734C5.70312 15.7344 5.58594 15.7734 5.54688 15.8516ZM7.30469 15.8125C7.1875 15.8125 7.10938 15.8906 7.10938 16.0078C7.10938 16.0859 7.22656 16.125 7.34375 16.0859C7.46094 16.0469 7.53906 16.0078 7.5 15.9297C7.5 15.8516 7.38281 15.7734 7.30469 15.8125ZM9.84375 0.8125C4.45312 0.8125 0.3125 4.95312 0.3125 10.3438C0.3125 14.6797 3.00781 18.3906 6.91406 19.7188C7.42188 19.7969 7.57812 19.4844 7.57812 19.25C7.57812 18.9766 7.57812 17.6484 7.57812 16.8281C7.57812 16.8281 4.84375 17.4141 4.25781 15.6562C4.25781 15.6562 3.82812 14.5234 3.20312 14.25C3.20312 14.25 2.30469 13.625 3.24219 13.625C3.24219 13.625 4.21875 13.7031 4.76562 14.6406C5.625 16.1641 7.03125 15.7344 7.61719 15.4609C7.69531 14.8359 7.92969 14.4062 8.24219 14.1328C6.05469 13.8984 3.82812 13.5859 3.82812 9.83594C3.82812 8.74219 4.14062 8.23438 4.76562 7.53125C4.64844 7.25781 4.33594 6.24219 4.88281 4.875C5.66406 4.64062 7.57812 5.92969 7.57812 5.92969C8.35938 5.69531 9.17969 5.61719 10 5.61719C10.8594 5.61719 11.6797 5.69531 12.4609 5.92969C12.4609 5.92969 14.3359 4.60156 15.1562 4.875C15.7031 6.24219 15.3516 7.25781 15.2734 7.53125C15.8984 8.23438 16.2891 8.74219 16.2891 9.83594C16.2891 13.5859 13.9844 13.8984 11.7969 14.1328C12.1484 14.4453 12.4609 15.0312 12.4609 15.9688C12.4609 17.2578 12.4219 18.8984 12.4219 19.2109C12.4219 19.4844 12.6172 19.7969 13.125 19.6797C17.0312 18.3906 19.6875 14.6797 19.6875 10.3438C19.6875 4.95312 15.2734 0.8125 9.84375 0.8125ZM4.10156 14.2891C4.02344 14.3281 4.0625 14.4453 4.10156 14.5234C4.17969 14.5625 4.25781 14.6016 4.33594 14.5625C4.375 14.5234 4.375 14.4062 4.29688 14.3281C4.21875 14.2891 4.14062 14.25 4.10156 14.2891ZM3.67188 13.9766C3.63281 14.0547 3.67188 14.0938 3.75 14.1328C3.82812 14.1719 3.90625 14.1719 3.94531 14.0938C3.94531 14.0547 3.90625 14.0156 3.82812 13.9766C3.75 13.9375 3.71094 13.9375 3.67188 13.9766ZM4.92188 15.3828C4.88281 15.4219 4.88281 15.5391 5 15.6172C5.07812 15.6953 5.19531 15.7344 5.23438 15.6562C5.27344 15.6172 5.27344 15.5 5.19531 15.4219C5.11719 15.3438 5 15.3047 4.92188 15.3828ZM4.49219 14.7969C4.41406 14.8359 4.41406 14.9531 4.49219 15.0312C4.57031 15.1094 4.64844 15.1484 4.72656 15.1094C4.76562 15.0703 4.76562 14.9531 4.72656 14.875C4.64844 14.7969 4.57031 14.7578 4.49219 14.7969Z"
+                  fill="#333333" />
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UClQFzl9TbIPQBe9HGewkJbQ" target="_blank" rel="noopener">
+              <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.6953 2.38281C21.4609 1.44531 20.7188 0.703125 19.8203 0.46875C18.1406 0 11.5 0 11.5 0C11.5 0 4.82031 0 3.14062 0.46875C2.24219 0.703125 1.5 1.44531 1.26562 2.38281C0.796875 4.02344 0.796875 7.53906 0.796875 7.53906C0.796875 7.53906 0.796875 11.0156 1.26562 12.6953C1.5 13.6328 2.24219 14.3359 3.14062 14.5703C4.82031 15 11.5 15 11.5 15C11.5 15 18.1406 15 19.8203 14.5703C20.7188 14.3359 21.4609 13.6328 21.6953 12.6953C22.1641 11.0156 22.1641 7.53906 22.1641 7.53906C22.1641 7.53906 22.1641 4.02344 21.6953 2.38281ZM9.3125 10.7031V4.375L14.8594 7.53906L9.3125 10.7031Z"
+                  fill="#333333" />
+              </svg>
+            </a>
+          </small>
+        </aside>
+      </article>
+      <form action="" class="contact-form box-shadow-1">
+        <input type="text" name="name" placeholder="Enter Name *" title="Name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+        <input type="email" name="email" placeholder="Enter Email *" title="Email *"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+        <textarea name="comments" cols="50" rows="10" placeholder="Your Message *"></textarea>
+        <div class="contact-form-loader text-center none">
+          <img src="assets/loader.svg" alt="Sending...">
+        </div>
+        <input type="submit" class="btn" value="Submit">
+      </form>
+      <article id="gracias" class="modal">
+        <div class="modal-content">
+          <div class="modal-content-2">
+            <article class="contact-form-response">
+              <h3>Thank you for <br> your comments</h3>
+              <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.6667 24C21 24 22.3333 18.6666 22.3333 18.6666H9C9 18.6666 10.3333 24 15.6667 24Z" />
+                <path
+                  d="M16.3333 2.66663C8.98133 2.66663 3 8.64796 3 16C3 23.352 8.98133 29.3333 16.3333 29.3333C23.6853 29.3333 29.6667 23.352 29.6667 16C29.6667 8.64796 23.6853 2.66663 16.3333 2.66663ZM16.3333 26.6666C10.452 26.6666 5.66667 21.8813 5.66667 16C5.66667 10.1186 10.452 5.33329 16.3333 5.33329C22.2147 5.33329 27 10.1186 27 16C27 21.8813 22.2147 26.6666 16.3333 26.6666Z" />
+                <path
+                  d="M17.6667 16L20.3333 16.016C20.3493 15.4 20.592 14.6667 21.6667 14.6667C22.7413 14.6667 22.984 15.4 23 16H25.6667C25.6667 14.392 24.6013 12 21.6667 12C18.732 12 17.6667 14.392 17.6667 16ZM11 14.6667C12.0747 14.6667 12.3173 15.4 12.3333 16H15C15 14.392 13.9347 12 11 12C8.06533 12 7 14.392 7 16L9.66667 16.016C9.68267 15.4 9.92533 14.6667 11 14.6667Z" />
+              </svg>
+
+            </article>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <footer class="footer">
+    <small>
+      Sitio diseñado por @rodrigojmayer
+    </small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
