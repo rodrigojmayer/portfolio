@@ -176,6 +176,18 @@ p {
 #slide-9:checked ~ .slides{
   transform: translateX(-88.888%);
 }
+
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4,
+#slide-5:checked ~ .slides-nav label#dot-5,
+#slide-6:checked ~ .slides-nav label#dot-6,
+#slide-7:checked ~ .slides-nav label#dot-7,
+#slide-8:checked ~ .slides-nav label#dot-8,
+#slide-9:checked ~ .slides-nav label#dot-9{
+  background-color: var(--gray-dark-color);
+}
 /* *************** Contact Form *************** */
 
 .contact-form {
