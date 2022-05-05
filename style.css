@@ -94,6 +94,64 @@ p {
 /* *************** Components *************** */
 
 /* *************** Carousel *************** */
+
+@keyframes carousel-slide{
+  0%{
+    transform: translateX(0%)
+  }
+  6%{
+    transform: translateX(0%)
+  }
+  11.111%{
+    transform: translateX(-11.111%)
+  }
+  17.111%{
+    transform: translateX(-11.111%)
+  }
+  22.222%{
+    transform: translateX(-22.222%)
+  }
+  28.222%{
+    transform: translateX(-22.222%)
+  }
+  33.333%{
+    transform: translateX(-33.333%)
+  }
+  39.333%{
+    transform: translateX(-33.333%)
+  }
+  44.444%{
+    transform: translateX(-44.444%)
+  }
+  50.444%{
+    transform: translateX(-44.444%)
+  }
+  55.555%{
+    transform: translateX(-55.555%)
+  }
+  61.555%{
+    transform: translateX(-55.555%)
+  }
+  66.666%{
+    transform: translateX(-66.666%)
+  }
+  72.666%{
+    transform: translateX(-66.666%)
+  }
+  77.777%{
+    transform: translateX(-77.777%)
+  }
+  83.777%{
+    transform: translateX(-77.777%)
+  }
+  88.888%{
+    transform: translateX(-88.888%)
+  }
+  94.888%{
+    transform: translateX(-88.888%)
+  }
+}
+
 .carousel{
   margin: 0 ;
   padding: 0;
@@ -110,6 +168,7 @@ p {
   display: flex;
   list-style: none;
   transition: transform .5s ease-in-out;
+  animation: carousel-slide 50s ease-in-out ;
 }
 
 .carousel .slide{
