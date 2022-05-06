@@ -168,7 +168,7 @@ p {
   display: flex;
   list-style: none;
   transition: transform .5s ease-in-out;
-  /* animation: carousel-slide 50s ease-in-out ; */
+  animation: carousel-slide 50s ease-in-out ;
 }
 
 .carousel .slide{
