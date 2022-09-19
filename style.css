@@ -156,8 +156,13 @@ p {
   margin: 0 ;
   padding: 0;
   max-width: 900px;
+  height: 100%;
   text-align: center;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .carousel .slides{
@@ -165,6 +170,7 @@ p {
   padding:0;
   margin:0;
   width: 900%;
+  height: 450px;
   display: flex;
   list-style: none;
   transition: transform .5s ease-in-out;
@@ -178,7 +184,8 @@ p {
   margin:0;
   padding:0;
   width: 1200px;
-  height:400px;
+  /* height:500px; */
+  /* height:90%; */
 }
 
 .carousel input{
@@ -803,6 +810,7 @@ svg {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  /* height: 400px; */
 }
 .portfolio-modal p {
   font-size: 1rem;
@@ -820,13 +828,31 @@ svg {
   grid-template-columns: 2.5rem 70%;
   grid-auto-rows: 1.3rem;
   column-gap: 1rem;
+  /* text-overflow:  ellipsis; */
 }
 
 .portfolio-details .b-small {
   color: var(--first-color);
   text-align: right;
   font-weight: bold;
+  
 }
+
+.portfolio-details small{ 
+  /* display: block;  */
+  overflow: hidden; 
+  text-overflow:  ellipsis;
+  /* white-space: nowrap; */
+  /* color:red; */
+}
+/* .portfolio-details a{  */
+  /* display: block; 
+  overflow: hidden; 
+  text-overflow:  ellipsis !important;
+  white-space: nowrap; */
+  /* width:10px; */
+  /* text-overflow:  ellipsis; */
+/* } */
 
 .service-card {
   margin: 1rem auto;
@@ -896,7 +922,8 @@ svg {
   .portfolio-info {
     margin: 0 1rem;
     align-self: center;
-    height: 22rem;
+    /* height: 22rem; */
+    height: 18rem;
   }
 
   .modal-content {
@@ -929,11 +956,6 @@ svg {
 
   .portfolio-details {
     grid-auto-rows: 1.4rem;
-  }
-
-  .portfolio-info {
-    align-self: center;
-    height: 18rem;
   }
 
   .portfolio-modal p {
@@ -1055,9 +1077,9 @@ svg {
     height:100%
   }
 
-  .avatar{
+  /* .avatar{ */
     /* nose */
-  }
+  /* } */
 
   .portfolio-modal {
     max-width: 90rem;
@@ -1070,8 +1092,12 @@ svg {
   }
   .portfolio-info {
     align-self: center;
-    height: 22rem;
-    width: 50rem;
+    /* height: 22rem; */
+    /* height: 32rem; */
+    height: 100%;
+    /* width: 50rem; */
+    max-width: 60%;
+    min-width: 30%;
   }
 
   .portfolio-modal p {
