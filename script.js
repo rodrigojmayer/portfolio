@@ -23,10 +23,22 @@
  function lockScroll() {
    document.body.classList.add("lock-scroll");
    document.body.classList.remove("un-lock-scroll");
+  //  document.querySelector("body").style.marginRight="11px";
+  // document.querySelector(".header").style.marginRight="11px";
+  // document.querySelector("#id_header").style.marginRight="0";
+  // document.getElementById("id_header").style.marginRight="11px";
+
+
+  //  alert("gilipollaz")
  }
  function unLockScroll() {
+  // document.querySelector("body").style.marginRight="0";
+  // document.querySelector(".header").style.marginRight="0";
+  // document.getElementById("id_header").style.marginRight="0";
+  //  document.querySelector("#project-4").style.marginRight="-11px";
    document.body.classList.remove("lock-scroll");
    document.body.classList.add("un-lock-scroll");
+
  }
 
 /* ************** ContactForm *************** */

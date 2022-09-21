@@ -29,6 +29,7 @@ html {
   font-family: var(--font);
   font-size: 16px;
   scroll-behavior: smooth;
+  /* overflow-y:hidden; */
 }
 
 *,
@@ -40,6 +41,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
+  overflow-y:overlay;
   color: var(--text-color);
 }
 
@@ -434,14 +436,19 @@ svg {
 
 ::-webkit-scrollbar {
   width: 11px;
+  margin-top: var(--header-height);
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
+  /* box-shadow: inset 0 0 5px var(--first-color); */
   border-radius: 10px;
+  margin-top: var(--header-height);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-color);
+  /* background: var(--gray-color); */
+  background: var(--first-alpha-color);
   border-radius: 10px;
+  margin-top: var(--header-height);
 }
 
 .modal-content {
@@ -492,10 +499,13 @@ svg {
 
 .lock-scroll {
   overflow: hidden;
+  /* transition: opacity 10.5s ease; */
 }
 
 .un-lock-scroll {
-  overflow: visible;
+  /* overflow: visible; */
+  overflow-y:overlay;
+  /* transition: opacity 10.5s ease; */
 }
 
 
