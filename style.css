@@ -176,7 +176,7 @@ p {
   display: flex;
   list-style: none;
   transition: transform .5s ease-in-out;
-  animation: carousel-slide 50s ease-in-out ;
+  /* animation: carousel-slide 50s ease-in-out ; */
 }
 
 .carousel .slide{
@@ -255,6 +255,13 @@ p {
 #slide-8:checked ~ .slides-nav label#dot-8,
 #slide-9:checked ~ .slides-nav label#dot-9{
   background-color: var(--gray-dark-color);
+  width: 17px;
+  height: 17px;
+}
+#dot-1,#dot-2,#dot-3,#dot-4,#dot-5,#dot-6,#dot-7,#dot-8,#dot-9{
+  /* background-color: var(--gray-dark-color); */
+  width: 15px;
+  height: 15px;
 }
 /* *************** Contact Form *************** */
 
