@@ -271,14 +271,9 @@ p {
 }
 
 .carousel .slide-network{
-  /* 100% por cada slide */
-  /* width: 1300px;
-  height:370px; */
   margin:0;
   padding:0;
   width: 1200px;
-  /* height:500px; */
-  /* height:90%; */
 }
 
 
