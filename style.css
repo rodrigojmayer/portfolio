@@ -9,6 +9,7 @@
   --white-color: #fff;
   --gray-light-color: #f3f3f3;
   --gray-color: #ccc;
+  --gray-color-2: rgb(235, 235, 235);
   --gray-dark-color: rgb(190, 190, 190);
   --black-color: #000;
   --link-color: #509ee3;
@@ -155,7 +156,7 @@ p {
 } */
 
 .carousel{
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   max-width: 900px;
   height: 100%;
@@ -165,6 +166,9 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  /* border-right: var(--first-color) solid; */
+  /* border-right: var(--gray-color) solid; */
+  /* border-left: var(--gray-color) solid; */
 }
 
 .carousel input{
@@ -249,7 +253,15 @@ p {
   width: 17px;
   height: 17px;
 }
-#dot-mail-1,#dot-mail-2,#dot-mail-3,#dot-mail-4,#dot-mail-5,#dot-mail-6,#dot-mail-7,#dot-mail-8,#dot-mail-9{
+#dot-mail-1,
+#dot-mail-2,
+#dot-mail-3,
+#dot-mail-4,
+#dot-mail-5,
+#dot-mail-6,
+#dot-mail-7,
+#dot-mail-8,
+#dot-mail-9{
   /* background-color: var(--gray-dark-color); */
   width: 15px;
   height: 15px;
@@ -338,8 +350,90 @@ p {
   width: 17px;
   height: 17px;
 }
-#dot-network-1,#dot-network-2,#dot-network-3,#dot-network-4,#dot-network-5,#dot-network-6,#dot-network-7,#dot-network-8,#dot-network-9,#dot-network-10,#dot-network-11,#dot-network-12,#dot-network-13,#dot-network-14{
+#dot-network-1,
+#dot-network-2,
+#dot-network-3,
+#dot-network-4,
+#dot-network-5,
+#dot-network-6,
+#dot-network-7,
+#dot-network-8,
+#dot-network-9,
+#dot-network-10,
+#dot-network-11,
+#dot-network-12,
+#dot-network-13,
+#dot-network-14{
   /* background-color: var(--gray-dark-color); */
+  width: 15px;
+  height: 15px;
+}
+
+
+
+/******slides wiki******/
+
+.carousel .slides-wiki{
+  /* 100% por cada slide */
+  padding:0;
+  margin:0;
+  width: 600%;
+  /* height: 450px; */
+  height: 480px;
+  display: flex;
+  list-style: none;
+  transition: transform .5s ease-in-out;
+  /* animation: carousel-slide 50s ease-in-out ; */
+}
+
+.carousel .slide-wiki{
+  /* 100% por cada slide */
+  /* width: 1300px;
+  height:370px; */
+  margin:0;
+  padding:0;
+  width: 1200px;
+  /* height:500px; */
+  /* height:90%; */
+}
+
+
+#slide-wiki-1:checked ~ .slides-wiki{
+  transform: translateX(0%);
+}
+#slide-wiki-2:checked ~ .slides-wiki{
+  transform: translateX(-16.666%);
+}
+#slide-wiki-3:checked ~ .slides-wiki{
+  transform: translateX(-33.333%);
+}
+#slide-wiki-4:checked ~ .slides-wiki{
+  transform: translateX(-50%);
+}
+#slide-wiki-5:checked ~ .slides-wiki{
+  transform: translateX(-66.666%);
+}
+#slide-wiki-6:checked ~ .slides-wiki{
+  transform: translateX(-83.333%);
+}
+
+#slide-wiki-1:checked ~ .slides-nav label#dot-wiki-1,
+#slide-wiki-2:checked ~ .slides-nav label#dot-wiki-2,
+#slide-wiki-3:checked ~ .slides-nav label#dot-wiki-3,
+#slide-wiki-4:checked ~ .slides-nav label#dot-wiki-4,
+#slide-wiki-5:checked ~ .slides-nav label#dot-wiki-5,
+#slide-wiki-6:checked ~ .slides-nav label#dot-wiki-6{
+  background-color: var(--gray-dark-color);
+  width: 17px;
+  height: 17px;
+}
+
+#dot-wiki-1,
+#dot-wiki-2,
+#dot-wiki-3,
+#dot-wiki-4,
+#dot-wiki-5,
+#dot-wiki-6{
   width: 15px;
   height: 15px;
 }
@@ -883,7 +977,8 @@ svg {
 }
 
 .portfolio-modal {
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
+  background-color: var(--gray-color-2);
   padding: 1rem;
   max-width: 400px;
   display: flex;
