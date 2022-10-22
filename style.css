@@ -439,6 +439,118 @@ p {
   height: 15px;
 }
 
+/******slides auctions******/
+
+.carousel .slides-auctions{
+  /* 100% por cada slide */
+  padding:0;
+  margin:0;
+  width: 1500%;
+  /* height: 450px; */
+  height: 480px;
+  display: flex;
+  list-style: none;
+  transition: transform .5s ease-in-out;
+  /* animation: carousel-slide 50s ease-in-out ; */
+}
+
+.carousel .slide-auctions{
+  /* 100% por cada slide */
+  /* width: 1300px;
+  height:370px; */
+  margin:0;
+  padding:0;
+  width: 1200px;
+  /* height:500px; */
+  /* height:90%; */
+}
+
+
+#slide-auctions-1:checked ~ .slides-auctions{
+  transform: translateX(0%);
+}
+#slide-auctions-2:checked ~ .slides-auctions{
+  transform: translateX(-6.667%);
+}
+#slide-auctions-3:checked ~ .slides-auctions{
+  transform: translateX(-13.334%);
+}
+#slide-auctions-4:checked ~ .slides-auctions{
+  transform: translateX(-20.001%);
+}
+#slide-auctions-5:checked ~ .slides-auctions{
+  transform: translateX(-26.667%);
+}
+#slide-auctions-6:checked ~ .slides-auctions{
+  transform: translateX(-33.334%);
+}
+#slide-auctions-7:checked ~ .slides-auctions{
+  transform: translateX(-40.002%);
+}
+#slide-auctions-8:checked ~ .slides-auctions{
+  transform: translateX(-46.668%);
+}
+#slide-auctions-9:checked ~ .slides-auctions{
+  transform: translateX(-53.336%);
+}
+#slide-auctions-10:checked ~ .slides-auctions{
+  transform: translateX(-60.003%);
+}
+#slide-auctions-11:checked ~ .slides-auctions{
+  transform: translateX(-66.670%);
+}
+#slide-auctions-12:checked ~ .slides-auctions{
+  transform: translateX(-73.337%);
+}
+#slide-auctions-13:checked ~ .slides-auctions{
+  transform: translateX(-80.004%);
+}
+#slide-auctions-14:checked ~ .slides-auctions{
+  transform: translateX(-86.671%);
+}
+#slide-auctions-15:checked ~ .slides-auctions{
+  transform: translateX(-93.337%);
+}
+
+#slide-auctions-1:checked ~ .slides-nav label#dot-auctions-1,
+#slide-auctions-2:checked ~ .slides-nav label#dot-auctions-2,
+#slide-auctions-3:checked ~ .slides-nav label#dot-auctions-3,
+#slide-auctions-4:checked ~ .slides-nav label#dot-auctions-4,
+#slide-auctions-5:checked ~ .slides-nav label#dot-auctions-5,
+#slide-auctions-6:checked ~ .slides-nav label#dot-auctions-6,
+#slide-auctions-7:checked ~ .slides-nav label#dot-auctions-7,
+#slide-auctions-8:checked ~ .slides-nav label#dot-auctions-8,
+#slide-auctions-9:checked ~ .slides-nav label#dot-auctions-9,
+#slide-auctions-10:checked ~ .slides-nav label#dot-auctions-10,
+#slide-auctions-11:checked ~ .slides-nav label#dot-auctions-11,
+#slide-auctions-12:checked ~ .slides-nav label#dot-auctions-12,
+#slide-auctions-13:checked ~ .slides-nav label#dot-auctions-13,
+#slide-auctions-14:checked ~ .slides-nav label#dot-auctions-14,
+#slide-auctions-15:checked ~ .slides-nav label#dot-auctions-15{
+  background-color: var(--gray-dark-color);
+  width: 17px;
+  height: 17px;
+}
+#dot-auctions-1,
+#dot-auctions-2,
+#dot-auctions-3,
+#dot-auctions-4,
+#dot-auctions-5,
+#dot-auctions-6,
+#dot-auctions-7,
+#dot-auctions-8,
+#dot-auctions-9,
+#dot-auctions-10,
+#dot-auctions-11,
+#dot-auctions-12,
+#dot-auctions-13,
+#dot-auctions-14,
+#dot-auctions-15{
+  /* background-color: var(--gray-dark-color); */
+  width: 15px;
+  height: 15px;
+}
+
 
 /* *************** Contact Form *************** */
 
@@ -1273,9 +1385,10 @@ svg {
     height:100%
   }
 
-  /* .avatar{ */
-    /* nose */
-  /* } */
+  .avatar{
+    object-fit: contain;
+    /* background-color: red; */
+  }
 
   .portfolio-modal {
     max-width: 90rem;
