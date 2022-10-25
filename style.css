@@ -563,14 +563,21 @@ p {
 
 .arrow{
   position: absolute;
-  top: 33%;
+  top: 32%;
   z-index: 200;
+  /* width: 50%; */
+
+}
+.arrow svg{
+  /* height: 50%; */
+  width: 75%;
 
 }
 .arrow path{
   /* fill:var(--first-alpha-color2); */
   
   fill:var(--gray-alpha-color);
+  transition: 1s;
 }
 .arrow path:hover{
   fill:var(--first-alpha-color);
