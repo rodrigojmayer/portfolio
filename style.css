@@ -78,6 +78,7 @@ h4 {
 
 h5 {
   margin: 0;
+  /* padding-bottom: 10px; */
   font-size: 1rem;
 }
 
@@ -98,6 +99,12 @@ p {
 
 /* *************** Components *************** */
 
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
 /* *************** Carousel *************** */
 
 /* @keyframes carousel-slide{
@@ -271,6 +278,11 @@ p {
   height: 15px;
 }
 
+
+.slides-nav{
+  /* margin:1rem; */
+  cursor:default;
+}
 /******slides network******/
 
 .carousel .slides-network{
@@ -448,27 +460,34 @@ p {
   /* 100% por cada slide */
   padding:0;
   margin:0;
-  width: 1500%;
+  /* width: 1500%; */
+  /* width: 200%; */
   /* height: 450px; */
   height: 480px;
   display: flex;
+  /* flex-direction: column; */
   list-style: none;
   transition: transform .5s ease-in-out;
   /* animation: carousel-slide 50s ease-in-out ; */
 }
 
+.carousel{
+  width: 500%;
+  height: 102%;
+}
 .carousel .slide-auctions{
   /* 100% por cada slide */
   /* width: 1300px;
   height:370px; */
   margin:0;
   padding:0;
-  width: 1200px;
+  /* width: 1200px; */
+  /* width: 1200%; */
   /* height:500px; */
   /* height:90%; */
 }
 
-
+/* 
 #slide-auctions-1:checked ~ .slides-auctions{
   transform: translateX(0%);
 }
@@ -513,8 +532,9 @@ p {
 }
 #slide-auctions-15:checked ~ .slides-auctions{
   transform: translateX(-93.337%);
-}
+} */
 
+#slide-auctions-0:checked ~ .slides-nav label#dot-auctions-0,
 #slide-auctions-1:checked ~ .slides-nav label#dot-auctions-1,
 #slide-auctions-2:checked ~ .slides-nav label#dot-auctions-2,
 #slide-auctions-3:checked ~ .slides-nav label#dot-auctions-3,
@@ -528,12 +548,14 @@ p {
 #slide-auctions-11:checked ~ .slides-nav label#dot-auctions-11,
 #slide-auctions-12:checked ~ .slides-nav label#dot-auctions-12,
 #slide-auctions-13:checked ~ .slides-nav label#dot-auctions-13,
-#slide-auctions-14:checked ~ .slides-nav label#dot-auctions-14,
-#slide-auctions-15:checked ~ .slides-nav label#dot-auctions-15{
-  background-color: var(--gray-dark-color);
-  width: 17px;
-  height: 17px;
+#slide-auctions-14:checked ~ .slides-nav label#dot-auctions-14{
+  /* background-color: var(--gray-dark-color); */
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+  /* width: 17px; */
+  /* height: 17px; */
 }
+#dot-auctions-0,
 #dot-auctions-1,
 #dot-auctions-2,
 #dot-auctions-3,
@@ -547,11 +569,10 @@ p {
 #dot-auctions-11,
 #dot-auctions-12,
 #dot-auctions-13,
-#dot-auctions-14,
-#dot-auctions-15{
-  /* background-color: var(--gray-dark-color); */
-  width: 15px;
-  height: 15px;
+#dot-auctions-14{
+  width: 1.7rem;
+  height: 1.2rem;
+  padding-top:5px;
 }
 
 
@@ -586,10 +607,10 @@ p {
 
 }
 .arrow_next{
-  right: 2%;
+  right: 4%;
 }
 .arrow_prev{
-  left: 2%;
+  left: 4%;
 }
 
 /* *************** Contact Form *************** */
