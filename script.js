@@ -96,11 +96,21 @@ document.addEventListener('DOMContentLoaded', function(){
   // let radio_auction2 = document.querySelectorAll(".radio_auction");
   // let element_actual_radio = document.getElementById("slide-auctions-1")
   let last_radio = 0;
-  
+  let var_radio
   var option=document.getElementsByName('slides-auctions');
   console.log(option[0])
   console.log(option[1])
-  
+  let arrow_prev_auctions = document.getElementById("arrow_prev_auctions")
+  let arrow_next_auctions = document.getElementById("arrow_next_auctions")
+  let slide_auctions = document.getElementsByClassName("slide-auctions")
+  arrow_next_auctions.addEventListener("click", ()=> {
+    var_radio = last_radio + 1
+    option[var_radio].click();
+  })
+  arrow_prev_auctions.addEventListener("click", ()=> {
+    var_radio = last_radio - 1
+    option[var_radio].click();
+  })
   for (let i = 0; i < radio_auction.length; i++) {
     option[i].addEventListener('change', myFunction, false);
     // option
@@ -108,7 +118,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
   function myFunction (){
       // this.id = this.id.replace( /^\D+/g, '');
-      let id_slide = this.id.replace( /^\D+/g, '');
+      let id_slide = parseInt(this.id.replace( /^\D+/g, ''));
+      parseInt(id_slide)
+      console.log(id_slide)
+      // let id_slide2 = parseInt(this.id.replace( /^\D+/g, ''));
+      // console.log(id_slide2)
       // document.getElementById(`slide-auctions-${last_radio}`).checked = false;
       // let element_last_radio = document.getElementById(`slide-auctions-${last_radio}`);
       // let element_last_radio = option[last_radio];
@@ -128,9 +142,6 @@ document.addEventListener('DOMContentLoaded', function(){
       // console.log(attribute)
       // console.log(radio_auction.length)
       // console.log(radio_auction.length)
-      let arrow_prev_auctions = document.getElementById("arrow_prev_auctions")
-      let arrow_next_auctions = document.getElementById("arrow_next_auctions")
-      let slide_auctions = document.getElementsByClassName("slide-auctions")
       // console.log(slide_auctions.length)
       for(var j = 0; j < slide_auctions.length; j++){
         if(id_slide == j)
