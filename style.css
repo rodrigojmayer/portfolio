@@ -32,6 +32,7 @@ html {
   font-family: var(--font);
   font-size: 16px;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color:transparent;
   /* overflow-y:hidden; */
 }
 
@@ -190,6 +191,9 @@ p {
   /* width:100%; */
   /* max-width: 900px; */
   max-width: 100%;
+  width: 500%;
+  height: 102%;
+  /* height: auto; */
   /* height: 100%; */
   /* height: 50%; */
   /* height: 20rem; */
@@ -457,10 +461,6 @@ p {
   /* animation: carousel-slide 50s ease-in-out ; */
 }
 
-.carousel{
-  width: 500%;
-  height: 102%;
-}
 .carousel .slide-auctions{
   /* 100% por cada slide */
   /* width: 1300px;
@@ -551,9 +551,10 @@ p {
 
 .arrow{
   position: absolute;
-  top: 5%;
+  top: 10%;
   z-index: 200;
   /* width: 50%; */
+  /* -webkit-tap-highlight-color:transparent; */
 
 }
 .arrow svg{
@@ -728,7 +729,7 @@ svg {
     /* width: 1500%; */
     /* width: 200%; */
     /* height: 450px; */
-    height: 480px;
+    /* height: 480px; */
     display: flex;
     /* flex-direction: column; */
     list-style: none;
@@ -773,7 +774,8 @@ svg {
     /* width: 1500%; */
     /* width: 200%; */
     /* height: 450px; */
-    height: 480px;
+    /* height: 480px; */
+    max-height: 480px;
     display: flex;
     /* flex-direction: column; */
     list-style: none;
@@ -836,7 +838,8 @@ svg {
 
 .modal-content {
   position: relative;
-  height: 47rem;
+  /* height: 47rem; */
+  height: auto;
   width: 90%;
   margin-top: 5%;
 }
@@ -868,6 +871,7 @@ svg {
   position: absolute;
   top: -2px;
   right: -1px;
+  /* -webkit-tap-highlight-color:transparent; */
 }
 
 .modal-close svg {
@@ -1354,8 +1358,8 @@ svg {
   } */
 
   .modal-content img {
-    width: 20rem;
-    height: 20rem;
+    /* width: 20rem; */
+    /* height: 20rem; */
     max-width: 100%;
   }
 
