@@ -390,9 +390,11 @@ p {
   /* 100% por cada slide */
   padding:0;
   margin:0;
-  width: 600%;
+  margin-top:10px;
+  /* width: 600%; */
   /* height: 450px; */
-  height: 480px;
+  height: auto;
+  /* height: 480px; */
   display: flex;
   list-style: none;
   transition: transform .5s ease-in-out;
@@ -405,12 +407,12 @@ p {
   height:370px; */
   margin:0;
   padding:0;
-  width: 1200px;
+  /* width: 1200px; */
   /* height:500px; */
   /* height:90%; */
 }
 
-
+/* 
 #slide-wiki-1:checked ~ .slides-wiki{
   transform: translateX(0%);
 }
@@ -428,17 +430,19 @@ p {
 }
 #slide-wiki-6:checked ~ .slides-wiki{
   transform: translateX(-83.333%);
-}
+} */
 
+#slide-wiki-0:checked ~ .slides-nav label#dot-wiki-0,
 #slide-wiki-1:checked ~ .slides-nav label#dot-wiki-1,
 #slide-wiki-2:checked ~ .slides-nav label#dot-wiki-2,
 #slide-wiki-3:checked ~ .slides-nav label#dot-wiki-3,
 #slide-wiki-4:checked ~ .slides-nav label#dot-wiki-4,
-#slide-wiki-5:checked ~ .slides-nav label#dot-wiki-5,
-#slide-wiki-6:checked ~ .slides-nav label#dot-wiki-6{
-  background-color: var(--gray-dark-color);
-  width: 17px;
-  height: 17px;
+#slide-wiki-5:checked ~ .slides-nav label#dot-wiki-5{
+  /* background-color: var(--gray-dark-color); */
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+  /* width: 17px; */
+  /* height: 17px; */
 }
 
 
@@ -461,7 +465,7 @@ p {
   /* animation: carousel-slide 50s ease-in-out ; */
 }
 
-.carousel .slide-auctions{
+.carousel .slide{
   /* 100% por cada slide */
   /* width: 1300px;
   height:370px; */
@@ -541,11 +545,11 @@ p {
   /* width: 17px; */
   /* height: 17px; */
 }
-.slide-auctions h4{
+.slide h4{
   font-size: 1.1rem;
   /* height: 5rem; */
 }
-.slide-auctions h5{
+.slide h5{
   /* font-size: 100%; */
   font-size: .9rem;
   height: 4.5rem;
@@ -589,6 +593,12 @@ p {
   left: 0;
 }
 
+.radio_dot{
+  width: 1.1rem!important;
+  margin: .2rem .4rem!important;
+  /* height: 1.2rem!important; */
+  /* padding-top:5px!important; */
+}
 /* *************** Contact Form *************** */
 
 .contact-form {
@@ -745,11 +755,11 @@ svg {
     /* animation: carousel-slide 50s ease-in-out ; */
   }
   
-  .slide-auctions h4{
+  .slide h4{
     font-size: 1.3rem;
     /* height: 5rem; */
   }
-  .slide-auctions h5{
+  .slide h5{
     /* font-size: 100%; */
     font-size: 1.1rem;
     height: 3rem;
@@ -765,7 +775,8 @@ svg {
   .radio_dot{
     width: 1.7rem!important;
     height: 1.2rem!important;
-    padding-top:5px!important;
+    margin: 0.1rem!important;
+    /* padding-top:5px!important; */
   }
 }
 

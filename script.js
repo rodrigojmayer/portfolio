@@ -62,29 +62,62 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
+  /* *****************  Images of Projects  ***************** */
+  
+  let prev_project_1 = document.getElementById("prev_project_1")
+  prev_project_1.addEventListener("click", changeImages, false)
+  prev_project_1.myParam = "wiki"
 
-  let radio_auction = document.getElementsByClassName("radio_auction");
-  let last_radio = 0;
-  let var_radio
-  var option=document.getElementsByName('slides-auctions');
-  console.log(option[0])
-  console.log(option[1])
-  let arrow_prev_auctions = document.getElementById("arrow_prev_auctions")
-  let arrow_next_auctions = document.getElementById("arrow_next_auctions")
-  let slide_auctions = document.getElementsByClassName("slide-auctions")
-  arrow_next_auctions.addEventListener("click", ()=> {
-    var_radio = last_radio + 1
-    option[var_radio].click();
-  })
-  arrow_prev_auctions.addEventListener("click", ()=> {
-    var_radio = last_radio - 1
-    option[var_radio].click();
-  })
-  for (let i = 0; i < radio_auction.length; i++) {
-    option[i].addEventListener('change', myFunction, false);
-  }
+  let prev_project_2 = document.getElementById("prev_project_2")
+  prev_project_2.addEventListener("click", changeImages, false)
+  prev_project_2.myParam = "auction"
 
-  function myFunction (){
+  // document.getElementById("prev_project_2").addEventListener("click", changeImages("auction"))
+
+  // someInput.addEventListener('click', myFunc, false);
+  // someInput.myParam = 'This is my parameter';
+  // function myFunc(evt)
+
+
+
+
+
+
+
+
+
+  function changeImages(param){
+    // let radio_auction = document.getElementsByClassName("radio_auction");
+    console.log(param.currentTarget.myParam)
+    let prjct = param.currentTarget.myParam
+    // alert("prjct")
+    let radio = document.getElementsByClassName(`radio_${prjct}`);
+    let last_radio = 0;
+    let var_radio
+    var option=document.getElementsByName(`slides-${prjct}`);
+    // console.log(radio)
+    // console.log(option)
+    let arrow_prev_prjct = document.getElementById(`arrow_prev_${prjct}`)
+    let arrow_next_prjct = document.getElementById(`arrow_next_${prjct}`)
+    let slide = document.getElementsByClassName(`slide-${prjct}`)
+
+    arrow_next_prjct.addEventListener("click", ()=> {
+      var_radio = last_radio + 1
+      option[var_radio].click();
+    })
+
+    arrow_prev_prjct.addEventListener("click", ()=> {
+      var_radio = last_radio - 1
+      option[var_radio].click();
+    })
+
+    for (let i = 0; i < radio.length; i++) {
+      option[i].addEventListener('change', myFunction, false);
+    }
+
+    function myFunction (){
+      console.log(this)
+      console.log(last_radio)
       let id_slide = parseInt(this.id.replace( /^\D+/g, ''));
       parseInt(id_slide)
       console.log(id_slide)
@@ -92,26 +125,28 @@ document.addEventListener('DOMContentLoaded', function(){
       option[last_radio].checked = false;
       option[id_slide].checked = true;
 
-      for(var j = 0; j < slide_auctions.length; j++){
+      for(var j = 0; j < slide.length; j++){
         if(id_slide == j)
-          show(slide_auctions[j])
+          show(slide[j])
         else
-          hide(slide_auctions[j])
+          hide(slide[j])
       }
       if(id_slide != "0"){
-        show(arrow_prev_auctions)
+        show(arrow_prev_prjct)
       }
       else{
-        hide(arrow_prev_auctions)
+        hide(arrow_prev_prjct)
       }
-      if(id_slide != radio_auction.length-1){
-        show(arrow_next_auctions)
+      if(id_slide != radio.length-1){
+        show(arrow_next_prjct)
       }
       else{
-        hide(arrow_next_auctions)
+        hide(arrow_next_prjct)
       }
       last_radio = id_slide
-  };
+    };
+  }
+
 
 
 });

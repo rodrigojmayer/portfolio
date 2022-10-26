@@ -193,7 +193,7 @@
         </a>
       </div>
       <div onclick="lockScroll();">
-        <a href="#project-1" class="portfolio-card">
+        <a href="#project-1" id="prev_project_1" class="portfolio-card">
           <img src="assets/Frame project 1 - Wiki.png" alt="Project Wiki">
           <aside class="portfolio-card-info">
             <div>
@@ -204,7 +204,7 @@
         </a>
       </div>
       <div onclick="lockScroll();">
-        <a href="#project-2" class="portfolio-card">
+        <a href="#project-2" id="prev_project_2" class="portfolio-card">
           <img src="assets/Frame project 2 - Commerce.png" alt="Project Commerce">
           <aside class="portfolio-card-info">
             <div>
@@ -221,7 +221,7 @@
 
   <article class="modal" id="project-3">
     <div class="modal-content">
-      <div class="modal-back-svg"></div>
+      <!-- <div class="modal-back-svg"></div> -->
       <a href="#close" class="modal-close" onclick="unLockScroll();">
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -327,7 +327,7 @@
   </article>
   <article class="modal" id="project-4">
     <div class="modal-content">
-      <div class="modal-back-svg"></div>
+      <!-- <div class="modal-back-svg"></div> -->
       <a href="#close" class="modal-close" onclick="unLockScroll();">
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -466,7 +466,7 @@
 
   <article class="modal" id="project-1">
     <div class="modal-content">
-      <div class="modal-back-svg"></div>
+      <!-- <div class="modal-back-svg"></div> -->
 
       <a href="#close" class="modal-close" onclick="unLockScroll();">
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -477,51 +477,61 @@
       <article class="portfolio-modal">
         <!-- <img src="assets/Frame project 1 - Wiki.png" alt="Project Wiki"> -->
         <article class="carousel" style="--carousel-bg-color: var(--white-alpha-color);">
-          <input type="radio" name="slides-wiki" id="slide-wiki-1" checked>
-          <input type="radio" name="slides-wiki" id="slide-wiki-2">
-          <input type="radio" name="slides-wiki" id="slide-wiki-3">
-          <input type="radio" name="slides-wiki" id="slide-wiki-4">
-          <input type="radio" name="slides-wiki" id="slide-wiki-5">
-          <input type="radio" name="slides-wiki" id="slide-wiki-6">
+          <div class="arrow arrow_next" id="arrow_next_wiki" >
+            <svg width="49" height="124" viewBox="0 0 49 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.0411 57.8916C48.5551 60.4213 48.5551 63.5787 47.0411 66.1084L14.8644 119.87C10.6952 126.836 -6.87928e-06 123.88 -6.52441e-06 115.761L-1.82446e-06 8.23882C-1.4696e-06 0.120417 10.6952 -2.8357 14.8645 4.13035L47.0411 57.8916Z" fill="#D9D9D9"/>
+            </svg>
+          </div>
+          <div class="arrow arrow_prev hide" id="arrow_prev_wiki">
+            <svg width="49" height="125" viewBox="0 0 49 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.45894 66.6084C-0.0551258 64.0787 -0.0551256 60.9213 1.45894 58.3916L33.6356 4.63033C37.8048 -2.33572 48.5 0.620383 48.5 8.73878L48.5 116.261C48.5 124.38 37.8048 127.336 33.6355 120.37L1.45894 66.6084Z" fill="#D9D9D9"/>
+            </svg>
+          </div>
+          <input type="radio" name="slides-wiki" class="radio_wiki" id="slide-wiki-0" checked>
+          <input type="radio" name="slides-wiki" class="radio_wiki" id="slide-wiki-1">
+          <input type="radio" name="slides-wiki" class="radio_wiki" id="slide-wiki-2">
+          <input type="radio" name="slides-wiki" class="radio_wiki" id="slide-wiki-3">
+          <input type="radio" name="slides-wiki" class="radio_wiki" id="slide-wiki-4">
+          <input type="radio" name="slides-wiki" class="radio_wiki" id="slide-wiki-5">
           <ul class="slides-wiki">
-            <li class="slide-wiki">
+            <li class="slide slide-wiki" id="image_wiki_0">
               <img class="avatar" src="assets/Wiki/01- Home.PNG" alt="Project wiki 1">
               <h4 class="text-first-color">Index Page</h4>
               <h5>User can click on any entry name to be taken directly to that entry page.</h5>
             </li>
-            <li class="slide-wiki">
+            <li class="slide slide-wiki hide" id="image_wiki_1">
               <img class="avatar" src="assets/Wiki/02- Create new page.PNG" alt="Project wiki 2">
               <h4 class="text-first-color">New Page</h4>
               <h5>Form to enter the title and the content of the wiki page we want to create.</h5>
             </li>
-            <li class="slide-wiki">
+            <li class="slide slide-wiki hide" id="image_wiki_2">
               <img class="avatar" src="assets/Wiki/03- Random page.PNG" alt="Project wiki 3">
               <h4 class="text-first-color">Entry Page</h4>
               <h5>Should render a page that displays the contents of that encyclopedia entry.</h5>
             </li>
-            <li class="slide-wiki">
+            <li class="slide slide-wiki hide" id="image_wiki_3">
               <img class="avatar" src="assets/Wiki/04- Edit page.PNG" alt="Project wiki 4">
               <h4 class="text-first-color">Edit Page</h4>
               <h5>The user can edit any entry page</h5>
             </li>
-            <li class="slide-wiki">
+            <li class="slide slide-wiki hide" id="image_wiki_4">
               <img class="avatar" src="assets/Wiki/05- Search with results.PNG" alt="Project wiki 5">
               <h4 class="text-first-color">Search</h4>
               <h5>Allow the user to type a query into the search box in the sidebar to search for an encyclopedia entry.</h5>
             </li>
-            <li class="slide-wiki">
+            <li class="slide slide-wiki hide" id="image_wiki_5">
               <img class="avatar" src="assets/Wiki/06- Search without results.PNG" alt="Project wiki 6">
               <h4 class="text-first-color">Not Found</h4>
               <h5>Page error when there is no match in the search.</h5>
             </li>
           </ul>
           <aside class="slides-nav">
+            <label for="slide-wiki-0" class="radio_dot" id="dot-wiki-0"></label>
             <label for="slide-wiki-1" class="radio_dot" id="dot-wiki-1"></label>
             <label for="slide-wiki-2" class="radio_dot" id="dot-wiki-2"></label>
             <label for="slide-wiki-3" class="radio_dot" id="dot-wiki-3"></label>
             <label for="slide-wiki-4" class="radio_dot" id="dot-wiki-4"></label>
             <label for="slide-wiki-5" class="radio_dot" id="dot-wiki-5"></label>
-            <label for="slide-wiki-6" class="radio_dot" id="dot-wiki-6"></label>
           </aside>
         </article>
 
@@ -547,7 +557,7 @@
 
   <article class="modal" id="project-2">
     <div class="modal-content">
-      <div class="modal-back-svg"></div>
+      <!-- <div class="modal-back-svg"></div> -->
       <a href="#close" class="modal-close" onclick="unLockScroll();">
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -557,106 +567,106 @@
       <article class="portfolio-modal">
         <!-- <img src="assets/Frame project 2 - Commerce.png" alt="Project Commerce"> -->
         <article class="carousel" style="--carousel-bg-color: var(--white-alpha-color);">
-          <div class="arrow arrow_next" id="arrow_next_auctions" >
+          <div class="arrow arrow_next" id="arrow_next_auction" >
             <svg width="49" height="124" viewBox="0 0 49 124" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M47.0411 57.8916C48.5551 60.4213 48.5551 63.5787 47.0411 66.1084L14.8644 119.87C10.6952 126.836 -6.87928e-06 123.88 -6.52441e-06 115.761L-1.82446e-06 8.23882C-1.4696e-06 0.120417 10.6952 -2.8357 14.8645 4.13035L47.0411 57.8916Z" fill="#D9D9D9"/>
             </svg>
           </div>
-          <div class="arrow arrow_prev hide" id="arrow_prev_auctions">
+          <div class="arrow arrow_prev hide" id="arrow_prev_auction">
             <svg width="49" height="125" viewBox="0 0 49 125" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.45894 66.6084C-0.0551258 64.0787 -0.0551256 60.9213 1.45894 58.3916L33.6356 4.63033C37.8048 -2.33572 48.5 0.620383 48.5 8.73878L48.5 116.261C48.5 124.38 37.8048 127.336 33.6355 120.37L1.45894 66.6084Z" fill="#D9D9D9"/>
             </svg>
           </div>
           <!-- <form name="myForm" class="myFormClass"> -->
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-0" checked>
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-1" >
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-2">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-3">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-4">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-5">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-6">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-7">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-8">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-9">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-10">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-11">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-12">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-13">
-            <input type="radio" name="slides-auctions" class="radio_auction" id="slide-auctions-14">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-0" checked>
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-1" >
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-2">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-3">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-4">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-5">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-6">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-7">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-8">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-9">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-10">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-11">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-12">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-13">
+            <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-14">
           <!-- </form> -->
           <ul class="slides-auctions">
-            <li class="slide-auctions" id="image_auctions_0">
+            <li class="slide slide-auction" id="image_auctions_0">
               <!-- <img class="avatar" src="assets/Auctions/01 - Active listings without log in.gif" alt="Project Auctions 1"> -->
               <img class="avatar" src="assets/Auctions/01-Active_listings_without_log_in.gif" alt="Project Auctions 1">
               <h4 class="text-first-color">Active listings without log in</h4>
               <h5>An unlogged user can view all the auctioned items, but cannot interact with them.</h5>
             </li>
-            <li class="slide-auctions hide" id="image_auctions_1">
+            <li class="slide slide-auction hide" id="image_auctions_1">
               <img class="avatar" src="assets/Auctions/02-Article_without_log_in.gif" alt="Project Auctions 2">
               <h4 class="text-first-color">Access to articles without log in</h4>
               <h5>You do not have permissions to add an item to your Watch List (favorites). You also cannot bid or ask a question about the item.</h5>
             </li>
-            <li class="slide-auctions hide" id="image_auctions_2">
+            <li class="slide slide-auction hide" id="image_auctions_2">
               <img class="avatar" src="assets/Auctions/03-Register.gif" alt="Project Auctions 3">
               <h4 class="text-first-color">Register</h4>
               <h5>In this section we can register our user, in order to have access to the aforementioned options.</h5>
             </li>            
-            <li class="slide-auctions hide" id="image_auctions_3">
+            <li class="slide slide-auction hide" id="image_auctions_3">
               <img class="avatar" src="assets/Auctions/04-Article_bike_logged_in_bigger_image.gif" alt="Project Auctions 4">
               <h4 class="text-first-color">Access to article</h4>
               <h5>When entering the auction of an item, we can see in more detail the image of it and its data.</h5>
             </li>            
-            <li class="slide-auctions hide" id="image_auctions_4">
+            <li class="slide slide-auction hide" id="image_auctions_4">
               <img class="avatar" src="assets/Auctions/05-Make_question.gif" alt="Project Auctions 5">
               <h4 class="text-first-color">Make questions</h4>
               <h5>We have the option to ask a question, which can only be answered by the creator of the auction of that item.</h5>
             </li>            
-            <li class="slide-auctions hide" id="image_auctions_5">
+            <li class="slide slide-auction hide" id="image_auctions_5">
               <img class="avatar" src="assets/Auctions/06-Place_bid.gif" alt="Project Auctions 6">
               <h4 class="text-first-color">Place bid</h4>
               <h5>If we are not the creator of the auction and the auction is still open, we may place a bid (higher than the current bid).</h5>
             </li>            
-            <li class="slide-auctions hide" id="image_auctions_6">
+            <li class="slide slide-auction hide" id="image_auctions_6">
               <img class="avatar" src="assets/Auctions/07-Add_to_watch_list.gif" alt="Project Auctions 7">
               <h4 class="text-first-color">Add to watch list</h4>
               <h5>In this way we save an auction in our Watch List (favorites).</h5>
             </li>           
-            <li class="slide-auctions hide" id="image_auctions_7">
+            <li class="slide slide-auction hide" id="image_auctions_7">
               <img class="avatar" src="assets/Auctions/08-Categories.gif" alt="Project Auctions 8">
               <h4 class="text-first-color">Categories</h4>
               <h5>The auctions are discriminated by categories, by which we can filter them.</h5>
             </li>          
-            <li class="slide-auctions hide" id="image_auctions_8">
+            <li class="slide slide-auction hide" id="image_auctions_8">
               <img class="avatar" src="assets/Auctions/09-Post_item.gif" alt="Project Auctions 9">
               <h4 class="text-first-color">Post item</h4>
               <h5>With this form we can load the data of the article that we want to auction (all fields must be completed).</h5>
             </li>       
-            <li class="slide-auctions hide" id="image_auctions_9">
+            <li class="slide slide-auction hide" id="image_auctions_9">
               <img class="avatar" src="assets/Auctions/10-Log_in_user_owner_of_auction.gif" alt="Project Auctions 10">
               <h4 class="text-first-color">Log in user owner of auction</h4>
               <h5>We log in with another user to be able to show the options that the creator of an auction has.</h5>
             </li>       
-            <li class="slide-auctions hide" id="image_auctions_10">
+            <li class="slide slide-auction hide" id="image_auctions_10">
               <img class="avatar" src="assets/Auctions/11-Answer_question.gif" alt="Project Auctions 11">
               <h4 class="text-first-color">Answer question</h4>
               <h5>Here we can see the option to answer a question that we have been asked about our auctioned item.</h5>
             </li>       
-            <li class="slide-auctions hide" id="image_auctions_11">
+            <li class="slide slide-auction hide" id="image_auctions_11">
               <img class="avatar" src="assets/Auctions/12-Close_auction.gif" alt="Project Auctions 12">
               <h4 class="text-first-color">Close auction</h4>
               <h5>The creator of the auction has the right to close the auction at any time.</h5>
             </li>       
-            <li class="slide-auctions hide" id="image_auctions_12">
+            <li class="slide slide-auction hide" id="image_auctions_12">
               <img class="avatar" src="assets/Auctions/13-Log_in_auction_winner.gif" alt="Project Auctions 13">
               <h4 class="text-first-color">Log in auction winner</h4>
               <h5>We change users again in order to expose what we will see when our offer is the winner of an auction.</h5>
             </li>   
-            <li class="slide-auctions hide" id="image_auctions_13">
+            <li class="slide slide-auction hide" id="image_auctions_13">
               <img class="avatar" src="assets/Auctions/14-Ipad_responsive.gif" alt="Project Auctions 14">
               <h4 class="text-first-color">Tablet responsive</h4>
               <h5>The entire page adapts perfectly to the size of tablet screens.</h5>
             </li>   
-            <li class="slide-auctions hide" id="image_auctions_14">
+            <li class="slide slide-auction hide" id="image_auctions_14">
               <img class="avatar" src="assets/Auctions/15-Mobile_responsive.gif" alt="Project Auctions 15">
               <h4 class="text-first-color">Mobile responsive</h4>
               <h5>The entire page adjusts perfectly to the size of mobile screens.</h5>
