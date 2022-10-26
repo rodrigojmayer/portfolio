@@ -190,7 +190,10 @@ p {
   /* width:100%; */
   /* max-width: 900px; */
   max-width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  /* height: 50%; */
+  /* height: 20rem; */
+  /* max-height: 20rem; */
   text-align: center;
   overflow-x: hidden;
   display: flex;
@@ -216,6 +219,11 @@ p {
   cursor: pointer;
 }
 
+.radio_dot{
+  width: 1.7rem;
+  height: 1.2rem;
+  padding-top:5px;
+}
 /******slides mail******/
 
 .carousel .slides-mail{
@@ -283,19 +291,6 @@ p {
   background-color: var(--gray-dark-color);
   width: 17px;
   height: 17px;
-}
-#dot-mail-1,
-#dot-mail-2,
-#dot-mail-3,
-#dot-mail-4,
-#dot-mail-5,
-#dot-mail-6,
-#dot-mail-7,
-#dot-mail-8,
-#dot-mail-9{
-  /* background-color: var(--gray-dark-color); */
-  width: 15px;
-  height: 15px;
 }
 
 
@@ -386,24 +381,7 @@ p {
   width: 17px;
   height: 17px;
 }
-#dot-network-1,
-#dot-network-2,
-#dot-network-3,
-#dot-network-4,
-#dot-network-5,
-#dot-network-6,
-#dot-network-7,
-#dot-network-8,
-#dot-network-9,
-#dot-network-10,
-#dot-network-11,
-#dot-network-12,
-#dot-network-13,
-#dot-network-14{
-  /* background-color: var(--gray-dark-color); */
-  width: 15px;
-  height: 15px;
-}
+
 
 
 
@@ -464,15 +442,6 @@ p {
   height: 17px;
 }
 
-#dot-wiki-1,
-#dot-wiki-2,
-#dot-wiki-3,
-#dot-wiki-4,
-#dot-wiki-5,
-#dot-wiki-6{
-  width: 15px;
-  height: 15px;
-}
 
 /******slides auctions******/
 
@@ -575,25 +544,6 @@ p {
   /* width: 17px; */
   /* height: 17px; */
 }
-#dot-auctions-0,
-#dot-auctions-1,
-#dot-auctions-2,
-#dot-auctions-3,
-#dot-auctions-4,
-#dot-auctions-5,
-#dot-auctions-6,
-#dot-auctions-7,
-#dot-auctions-8,
-#dot-auctions-9,
-#dot-auctions-10,
-#dot-auctions-11,
-#dot-auctions-12,
-#dot-auctions-13,
-#dot-auctions-14{
-  width: 1.7rem;
-  height: 1.2rem;
-  padding-top:5px;
-}
 
 
 /* .slides-auctions{
@@ -604,14 +554,14 @@ p {
 
 .arrow{
   position: absolute;
-  top: 32%;
+  top: 5%;
   z-index: 200;
   /* width: 50%; */
 
 }
 .arrow svg{
   /* height: 50%; */
-  width: 75%;
+  width: 50%;
 
 }
 .arrow path{
@@ -627,10 +577,10 @@ p {
 
 }
 .arrow_next{
-  right: 4%;
+  right: 0;
 }
 .arrow_prev{
-  left: 4%;
+  left: 0;
 }
 
 /* *************** Contact Form *************** */
@@ -767,6 +717,15 @@ svg {
   background-color: var(--first-color);
 }
 
+
+
+@media screen and (min-width: 768px) {
+  /* .carousel{ */
+    /* max-width: 100%; */
+
+  /* } */
+}
+
 @media screen and (min-width: 1024px) {
   .menu-btn {
     display: none;
@@ -788,6 +747,38 @@ svg {
   }
   .menu a:hover {
     background-color: transparent;
+  }
+
+  
+.arrow{
+    /* position: absolute; */
+    top: 32%;
+    /* z-index: 200; */
+    /* width: 50%; */
+
+  }
+  .arrow svg{
+    /* height: 50%; */
+    width: 75%;
+
+  }
+  .arrow path{
+    /* fill:var(--first-alpha-color2); */
+    
+    /* fill:var(--gray-alpha-color); */
+    /* transition: 1s; */
+  }
+  .arrow path:hover{
+    /* fill:var(--first-alpha-color); */
+    /* cursor: pointer; */
+    /* transition: 1s; */
+
+  }
+  .arrow_next{
+    right: 3vw;
+  }
+  .arrow_prev{
+    left: 3vw;
   }
 }
 
@@ -1174,11 +1165,15 @@ svg {
   /* max-width: 400px; */
   display: flex;
   flex-direction: column-reverse;
+  justify-self: center;
   /* justify-content: center; */
   /* align-items: center; */
   /* align-content: center; */
   border-radius: 2px;
+  /* min-height: 20rem; */
+  /* max-height:42rem; */
   /* height: 600px; */
+  /* height: auto; */
 }
 
 
@@ -1313,7 +1308,7 @@ svg {
   }
 
   .modal-content {
-    height: 21rem;
+    /* height: 21rem; */
     min-width: 44rem;
     max-width: 100%;
     top: 0;
@@ -1334,10 +1329,9 @@ svg {
   }
 
   .portfolio-modal {
+    padding-top: 1rem;
     min-width: 44rem;
     max-width: 100%;
-    flex-direction: row;
-    justify-self: center;
     margin: 0;
   }
 
@@ -1469,7 +1463,8 @@ svg {
   }
 
   .modal-content {
-    height: 26rem;
+    height: 600px!important;
+    /* height: 26rem; */
     width: 90rem;
     margin:80px;
   }
@@ -1497,6 +1492,10 @@ svg {
 
   .portfolio-modal {
     max-width: 90rem;
+    /* height: 570px; */
+    height: 600px!important;
+    flex-direction: row;
+    /* min-height: 600px; */
     margin: 0;
   }
 
