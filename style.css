@@ -541,7 +541,15 @@ p {
   /* width: 17px; */
   /* height: 17px; */
 }
-
+.slide-auctions h4{
+  font-size: 1.1rem;
+  /* height: 5rem; */
+}
+.slide-auctions h5{
+  /* font-size: 100%; */
+  font-size: .9rem;
+  height: 4.5rem;
+}
 
 /* .slides-auctions{
   position:relative;
@@ -737,6 +745,23 @@ svg {
     /* animation: carousel-slide 50s ease-in-out ; */
   }
   
+  .slide-auctions h4{
+    font-size: 1.3rem;
+    /* height: 5rem; */
+  }
+  .slide-auctions h5{
+    /* font-size: 100%; */
+    font-size: 1.1rem;
+    height: 3rem;
+  }
+  
+  .arrow{
+    top: 26%;
+  }
+  .arrow svg{
+    width: 70%;
+
+  }
   .radio_dot{
     width: 1.7rem!important;
     height: 1.2rem!important;
@@ -1339,7 +1364,8 @@ svg {
     margin: 0 1rem;
     align-self: center;
     /* height: 22rem; */
-    height: 18rem;
+    /* height: 18rem; */
+    height: auto;
   }
 
   .modal-content {
