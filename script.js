@@ -62,39 +62,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-// setTimeout(console.log(myElement), 5000);
-  // let myElement = document.querySelector(".slides-auctions");
-  // myElement.getElementsByClassName.transform = ""
-  // console.log(myElement)
-  // for(let i = 0; i<100; i++)
-  //  setTimeout(console.log(myElement), 5000);
-
-  // let checklist1 = document.querySelector("#slide-auctions-1")
-  // let checklist2 = document.querySelector("#slide-auctions-2")
-  // let checklist = document.name("#slide-auctions-2")
-  // console.log(checklist1)
-  // console.log(checklist2)
-
-  // checklist.addEventListener("click", function(){
-  //   console.log("entrando")
-  //   console.log(myElement)
-  // })
-  // var rad = document.slidesauctions;
-  // var prev = null;
-  // for (var i = 0; i < rad.length; i++) {
-  //     rad[i].addEventListener('change', function() {
-  //         (prev) ? console.log(prev.value): null;
-  //         if (this !== prev) {
-  //             prev = this;
-  //         }
-  //         console.log(this.value)
-  //         // console.log(i)
-  //     });
-  // }
 
   let radio_auction = document.getElementsByClassName("radio_auction");
-  // let radio_auction2 = document.querySelectorAll(".radio_auction");
-  // let element_actual_radio = document.getElementById("slide-auctions-1")
   let last_radio = 0;
   let var_radio
   var option=document.getElementsByName('slides-auctions');
@@ -113,36 +82,16 @@ document.addEventListener('DOMContentLoaded', function(){
   })
   for (let i = 0; i < radio_auction.length; i++) {
     option[i].addEventListener('change', myFunction, false);
-    // option
   }
 
   function myFunction (){
-      // this.id = this.id.replace( /^\D+/g, '');
       let id_slide = parseInt(this.id.replace( /^\D+/g, ''));
       parseInt(id_slide)
       console.log(id_slide)
-      // let id_slide2 = parseInt(this.id.replace( /^\D+/g, ''));
-      // console.log(id_slide2)
-      // document.getElementById(`slide-auctions-${last_radio}`).checked = false;
-      // let element_last_radio = document.getElementById(`slide-auctions-${last_radio}`);
-      // let element_last_radio = option[last_radio];
-      // document.getElementById(`slide-auctions-${this.id}`).checked = true;
-      // let stringtest = `slide-auctions-${this.id}`;
-      // let element_actual_radio = option[this.id];
-      // let element_actual_radio = document.getElementById(stringtest)
-      // console.log(`element _last_radio ${last_radio}`)
-      // console.log(element_last_radio)
-      // console.log(`element _actual_radio ${this.id}`)
-      // console.log(element_actual_radio)
       
       option[last_radio].checked = false;
       option[id_slide].checked = true;
 
-      // var attribute = this.name
-      // console.log(attribute)
-      // console.log(radio_auction.length)
-      // console.log(radio_auction.length)
-      // console.log(slide_auctions.length)
       for(var j = 0; j < slide_auctions.length; j++){
         if(id_slide == j)
           show(slide_auctions[j])
@@ -151,60 +100,18 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       if(id_slide != "0"){
         show(arrow_prev_auctions)
-        // arrow_prev_auctions.classList.add("show")
-        // arrow_prev_auctions.classList.remove("hide")
       }
       else{
         hide(arrow_prev_auctions)
-        // arrow_prev_auctions.classList.add("hide")
-        // arrow_prev_auctions.classList.remove("show")
       }
       if(id_slide != radio_auction.length-1){
         show(arrow_next_auctions)
-        // arrow_next_auctions.classList.add("show")
-        // arrow_next_auctions.classList.remove("hide")
       }
       else{
         hide(arrow_next_auctions)
-        // arrow_next_auctions.classList.add("hide")
-        // arrow_next_auctions.classList.remove("show")
-
       }
       last_radio = id_slide
-      // slide-auctions
-      // image_auctions_6
   };
-
-  // radio_auction2.forEach(item => {
-  //   item.addEventListener('click', event => {
-  //     //handle click
-  //     // console.log("entra al foreach")
-  //   })
-  // })
-
-  // for (let i = 0; i < radio_auction.length; i++) {
-    // radio_auction[i].addEventListener('change', myFunction, false);
-    // radio_auction[i].addEventListener('change', ()=>{
-
-    //   this.id = this.id.replace( /^\D+/g, '');
-    //   // document.getElementById(`slide-auctions-${last_radio}`).checked = false;
-    //   let element_last_radio = document.getElementById(`slide-auctions-${last_radio}`);
-    //   // document.getElementById(`slide-auctions-${this.id}`).checked = true;
-    //   let stringtest = `slide-auctions-${this.id}`;
-    //   let element_actual_radio = document.getElementById(stringtest)
-    //   console.log(`element _last_radio ${last_radio}`)
-    //   console.log(element_last_radio)
-    //   console.log(`element _actual_radio ${this.id}`)
-    //   console.log(element_actual_radio)
-    // })
-  // }
-
-  // if (!(option[0].checked || option[1].checked)) {
-      // alert("Please Select Your Gender");
-      // return false;
-  // }
-
-
 
 
 });
@@ -225,7 +132,6 @@ function show(element){
   element.classList.remove("hide")
 }
 function hide(element){
-  // console.log(element)
   element.classList.add("hide")
   element.classList.remove("show")
 }
