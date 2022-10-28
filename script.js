@@ -6,7 +6,7 @@ let url = window.location.href;
 document.addEventListener('DOMContentLoaded', function(){
   
 
-  newurl = url.split('#');
+  // newurl = url.split('#');
   if (performance.getEntriesByType("navigation")[0].type == "reload") {
     // window.location.href = newurl.at(0)
 //////////////////////////////////////////////////////////  CHANGE THIS AFTER FINISH EDITION PROJECTS///////////////////////////////////////////////////////////////////////////////
@@ -191,6 +191,13 @@ function unLockScroll() {
   document.body.classList.add("un-lock-scroll");
 
 }
+
+// export const unLockScroll = ()=>{
+//   document.body.classList.remove("lock-scroll");
+//   document.body.classList.add("un-lock-scroll");
+// }
+
+
 
 function show(element){
   element.classList.add("show")

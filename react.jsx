@@ -1,4 +1,8 @@
 
+// import unLockScroll from './script.js';
+
+
+
 let modal = document.getElementById("project-2")
 let prev_project = document.getElementById("prev_project_2")
 
@@ -14,14 +18,14 @@ if(modal){
 function Modal(){
     return(
         <div class="modal-content">
-            <a href="#close" class="modal-close" onclick="unLockScroll();">
+            <a href="#closess" class="modal-close" onClick={unLockScroll}>
                 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M16.3333 3C8.98133 3 3 8.98133 3 16.3333C3 23.6853 8.98133 29.6667 16.3333 29.6667C23.6853 29.6667 29.6667 23.6853 29.6667 16.3333C29.6667 8.98133 23.6853 3 16.3333 3ZM21.9427 20.0573L20.0573 21.9427L16.3333 18.2187L12.6093 21.9427L10.724 20.0573L14.448 16.3333L10.724 12.6093L12.6093 10.724L16.3333 14.448L20.0573 10.724L21.9427 12.6093L18.2187 16.3333L21.9427 20.0573Z" />
                 </svg>
             </a>
             <article class="portfolio-modal">
-                <article class="carousel" style="--carousel-bg-color: var(--white-alpha-color);">
+                <article class="carousel">
                     <div class="arrow arrow_next" id="arrow_next_auction" >
                         <svg width="49" height="124" viewBox="0 0 49 124" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M47.0411 57.8916C48.5551 60.4213 48.5551 63.5787 47.0411 66.1084L14.8644 119.87C10.6952 126.836 -6.87928e-06 123.88 -6.52441e-06 115.761L-1.82446e-06 8.23882C-1.4696e-06 0.120417 10.6952 -2.8357 14.8645 4.13035L47.0411 57.8916Z" fill="#D9D9D9"/>
@@ -162,3 +166,9 @@ function Modal(){
 
     )
 }
+
+function unLockScroll() {
+    document.body.classList.remove("lock-scroll");
+    document.body.classList.add("un-lock-scroll");
+  
+  }
