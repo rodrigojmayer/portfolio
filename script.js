@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function(){
   if (performance.getEntriesByType("navigation")[0].type == "reload") {
     // window.location.href = newurl.at(0)
 //////////////////////////////////////////////////////////  CHANGE THIS AFTER FINISH EDITION PROJECTS///////////////////////////////////////////////////////////////////////////////
-    window.location.href = newurl.at(0)+"#portafolio"
+    // window.location.href = newurl.at(0)+"#portafolio"
+    location.hash = "#portafolio"
+    // location.hash = "#inicio"
     // window.location.href = newurl.at(0)
   }
 
@@ -100,13 +102,6 @@ document.addEventListener('DOMContentLoaded', function(){
   // function myFunc(evt)
 
 
-
-
-
-
-
-
-
   function changeImages(param){
     // let radio_auction = document.getElementsByClassName("radio_auction");
     console.log(param.currentTarget.myParam)
@@ -170,6 +165,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
+  
+  document.addEventListener("deviceready", stopBack, false);
+  function stopBack() /* Stops user navigating pages using back button on device */{
+      document.addEventListener("backbutton", backKeyPressed, false);
+
+      function backKeyPressed() {
+        unLockScroll()
+        location.hash = "#close"
+          //Do some stuff
+
+      }
+  }
+
+
 });
 
 
@@ -191,3 +200,4 @@ function hide(element){
   element.classList.add("hide")
   element.classList.remove("show")
 }
+
