@@ -1,5 +1,18 @@
 
+
+// let elem;
+let url = window.location.href;
+
 document.addEventListener('DOMContentLoaded', function(){
+  
+
+  newurl = url.split('#');
+  if (performance.getEntriesByType("navigation")[0].type == "reload") {
+    // window.location.href = newurl.at(0)
+//////////////////////////////////////////////////////////  CHANGE THIS AFTER FINISH EDITION PROJECTS///////////////////////////////////////////////////////////////////////////////
+    window.location.href = newurl.at(0)+"#portafolio"
+    // window.location.href = newurl.at(0)
+  }
 
 
     /* *************** Menu **************** */
@@ -71,6 +84,14 @@ document.addEventListener('DOMContentLoaded', function(){
   let prev_project_2 = document.getElementById("prev_project_2")
   prev_project_2.addEventListener("click", changeImages, false)
   prev_project_2.myParam = "auction"
+
+  let prev_project_3 = document.getElementById("prev_project_3")
+  prev_project_3.addEventListener("click", changeImages, false)
+  prev_project_3.myParam = "mail"
+
+  let prev_project_4 = document.getElementById("prev_project_4")
+  prev_project_4.addEventListener("click", changeImages, false)
+  prev_project_4.myParam = "network"
 
   // document.getElementById("prev_project_2").addEventListener("click", changeImages("auction"))
 
