@@ -233,9 +233,11 @@ p {
   /* 100% por cada slide */
   padding:0;
   margin:0;
-  width: 900%;
+  margin-top:10px;
+  /* width: 900%; */
   /* height: 450px; */
-  height: 480px;
+  /* height: 480px; */
+  height: auto;
   display: flex;
   list-style: none;
   transition: transform .5s ease-in-out;
@@ -248,12 +250,12 @@ p {
   height:370px; */
   margin:0;
   padding:0;
-  width: 1200px;
+  /* width: 1200px; */
   /* height:500px; */
   /* height:90%; */
 }
 
-
+/* 
 #slide-mail-1:checked ~ .slides-mail{
   transform: translateX(0%);
 }
@@ -280,8 +282,9 @@ p {
 }
 #slide-mail-9:checked ~ .slides-mail{
   transform: translateX(-88.888%);
-}
+} */
 
+#slide-mail-0:checked ~ .slides-nav label#dot-mail-0,
 #slide-mail-1:checked ~ .slides-nav label#dot-mail-1,
 #slide-mail-2:checked ~ .slides-nav label#dot-mail-2,
 #slide-mail-3:checked ~ .slides-nav label#dot-mail-3,
@@ -290,10 +293,14 @@ p {
 #slide-mail-6:checked ~ .slides-nav label#dot-mail-6,
 #slide-mail-7:checked ~ .slides-nav label#dot-mail-7,
 #slide-mail-8:checked ~ .slides-nav label#dot-mail-8,
-#slide-mail-9:checked ~ .slides-nav label#dot-mail-9{
-  background-color: var(--gray-dark-color);
-  width: 17px;
-  height: 17px;
+#slide-mail-9:checked ~ .slides-nav label#dot-mail-9,
+#slide-mail-10:checked ~ .slides-nav label#dot-mail-10,
+#slide-mail-11:checked ~ .slides-nav label#dot-mail-11{
+  /* background-color: var(--gray-dark-color); */
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+  /* width: 17px;
+  height: 17px; */
 }
 
 

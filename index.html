@@ -12,7 +12,7 @@
   <!-- <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script> -->
   <script src="https://unpkg.com/react@17/umd/react.production.min.js" ></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" ></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js" ></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -240,64 +240,92 @@
       <article class="portfolio-modal">
         <!-- <img src="assets/Frame project 3 - Mail.png" alt="Project Mail"> -->
         <article class="carousel" style="--carousel-bg-color: var(--white-alpha-color);">
-          <input type="radio" name="slides-mail" id="slide-mail-1" checked>
-          <input type="radio" name="slides-mail" id="slide-mail-2">
-          <input type="radio" name="slides-mail" id="slide-mail-3">
-          <input type="radio" name="slides-mail" id="slide-mail-4">
-          <input type="radio" name="slides-mail" id="slide-mail-5">
-          <input type="radio" name="slides-mail" id="slide-mail-6">
-          <input type="radio" name="slides-mail" id="slide-mail-7">
-          <input type="radio" name="slides-mail" id="slide-mail-8">
-          <input type="radio" name="slides-mail" id="slide-mail-9">
-          <input type="radio" name="slides-mail" id="slide-mail-10">
-          <!-- <ul class="slides-mail">
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/00 - Login desktop.PNG" alt="Project Mail 1">
-              <h4 class="text-first-color">Basic Login Page</h4>
-              <h5>This is a general layout of a common login screen. A user can input the username and the password together to log in.</h5>
-            </li>
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/06 - Register desktop.PNG" alt="Project Mail 2">
+          <div class="arrow arrow_next" id="arrow_next_mail" >
+            <svg width="49" height="124" viewBox="0 0 49 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M47.0411 57.8916C48.5551 60.4213 48.5551 63.5787 47.0411 66.1084L14.8644 119.87C10.6952 126.836 -6.87928e-06 123.88 -6.52441e-06 115.761L-1.82446e-06 8.23882C-1.4696e-06 0.120417 10.6952 -2.8357 14.8645 4.13035L47.0411 57.8916Z" fill="#D9D9D9"/>
+            </svg>
+          </div>
+          <div class="arrow arrow_prev hide" id="arrow_prev_mail">
+              <svg width="49" height="125" viewBox="0 0 49 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.45894 66.6084C-0.0551258 64.0787 -0.0551256 60.9213 1.45894 58.3916L33.6356 4.63033C37.8048 -2.33572 48.5 0.620383 48.5 8.73878L48.5 116.261C48.5 124.38 37.8048 127.336 33.6355 120.37L1.45894 66.6084Z" fill="#D9D9D9"/>
+              </svg>
+          </div>
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-0" checked>
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-1">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-2">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-3">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-4">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-5">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-6">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-7">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-8">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-9">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-10">
+          <input type="radio" name="slides-mail" class="radio_mail" id="slide-mail-11">
+          <ul class="slides-mail">
+            <li class="slide slide-mail" id="image_mail_0">
+              <img class="avatar" src="assets/RJMail/01-Sign_up_page.gif" alt="Project Mail 1">
               <h4 class="text-first-color">Sign Up Page</h4>
               <h5>Enables users to independently register and gain access to the e-mail system.</h5>
             </li>
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/01 - Inbox desktop.PNG" alt="Project Mail 3">
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/02-Basic_login_page.gif" alt="Project Mail 2">
+              <h4 class="text-first-color">Basic Login Page</h4>
+              <h5>This is a general layout of a common login screen. A user can input the username and the password together to log in.</h5>
+            </li>
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/03-Inbox.gif" alt="Project Mail 3">
               <h4 class="text-first-color">Inbox</h4>
               <h5>The default repository for all incoming mail.</h5>
+            </li> 
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/04-Search.gif" alt="Project Mail 4">
+              <h4 class="text-first-color">Search</h4>
+              <h5>Function to filter by a sentence the emails of the current section.</h5>
             </li>            
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/02 - Archived desktop.PNG" alt="Project Mail 4">
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/05-Archived.gif" alt="Project Mail 5">
               <h4 class="text-first-color">Archived</h4>
               <h5>You can archive your emails. In that case they are moved to the "Archived" page.</h5>
-            </li>            
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/03 - Sent desktop.PNG" alt="Project Mail 5">
-              <h4 class="text-first-color">Sent</h4>
-              <h5>Here you can find all your sent emails.</h5>
-            </li>            
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/04 - Compose desktop.PNG" alt="Project Mail 6">
+            </li>                
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/06-Compose.gif" alt="Project Mail 6">
               <h4 class="text-first-color">Compose</h4>
               <h5>This is the form to create and send a new email.</h5>
-            </li>            
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/05 - Email desktop.PNG" alt="Project Mail 7">
+            </li>    
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/07-Email_view.gif" alt="Project Mail 7">
               <h4 class="text-first-color">Email view</h4>
               <h5>Open an email to see all the information about it. You can also reply to it or archive it.</h5>
             </li>           
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/01 - Mobile.png" alt="Project Mail 8">
-              <h4 class="text-first-color">Mobile responsive</h4>
-              <h5>Login, Register, Inbox and Archived views.</h5>
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/08-Email_replay.gif" alt="Project Mail 8">
+              <h4 class="text-first-color">Email reply</h4>
+              <h5>Open an email to see all the information about it. You can also reply to it or archive it.</h5>
+            </li>                      
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/09-Sent_emails.gif" alt="Project Mail 9">
+              <h4 class="text-first-color">Sent emails</h4>
+              <h5>Here you can find all your sent emails.</h5>
+            </li>                        
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/10-Sent_email.gif" alt="Project Mail 10">
+              <h4 class="text-first-color">Sent email</h4>
+              <h5>To see the contain of an old sent email.</h5>
+            </li>     
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/11-Tablet_responsive.gif" alt="Project Mail 11">
+              <h4 class="text-first-color">Tablet responsive</h4>
+              <h5>The entire page adapts perfectly to the size of tablet screens.</h5>
             </li>          
-            <li class="slide-mail">
-              <img class="avatar" src="assets/RJMail/02 - Mobile.png" alt="Project Mail 9">
+            <li class="slide slide-mail hide">
+              <img class="avatar" src="assets/RJMail/12-Mobile_responsive.gif" alt="Project Mail 12">
               <h4 class="text-first-color">Mobile responsive</h4>
-              <h5>Sent, Compose and Email views.</h5>
+              <h5>The entire page adjusts perfectly to the size of mobile screens.</h5>
             </li>
-          </ul> -->
+          </ul>
           <aside class="slides-nav">
+            <label for="slide-mail-0" class="radio_dot" id="dot-mail-0"></label>
             <label for="slide-mail-1" class="radio_dot" id="dot-mail-1"></label>
             <label for="slide-mail-2" class="radio_dot" id="dot-mail-2"></label>
             <label for="slide-mail-3" class="radio_dot" id="dot-mail-3"></label>
@@ -307,6 +335,8 @@
             <label for="slide-mail-7" class="radio_dot" id="dot-mail-7"></label>
             <label for="slide-mail-8" class="radio_dot" id="dot-mail-8"></label>
             <label for="slide-mail-9" class="radio_dot" id="dot-mail-9"></label>
+            <label for="slide-mail-10" class="radio_dot" id="dot-mail-10"></label>
+            <label for="slide-mail-11" class="radio_dot" id="dot-mail-11"></label>
           </aside>
            
 
