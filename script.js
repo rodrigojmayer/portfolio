@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function(){
 //////////////////////////////////////////////////////////  CHANGE THIS AFTER FINISH EDITION PROJECTS///////////////////////////////////////////////////////////////////////////////
     // window.location.href = newurl.at(0)+"#portafolio"
     // location.hash = "#portafolio"
-    // location.hash = "#inicio"
-    window.location.href = newurl.at(0)
+    location.hash = "#inicio"
+    // window.location.href = newurl.at(0)
   }
 
 
