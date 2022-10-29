@@ -21,7 +21,7 @@ let prev_project = document.getElementById("prev_project_2")
 function Modal(){
     return(
         <div class="modal-content">
-            <a href="#closess" class="modal-close" onClick={unLockScroll}>
+            <a href="#close" class="modal-close" onClick={unLockScroll}>
                 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M16.3333 3C8.98133 3 3 8.98133 3 16.3333C3 23.6853 8.98133 29.6667 16.3333 29.6667C23.6853 29.6667 29.6667 23.6853 29.6667 16.3333C29.6667 8.98133 23.6853 3 16.3333 3ZM21.9427 20.0573L20.0573 21.9427L16.3333 18.2187L12.6093 21.9427L10.724 20.0573L14.448 16.3333L10.724 12.6093L12.6093 10.724L16.3333 14.448L20.0573 10.724L21.9427 12.6093L18.2187 16.3333L21.9427 20.0573Z" />
@@ -175,4 +175,3 @@ function unLockScroll() {
   
   }
 
-  
