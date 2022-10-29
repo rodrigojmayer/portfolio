@@ -51,24 +51,36 @@ const RenderList = props => {
 // }
 function Modal(){
 
-    const slides = [
-        "slide-auctions-0",
-        "slide-auctions-1",
-        "slide-auctions-2",
-        "slide-auctions-3",
-        "slide-auctions-4",
-        "slide-auctions-5",
-        "slide-auctions-6",
-        "slide-auctions-7",
-        "slide-auctions-8",
-        "slide-auctions-9",
-        "slide-auctions-10",
-        "slide-auctions-11",
-        "slide-auctions-12",
-        "slide-auctions-13",
-        "slide-auctions-14"
-    ];
-  
+    // const slides = new Array(15)
+    const inputs =  Array.from(Array(15).keys())
+    const project = "auction"
+    const projects = "auctions"
+    const folder = "Auctions"
+
+
+    const images = [
+        {src: '01-Active_listings_without_log_in',         h4: 'Active listings without log in',     h5: 'An unlogged user can view all the auctioned items, but cannot interact with them.'},
+        {src: '02-Article_without_log_in',                 h4: 'Access to articles without log in',  h5: 'You do not have permissions to add an item to your Watch List (favorites). You also cannot bid or ask a question about the item.'},
+        {src: '03-Register',                               h4: 'Register',                           h5: 'In this section we can register our user, in order to have access to the aforementioned options.'},
+        {src: '04-Article_bike_logged_in_bigger_image',    h4: 'Access to article',                  h5: 'When entering the auction of an item, we can see in more detail the image of it and its data.'},
+        {src: '05-Make_question',                          h4: 'Make questions',                     h5: 'We have the option to ask a question, which can only be answered by the creator of the auction of that item.'},
+        {src: '06-Place_bid',                              h4: 'Place bid',                          h5: 'If we are not the creator of the auction and the auction is still open, we may place a bid (higher than the current bid).'},
+        {src: '07-Add_to_watch_list',                      h4: 'Add to watch list',                  h5: 'In this way we save an auction in our Watch List (favorites).'},
+        {src: '08-Categories',                             h4: 'Categories',                         h5: 'The auctions are discriminated by categories, by which we can filter them.'},
+        {src: '09-Post_item',                              h4: 'Post item',                          h5: 'With this form we can load the data of the article that we want to auction (all fields must be completed).'},
+        {src: '10-Log_in_user_owner_of_auction',           h4: 'Log in user owner of auction',       h5: 'We log in with another user to be able to show the options that the creator of an auction has.'},
+        {src: '11-Answer_question',                        h4: 'Answer question',                    h5: 'Here we can see the option to answer a question that we have been asked about our auctioned item.'},
+        {src: '12-Close_auction',                          h4: 'Close auction',                      h5: 'The creator of the auction has the right to close the auction at any time.'},
+        {src: '13-Log_in_auction_winner',                  h4: 'Log in auction winner',              h5: 'We change users again in order to expose what we will see when our offer is the winner of an auction.'},
+        {src: '14-Ipad_responsive',                        h4: 'Tablet responsive',                  h5: 'The entire page adapts perfectly to the size of tablet screens.'},
+        {src: '15-Mobile_responsive',                      h4: 'Mobile responsive',                  h5: 'The entire page adjusts perfectly to the size of mobile screens.'}
+    ]
+
+    // const images = []
+    
+
+
+
     // return (
     //   <div>
         // {animals.map(slides => (
@@ -98,9 +110,11 @@ function Modal(){
                         </svg>
                     </div>
 
-                    {slides.map((slides, index) => (
-                        (index === 0 ) ? <input type="radio" name="slides-auction" class="radio_auction" id={slides} checked/> : <input type="radio" name="slides-auction" class="radio_auction" id={slides} />
-                        
+                    {inputs.map((inputs) => (
+                        // (index === 0 ) ? <input type="radio" name="slides-auction" class="radio_auction" id={slides} checked/> : <input type="radio" name="slides-auction" class="radio_auction" id={slides} />
+                        // (index === 0 ) ? <input type="radio" name="slides-auction" class="radio_auction" id={'slide-' + projects +'-' + index} checked/> : <input type="radio" name="slides-auction" class="radio_auction" id={slides} />
+                        (inputs === 0 ) ? <input type="radio" name={'slides-' + project} class={'radio_' + project} id={'slide-' + projects + '-' +  inputs} checked/> : <input type="radio" name={'slides-' + project} class={'radio_' + project}  id={'slide-' + projects +'-' +  inputs} />
+                        // <p>holi</p>
                     ))}
 
                     {/* <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-0" checked />
@@ -119,8 +133,29 @@ function Modal(){
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-13"/>
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-14"/> */}
                 
+                    
+                    
+                    
                     <ul class="slides-auctions">
-                        <li class="slide slide-auction" id="image_auctions_0">
+
+
+
+                        {images.map((image, index) => (
+                            
+                            // <li class="slide slide-auction" id="image_auctions_0">
+                            <li class={index == 0 ? 'slide slide-' + project : 'slide slide-' + project + ' hide' } id={'image_' + projects + '_' + index}>
+                                {/* <img class="avatar" src="assets/Auctions/01-Active_listings_without_log_in.gif" alt="Project Auctions 1"/> */}
+                                <img class="avatar" src={'assets/' + folder + '/' + image.src + '.gif'} alt={'Project ' + projects + ' ' + index+1}/>
+                                {/* <h4 class="text-first-color">Active listings without log in</h4> */}
+                                <h4 class="text-first-color">{image.h4}</h4>
+                                {/* <h5>An unlogged user can view all the auctioned items, but cannot interact with them.</h5> */}
+                                <h5>{image.h5}</h5>
+                            </li>
+
+                        ))}
+                        
+                        
+                        {/* <li class="slide slide-auction" id="image_auctions_0">
                             <img class="avatar" src="assets/Auctions/01-Active_listings_without_log_in.gif" alt="Project Auctions 1"/>
                             <h4 class="text-first-color">Active listings without log in</h4>
                             <h5>An unlogged user can view all the auctioned items, but cannot interact with them.</h5>
@@ -194,8 +229,17 @@ function Modal(){
                             <img class="avatar" src="assets/Auctions/15-Mobile_responsive.gif" alt="Project Auctions 15"/>
                             <h4 class="text-first-color">Mobile responsive</h4>
                             <h5>The entire page adjusts perfectly to the size of mobile screens.</h5>
-                        </li>
+                        </li> */}
+
+
+
+
+
+
                     </ul>
+                    
+                    
+                    
                     <aside class="slides-nav">
                         <label for="slide-auctions-0" class="radio_dot" id="dot-auctions-0"></label>
                         <label for="slide-auctions-1" class="radio_dot" id="dot-auctions-1"></label>
