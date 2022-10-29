@@ -1,19 +1,22 @@
 
-// import unLockScroll from './script.js';
 
 
 
 let modal = document.getElementById("project-2")
 let prev_project = document.getElementById("prev_project_2")
 
-if(modal){
+// if(modal){
     prev_project.addEventListener("click", (e)=>{       
         // let ew = false
         // handleModal(ew)
-        console.log("abriendo modal")
-    }, false)
+        // console.log("abriendo modal")
     ReactDOM.render(<Modal />, modal);
-}
+
+
+    
+    
+    }, false)
+// }
 // alert("hoi")
 function Modal(){
     return(
@@ -163,7 +166,6 @@ function Modal(){
                 </div>
             </article>
         </div>
-
     )
 }
 
@@ -172,3 +174,5 @@ function unLockScroll() {
     document.body.classList.add("un-lock-scroll");
   
   }
+
+  

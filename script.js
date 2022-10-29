@@ -101,66 +101,86 @@ document.addEventListener('DOMContentLoaded', function(){
   // someInput.myParam = 'This is my parameter';
   // function myFunc(evt)
 
+  addEventListener('click', (eventest) => {
+    console.log("eventest")
+    console.log(eventest)
+  });
 
   function changeImages(param){
     // let radio_auction = document.getElementsByClassName("radio_auction");
     console.log(param.currentTarget.myParam)
     let prjct = param.currentTarget.myParam
     // alert("prjct")
-    let radio = document.getElementsByClassName(`radio_${prjct}`);
-    let last_radio = 0;
-    let var_radio
-    var option=document.getElementsByName(`slides-${prjct}`);
-    // console.log(radio)
-    // console.log(option)
-    let arrow_prev_prjct = document.getElementById(`arrow_prev_${prjct}`)
-    let arrow_next_prjct = document.getElementById(`arrow_next_${prjct}`)
-    let slide = document.getElementsByClassName(`slide-${prjct}`)
 
-    arrow_next_prjct.addEventListener("click", ()=> {
-      var_radio = last_radio + 1
-      option[var_radio].click();
-    })
 
-    arrow_prev_prjct.addEventListener("click", ()=> {
-      var_radio = last_radio - 1
-      option[var_radio].click();
-    })
+        
+      // console.log("pasa el waitforelm!")
 
-    for (let i = 0; i < radio.length; i++) {
-      option[i].addEventListener('change', myFunction, false);
-    }
+        let var_radio
+        let last_radio = 0;
 
-    function myFunction (){
-      console.log(this)
-      console.log(last_radio)
-      let id_slide = parseInt(this.id.replace( /^\D+/g, ''));
-      parseInt(id_slide)
-      console.log(id_slide)
+        
+        let radio
+        let option
+        let arrow_prev_prjct
+        let arrow_next_prjct
+        let slide
+      // const elm = await waitForElm('.some-class');
+      waitForElm(`#arrow_next_${prjct}`).then((elm) => {
+        
+        radio = document.getElementsByClassName(`radio_${prjct}`);
+        option=document.getElementsByName(`slides-${prjct}`);
+        arrow_prev_prjct = document.getElementById(`arrow_prev_${prjct}`)
+        arrow_next_prjct = document.getElementById(`arrow_next_${prjct}`)
+        slide = document.getElementsByClassName(`slide-${prjct}`)
+
+  
+        arrow_next_prjct.addEventListener("click", ()=> {
+          var_radio = last_radio + 1
+          option[var_radio].click();
+        })
+
+        arrow_prev_prjct.addEventListener("click", ()=> {
+          var_radio = last_radio - 1
+          option[var_radio].click();
+        })
+
+        for (let i = 0; i < radio.length; i++) {
+          option[i].addEventListener('click', myFunction, false);
+        }
+
+        function myFunction (){
+          let id_slide = parseInt(this.id.replace( /^\D+/g, ''));
+          parseInt(id_slide)
+          option[last_radio].checked = false;
+          option[id_slide].checked = true;
+  
+          for(var j = 0; j < slide.length; j++){
+            if(id_slide == j)
+              show(slide[j])
+            else
+              hide(slide[j])
+          }
+          if(id_slide != "0"){
+            show(arrow_prev_prjct)
+          }
+          else{
+            hide(arrow_prev_prjct)
+          }
+          if(id_slide != radio.length-1){
+            show(arrow_next_prjct)
+          }
+          else{
+            hide(arrow_next_prjct)
+          }
+          last_radio = id_slide
+        };
+
+
+      });
       
-      option[last_radio].checked = false;
-      option[id_slide].checked = true;
 
-      for(var j = 0; j < slide.length; j++){
-        if(id_slide == j)
-          show(slide[j])
-        else
-          hide(slide[j])
-      }
-      if(id_slide != "0"){
-        show(arrow_prev_prjct)
-      }
-      else{
-        hide(arrow_prev_prjct)
-      }
-      if(id_slide != radio.length-1){
-        show(arrow_next_prjct)
-      }
-      else{
-        hide(arrow_next_prjct)
-      }
-      last_radio = id_slide
-    };
+
   }
 
 
@@ -208,3 +228,29 @@ function hide(element){
   element.classList.remove("show")
 }
 
+
+function waitForElm(selector) {
+  console.log("document.querySelector(selector)1")
+  console.log(document.querySelector(selector))
+  return new Promise(resolve => {
+      if (document.querySelector(selector)) {
+        console.log("document.querySelector(selector)2")
+          console.log(document.querySelector(selector))
+          return resolve(document.querySelector(selector));
+      }
+
+      const observer = new MutationObserver(mutations => {
+          if (document.querySelector(selector)) {
+            console.log("document.querySelector(selector)3")
+              console.log(document.querySelector(selector))
+              resolve(document.querySelector(selector));
+              observer.disconnect();
+          }
+      });
+
+      observer.observe(document.body, {
+          childList: true,
+          subtree: true
+      });
+  });
+}
