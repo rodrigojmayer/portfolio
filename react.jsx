@@ -1,3 +1,4 @@
+// const { Fragment } = require("react");
 
 
 
@@ -10,6 +11,7 @@ let prev_project = document.getElementById("prev_project_2")
         // let ew = false
         // handleModal(ew)
         // console.log("abriendo modal")
+    // const myCompi = <ModalImages />
     ReactDOM.render(<Modal />, modal);
 
 
@@ -18,7 +20,63 @@ let prev_project = document.getElementById("prev_project_2")
     }, false)
 // }
 // alert("hoi")
+
+
+const RenderList = props => {
+    const animals = ["Dog", "Bird", "Cat", "Mouse", "Horse"];
+  
+    return (
+      <div>
+        {animals.map(animal => (
+          <input>{animal}</input>
+        ))}
+      </div>
+    );
+  };
+
+// function ModalImages(){
+
+//     const rows = [];
+//     for (let i = 0; i < 10; i++) {
+//         // note: we are adding a key prop here to allow react to uniquely identify each
+//         // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+//         rows.push("asder");
+//     }
+//     return <div>{rows}</div>;
+
+//     // return(
+//     //     <div>
+//     //     </div>
+//     // )
+// }
 function Modal(){
+
+    const slides = [
+        "slide-auctions-0",
+        "slide-auctions-1",
+        "slide-auctions-2",
+        "slide-auctions-3",
+        "slide-auctions-4",
+        "slide-auctions-5",
+        "slide-auctions-6",
+        "slide-auctions-7",
+        "slide-auctions-8",
+        "slide-auctions-9",
+        "slide-auctions-10",
+        "slide-auctions-11",
+        "slide-auctions-12",
+        "slide-auctions-13",
+        "slide-auctions-14"
+    ];
+  
+    // return (
+    //   <div>
+        // {animals.map(slides => (
+        //   <input>{slides}</input>
+        // ))}
+    //   </div>
+    // );
+
     return(
         <div class="modal-content">
             <a href="#close" class="modal-close" onClick={unLockScroll}>
@@ -39,7 +97,13 @@ function Modal(){
                         <path d="M1.45894 66.6084C-0.0551258 64.0787 -0.0551256 60.9213 1.45894 58.3916L33.6356 4.63033C37.8048 -2.33572 48.5 0.620383 48.5 8.73878L48.5 116.261C48.5 124.38 37.8048 127.336 33.6355 120.37L1.45894 66.6084Z" fill="#D9D9D9"/>
                         </svg>
                     </div>
-                    <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-0" checked />
+
+                    {slides.map((slides, index) => (
+                        (index === 0 ) ? <input type="radio" name="slides-auction" class="radio_auction" id={slides} checked/> : <input type="radio" name="slides-auction" class="radio_auction" id={slides} />
+                        
+                    ))}
+
+                    {/* <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-0" checked />
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-1" />
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-2"/>
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-3"/>
@@ -53,7 +117,7 @@ function Modal(){
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-11"/>
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-12"/>
                     <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-13"/>
-                    <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-14"/>
+                    <input type="radio" name="slides-auction" class="radio_auction" id="slide-auctions-14"/> */}
                 
                     <ul class="slides-auctions">
                         <li class="slide slide-auction" id="image_auctions_0">
@@ -163,11 +227,17 @@ function Modal(){
                         <small><a href="https://rjmauctions.pythonanywhere.com/" target="_blank"
                             rel="noopener">https://rjmauctions.pythonanywhere.com/</a></small>
                     </aside>
+                    {/* {rows} */}
+                    {/* <ModalImages /> */}
+                    {/* <RenderList /> */}
                 </div>
             </article>
         </div>
     )
 }
+
+
+
 
 function unLockScroll() {
     document.body.classList.remove("lock-scroll");
