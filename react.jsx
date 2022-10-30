@@ -1,64 +1,65 @@
 // const { Fragment } = require("react");
 
-
-
-
-let modal = document.getElementById("project-2")
-let prev_project = document.getElementById("prev_project_2")
-
-// if(modal){
-    prev_project.addEventListener("click", (e)=>{       
-        // let ew = false
-        // handleModal(ew)
-        // console.log("abriendo modal")
-    // const myCompi = <ModalImages />
+let modal 
+let prev_project1 = document.getElementById("prev_project_1") // wiki
+let prev_project2 = document.getElementById("prev_project_2") // auction s
+let prev_project3 = document.getElementById("prev_project_3") // mail
+let prev_project4 = document.getElementById("prev_project_4") // network
+// prev_project
+prev_project1.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-1")
     ReactDOM.render(<Modal />, modal);
+}, false)
+prev_project2.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-2")
+    ReactDOM.render(<Modal />, modal);
+}, false)
+prev_project3.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-3")
+    ReactDOM.render(<Modal />, modal);
+}, false)
+prev_project4.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-4")
+    ReactDOM.render(<Modal />, modal);
+}, false)       
 
-
-    
-    
-    }, false)
-// }
-// alert("hoi")
-
-
-const RenderList = props => {
-    const animals = ["Dog", "Bird", "Cat", "Mouse", "Horse"];
-  
-    return (
-      <div>
-        {animals.map(animal => (
-          <input>{animal}</input>
-        ))}
-      </div>
-    );
-  };
-
-// function ModalImages(){
-
-//     const rows = [];
-//     for (let i = 0; i < 10; i++) {
-//         // note: we are adding a key prop here to allow react to uniquely identify each
-//         // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-//         rows.push("asder");
-//     }
-//     return <div>{rows}</div>;
-
-//     // return(
-//     //     <div>
-//     //     </div>
-//     // )
-// }
 function Modal(){
 
-    let num_array = new Array(), project = "", projects = "", folder = "", images = new Array, client = "", description = "", link = ""
-    // console.log(prev_project.id)
-    if(prev_project.id == "prev_project_2"){
+    let num_array = new Array, project = "", projects = "", folder = "", images = new Array, client = "", description = "", link = ""
+    // console.log(modal.id)
+    if(modal.id == "project-2"){
         // const slides = new Array(15)
          num_array =  Array.from(Array(15).keys())
          project = "auction"
          projects = "auctions"
          folder = "Auctions"
+         images = [
+            {src: '01-Active_listings_without_log_in',         h4: 'Active listings without log in',     h5: 'An unlogged user can view all the auctioned items, but cannot interact with them.'},
+            {src: '02-Article_without_log_in',                 h4: 'Access to articles without log in',  h5: 'You do not have permissions to add an item to your Watch List (favorites). You also cannot bid or ask a question about the item.'},
+            {src: '03-Register',                               h4: 'Register',                           h5: 'In this section we can register our user, in order to have access to the aforementioned options.'},
+            {src: '04-Article_bike_logged_in_bigger_image',    h4: 'Access to article',                  h5: 'When entering the auction of an item, we can see in more detail the image of it and its data.'},
+            {src: '05-Make_question',                          h4: 'Make questions',                     h5: 'We have the option to ask a question, which can only be answered by the creator of the auction of that item.'},
+            {src: '06-Place_bid',                              h4: 'Place bid',                          h5: 'If we are not the creator of the auction and the auction is still open, we may place a bid (higher than the current bid).'},
+            {src: '07-Add_to_watch_list',                      h4: 'Add to watch list',                  h5: 'In this way we save an auction in our Watch List (favorites).'},
+            {src: '08-Categories',                             h4: 'Categories',                         h5: 'The auctions are discriminated by categories, by which we can filter them.'},
+            {src: '09-Post_item',                              h4: 'Post item',                          h5: 'With this form we can load the data of the article that we want to auction (all fields must be completed).'},
+            {src: '10-Log_in_user_owner_of_auction',           h4: 'Log in user owner of auction',       h5: 'We log in with another user to be able to show the options that the creator of an auction has.'},
+            {src: '11-Answer_question',                        h4: 'Answer question',                    h5: 'Here we can see the option to answer a question that we have been asked about our auctioned item.'},
+            {src: '12-Close_auction',                          h4: 'Close auction',                      h5: 'The creator of the auction has the right to close the auction at any time.'},
+            {src: '13-Log_in_auction_winner',                  h4: 'Log in auction winner',              h5: 'We change users again in order to expose what we will see when our offer is the winner of an auction.'},
+            {src: '14-Ipad_responsive',                        h4: 'Tablet responsive',                  h5: 'The entire page adapts perfectly to the size of tablet screens.'},
+            {src: '15-Mobile_responsive',                      h4: 'Mobile responsive',                  h5: 'The entire page adjusts perfectly to the size of mobile screens.'}
+        ]
+         client = 'CS50 Harvard'
+         description = 'Design of an eBay-like e-commerce auction site that allows users to post auction listings, bid on listings, comment on those listings, and add listings to a "watch list". Technologies used for this project Python/Django, JS/React, CSS/SASS.'
+         link = 'https://rjmauctions.pythonanywhere.com/'
+    }
+    if(modal.id == "project-3"){
+        // const slides = new Array(15)
+         num_array =  Array.from(Array(15).keys())
+         project = "mail"
+         projects = "mail"
+         folder = "Mail"
          images = [
             {src: '01-Active_listings_without_log_in',         h4: 'Active listings without log in',     h5: 'An unlogged user can view all the auctioned items, but cannot interact with them.'},
             {src: '02-Article_without_log_in',                 h4: 'Access to articles without log in',  h5: 'You do not have permissions to add an item to your Watch List (favorites). You also cannot bid or ask a question about the item.'},

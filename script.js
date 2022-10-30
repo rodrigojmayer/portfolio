@@ -111,14 +111,9 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log(param.currentTarget.myParam)
     let prjct = param.currentTarget.myParam
     // alert("prjct")
-
-
-        
       // console.log("pasa el waitforelm!")
-
         let var_radio
         let last_radio = 0;
-
         
         let radio
         let option
@@ -134,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function(){
         arrow_next_prjct = document.getElementById(`arrow_next_${prjct}`)
         slide = document.getElementsByClassName(`slide-${prjct}`)
 
-  
         arrow_next_prjct.addEventListener("click", ()=> {
           var_radio = last_radio + 1
           option[var_radio].click();
@@ -175,12 +169,7 @@ document.addEventListener('DOMContentLoaded', function(){
           }
           last_radio = id_slide
         };
-
-
       });
-      
-
-
   }
 
 
