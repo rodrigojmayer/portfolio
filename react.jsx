@@ -52,7 +52,7 @@ const RenderList = props => {
 function Modal(){
 
     // const slides = new Array(15)
-    const inputs =  Array.from(Array(15).keys())
+    const num_array =  Array.from(Array(15).keys())
     const project = "auction"
     const projects = "auctions"
     const folder = "Auctions"
@@ -79,6 +79,10 @@ function Modal(){
     // const images = []
     
 
+
+
+
+ 
 
 
     // return (
@@ -110,7 +114,7 @@ function Modal(){
                         </svg>
                     </div>
 
-                    {inputs.map((inputs) => (
+                    {num_array.map((inputs) => (
                         (inputs === 0 ) ? <input type="radio" name={'slides-' + project} class={'radio_' + project} id={'slide-' + projects + '-' +  inputs} checked/> : <input type="radio" name={'slides-' + project} class={'radio_' + project}  id={'slide-' + projects +'-' +  inputs} />
                         // <p>holi</p>
                     ))}
@@ -127,7 +131,11 @@ function Modal(){
                     
                     <aside class="slides-nav">
 
-                        <label for="slide-auctions-0" class="radio_dot" id="dot-auctions-0"></label>
+                        {num_array.map((nlabel) => (
+                            <label for={'slide-' + projects + '-' + nlabel} class="radio_dot" id={'dot-' + projects + '-' + nlabel}></label>
+                        ))}
+
+                        {/* <label for="slide-auctions-0" class="radio_dot" id="dot-auctions-0"></label>
                         <label for="slide-auctions-1" class="radio_dot" id="dot-auctions-1"></label>
                         <label for="slide-auctions-2" class="radio_dot" id="dot-auctions-2"></label>
                         <label for="slide-auctions-3" class="radio_dot" id="dot-auctions-3"></label>
@@ -141,7 +149,7 @@ function Modal(){
                         <label for="slide-auctions-11" class="radio_dot" id="dot-auctions-11"></label>
                         <label for="slide-auctions-12" class="radio_dot" id="dot-auctions-12"></label>
                         <label for="slide-auctions-13" class="radio_dot" id="dot-auctions-13"></label>
-                        <label for="slide-auctions-14" class="radio_dot" id="dot-auctions-14"></label>
+                        <label for="slide-auctions-14" class="radio_dot" id="dot-auctions-14"></label> */}
                         
                     </aside>
                 
