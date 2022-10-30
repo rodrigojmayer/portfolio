@@ -80,19 +80,19 @@ document.addEventListener('DOMContentLoaded', function(){
   /* *****************  Images of Projects  ***************** */
   
   let prev_project_1 = document.getElementById("prev_project_1")
-  prev_project_1.addEventListener("click", changeImages, false)
+  prev_project_1.addEventListener("click", changeImages, { once: true })
   prev_project_1.myParam = "wiki"
 
   let prev_project_2 = document.getElementById("prev_project_2")
-  prev_project_2.addEventListener("click", changeImages, false)
+  prev_project_2.addEventListener("click", changeImages, { once: true })
   prev_project_2.myParam = "auction"
 
   let prev_project_3 = document.getElementById("prev_project_3")
-  prev_project_3.addEventListener("click", changeImages, false)
+  prev_project_3.addEventListener("click", changeImages, { once: true })
   prev_project_3.myParam = "mail"
 
   let prev_project_4 = document.getElementById("prev_project_4")
-  prev_project_4.addEventListener("click", changeImages, false)
+  prev_project_4.addEventListener("click", changeImages, { once: true })
   prev_project_4.myParam = "network"
 
   // document.getElementById("prev_project_2").addEventListener("click", changeImages("auction"))
@@ -102,16 +102,15 @@ document.addEventListener('DOMContentLoaded', function(){
   // function myFunc(evt)
 
   addEventListener('click', (eventest) => {
-    console.log("eventest")
-    console.log(eventest)
+    // console.log("eventest")
+    // console.log(eventest)
   });
 
   function changeImages(param){
     // let radio_auction = document.getElementsByClassName("radio_auction");
-    console.log(param.currentTarget.myParam)
+    // console.log(param.currentTarget.myParam)
     let prjct = param.currentTarget.myParam
     // alert("prjct")
-      // console.log("pasa el waitforelm!")
         let var_radio
         let last_radio = 0;
         
@@ -122,14 +121,28 @@ document.addEventListener('DOMContentLoaded', function(){
         let slide
       // const elm = await waitForElm('.some-class');
       waitForElm(`#arrow_next_${prjct}`).then((elm) => {
+        // console.log("pasa el waitforelm!")
         
         radio = document.getElementsByClassName(`radio_${prjct}`);
         option=document.getElementsByName(`slides-${prjct}`);
         arrow_prev_prjct = document.getElementById(`arrow_prev_${prjct}`)
         arrow_next_prjct = document.getElementById(`arrow_next_${prjct}`)
         slide = document.getElementsByClassName(`slide-${prjct}`)
+        
+        // console.log('radio')
+        // console.log(radio)
+        // console.log('option')
+        // console.log(option)
+        // console.log('arrow_prev_prjct')
+        // console.log(arrow_prev_prjct)
+        // console.log('arrow_next_prjct')
+        // console.log(arrow_next_prjct)
+        console.log('var_radio')
+        console.log(var_radio)
 
         arrow_next_prjct.addEventListener("click", ()=> {
+          console.log('last_radio')
+          console.log(last_radio)
           var_radio = last_radio + 1
           option[var_radio].click();
         })
@@ -219,19 +232,19 @@ function hide(element){
 
 
 function waitForElm(selector) {
-  console.log("document.querySelector(selector)1")
-  console.log(document.querySelector(selector))
+  // console.log("document.querySelector(selector)1")
+  // console.log(document.querySelector(selector))
   return new Promise(resolve => {
       if (document.querySelector(selector)) {
-        console.log("document.querySelector(selector)2")
-          console.log(document.querySelector(selector))
+        // console.log("document.querySelector(selector)2")
+          // console.log(document.querySelector(selector))
           return resolve(document.querySelector(selector));
       }
 
       const observer = new MutationObserver(mutations => {
           if (document.querySelector(selector)) {
-            console.log("document.querySelector(selector)3")
-              console.log(document.querySelector(selector))
+            // console.log("document.querySelector(selector)3")
+              // console.log(document.querySelector(selector))
               resolve(document.querySelector(selector));
               observer.disconnect();
           }
