@@ -76,6 +76,18 @@ function Modal(){
         {src: '15-Mobile_responsive',                      h4: 'Mobile responsive',                  h5: 'The entire page adjusts perfectly to the size of mobile screens.'}
     ]
 
+    const description = 'Design of an eBay-like e-commerce auction site that allows users to post auction listings, bid on listings, comment on those listings, and add listings to a "watch list". Technologies used for this project Python/Django, JS/React, CSS/SASS.'
+    const link = 'https://rjmauctions.pythonanywhere.com/'
+
+
+
+
+
+
+
+
+
+
     // const images = []
     
 
@@ -130,41 +142,22 @@ function Modal(){
                     </ul>
                     
                     <aside class="slides-nav">
-
                         {num_array.map((nlabel) => (
                             <label for={'slide-' + projects + '-' + nlabel} class="radio_dot" id={'dot-' + projects + '-' + nlabel}></label>
                         ))}
-
-                        {/* <label for="slide-auctions-0" class="radio_dot" id="dot-auctions-0"></label>
-                        <label for="slide-auctions-1" class="radio_dot" id="dot-auctions-1"></label>
-                        <label for="slide-auctions-2" class="radio_dot" id="dot-auctions-2"></label>
-                        <label for="slide-auctions-3" class="radio_dot" id="dot-auctions-3"></label>
-                        <label for="slide-auctions-4" class="radio_dot" id="dot-auctions-4"></label>
-                        <label for="slide-auctions-5" class="radio_dot" id="dot-auctions-5"></label>
-                        <label for="slide-auctions-6" class="radio_dot" id="dot-auctions-6"></label>
-                        <label for="slide-auctions-7" class="radio_dot" id="dot-auctions-7"></label>
-                        <label for="slide-auctions-8" class="radio_dot" id="dot-auctions-8"></label>
-                        <label for="slide-auctions-9" class="radio_dot" id="dot-auctions-9"></label>
-                        <label for="slide-auctions-10" class="radio_dot" id="dot-auctions-10"></label>
-                        <label for="slide-auctions-11" class="radio_dot" id="dot-auctions-11"></label>
-                        <label for="slide-auctions-12" class="radio_dot" id="dot-auctions-12"></label>
-                        <label for="slide-auctions-13" class="radio_dot" id="dot-auctions-13"></label>
-                        <label for="slide-auctions-14" class="radio_dot" id="dot-auctions-14"></label> */}
-                        
                     </aside>
                 
                 </article>
                 <div class="portfolio-info">
-                    <h3>Project Auctions</h3>
-                    <p>Design of an eBay-like e-commerce auction site that allows users to post auction listings,
-                        bid on listings, comment on those listings, and add listings to a "watch list".
-                        Technologies used for this project Python/Django, JS/React, CSS/SASS.</p>
+
+                    <h3>Project {projects}</h3>
+                    <p> {description} </p>
                     <aside class="portfolio-details">
                         <small class="b-small">Client: </small>
                         <small>CS50 Harvard</small>
                         <small class="b-small">Link: </small>
-                        <small><a href="https://rjmauctions.pythonanywhere.com/" target="_blank"
-                            rel="noopener">https://rjmauctions.pythonanywhere.com/</a></small>
+                        <small><a href={link} target="_blank"
+                            rel="noopener">{link}</a></small>
                     </aside>
                     {/* {rows} */}
                     {/* <ModalImages /> */}
