@@ -1,18 +1,17 @@
 // const { Fragment } = require("react");
 // import {useEffect} from 'react';
 let modal 
-// let prev_project1 = document.getElementById("prev_project_1") // wiki
+let prev_project1 = document.getElementById("prev_project_1") // wiki
 let prev_project2 = document.getElementById("prev_project_2") // auction s
 let prev_project3 = document.getElementById("prev_project_3") // mail
-// let prev_project4 = document.getElementById("prev_project_4") // network
-// prev_project
-// prev_project1.addEventListener("click", (e)=>{     
-//     modal = document.getElementById("project-1")
-//     ReactDOM.render(<Modal />, modal);
-// }, { once: true })
+let prev_project4 = document.getElementById("prev_project_4") // network
+
+prev_project1.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-1")
+    ReactDOM.render(<Modal />, modal);
+}, { once: true })
 prev_project2.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-2")
-    // console.log("holisisis")
     ReactDOM.render(<Modal />, modal);
 }, { once: true })
 prev_project3.addEventListener("click", (e)=>{     
@@ -20,10 +19,10 @@ prev_project3.addEventListener("click", (e)=>{
     ReactDOM.render(<Modal />, modal);
 }, { once: true })
 
-// prev_project4.addEventListener("click", (e)=>{     
-//     modal = document.getElementById("project-4")
-//     ReactDOM.render(<Modal />, modal);
-// }, { once: true })       
+prev_project4.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-4")
+    ReactDOM.render(<Modal />, modal);
+}, { once: true })       
 
 function Modal(){
     let num_array = new Array, project = "", projects = "", folder = "", images = new Array, title = "", client = "", description = "", link = ""
@@ -33,27 +32,23 @@ function Modal(){
         // console.log("entrando al react")
         if (modal.id == "project-1") {
             // const slides = new Array(15)
-            num_array = Array.from(Array(15).keys())
-            project = ""
-            projects = ""
-            folder = ""
+            num_array = Array.from(Array(7).keys())
+            project = "wiki"
+            projects = "wiki"
+            folder = "Wiki"
             images = [
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
+                { src: '01-Index_page', h4: 'Index Page', h5: 'User can click on any entry name to be taken directly to that entry page.' },
+                { src: '02-New_page', h4: 'New Page', h5: 'Form to enter the title and the content of the wiki page we want to create.' },
+                { src: '03-Entry_page', h4: 'Entry Page', h5: 'Should render a page that displays the contents of that encyclopedia entry.' },
+                { src: '04-Edit_page', h4: 'Edit Page', h5: 'The user can edit any entry page.' },
+                { src: '05-Random_page', h4: 'Random Page', h5: 'Takes us to any aleatory page.' },
+                { src: '06-Search', h4: 'Search', h5: 'Allow the user to type a query into the search box in the sidebar to search for an encyclopedia entry.' },
+                { src: '07-Not_found', h4: 'Not Found', h5: 'Page error when there is no match in the search.' }
             ]
-            title = ''
+            title = 'Wiki'
             client = 'CS50 Harvard'
-            description = ''
-            link = ''
+            description = 'Design of a Wikipedia-like online encyclopedia that anyone can edit. When entering the page we can see the options bar on the left. "Search Encyclopedia" to filter the names of the Entry-pages, and if you do not find what you are looking for, the option to load it. "Home" to return to the index page where we see the complete list of Entry-pages. To edit, we have to enter the one we want and there we will see the "Edit" option. "Create New Page" will allow us to load a new Entry-page. And finally, "Random Page" to randomly open one of these.'
+            link = 'https://rodrigojmayer.pythonanywhere.com/'
         }
         if (modal.id == "project-2") {
             // const slides = new Array(15)
@@ -101,7 +96,7 @@ function Modal(){
                 { src: '09-Sent_emails', h4: 'Sent emails', h5: 'Here you can find all your sent emails.' },        
                 { src: '10-Sent_email', h4: 'Sent email', h5: 'To see the contain of an old sent email.' },
                 { src: '11-Tablet_responsive', h4: 'Tablet responsive', h5: 'The entire page adapts perfectly to the size of tablet screens.' }, 
-                { src: '12-Mobile_responsive', h4: 'Mobile responsive', h5: 'The entire page adjusts perfectly to the size of mobile screens.' },
+                { src: '12-Mobile_responsive', h4: 'Mobile responsive', h5: 'The entire page adjusts perfectly to the size of mobile screens.' }
             ]
             title = 'Mail'
             client = 'CS50 Harvard'
@@ -110,27 +105,30 @@ function Modal(){
         }
         if (modal.id == "project-4") {
             // const slides = new Array(15)
-            num_array = Array.from(Array(15).keys())
-            project = ""
-            projects = ""
-            folder = ""
+            num_array = Array.from(Array(14).keys())
+            project = "network"
+            projects = "network"
+            folder = "RJMNetwork"
             images = [
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
-                { src: '', h4: '', h5: '' },
+                { src: '01-Main_page_unlogged', h4: 'Main Page Unlogged', h5: 'Home page before logging in. You can view all existing posts, but not interact with them.' },
+                { src: '02-Sign_up', h4: 'Sign Up Page', h5: 'It allows users to register and gain access to the network.' },
+                { src: '03-Main_page_logged', h4: 'Main Page Logged', h5: 'Home page after logging in. Now you can interact with all the posts.' },
+                { src: '04-Create_new_post', h4: 'Create New Post', h5: 'Modal to create a post.' },
+                { src: '05-Profile_logged', h4: 'Profile Logged View Page', h5: 'Here you can see all your posts, the number of followers and followings you have, and acces to edit your profile.' },
+                { src: '06-Edit_profile', h4: 'Edit Profile Logged', h5: 'Modal to change username, email address, password and the profile picture.' },
+                { src: '07-Edit_post', h4: 'Edit Post', h5: 'You can edit your own posts.' },
+                { src: '08-Users_difference', h4: 'Users Difference', h5: 'Users with the same first letter will have a different profile picture by default.' },
+                { src: '09-Login_page', h4: 'Login Page', h5: 'Common login screen. A user can input their username and password to login.' },
+                { src: '10-Followed_users', h4: 'Followed Users', h5: 'On this page you can see the posts of all the users you follow.' },
+                { src: '11-Liked_posts', h4: 'Liked Posts', h5: 'On this page you can see all the posts you liked.' },
+                { src: '12-Search', h4: 'Search', h5: 'Search will filter the posts you are looking for.' },
+                { src: '13-Tablet', h4: 'Tablet responsive', h5: 'The entire page adapts perfectly to the size of tablet screens.' },
+                { src: '14-Mobile', h4: 'Mobile responsive', h5: 'The entire page adjusts perfectly to the size of mobile screens.' }
             ]
-            title = ''
+            title = 'Network'
             client = 'CS50 Harvard'
-            description = ''
-            link = ''
+            description = "Design of a Twitter-like social network website for making posts and following users. Once you're signed in, you should see all the posts in the main page. At the bottom we have the menu bar with the five options (Home, Search, Following, Liked and Profile). Over the menu bar, floating to the right of the page is the button to create posts. You can give a like to the post you want, as well as follow the users you prefer, and so you will have these posts on the Like and Following pages respectively. You are also enabled to edit your posts and your profile data. You can select an image for your user, but in case you don't want to, the first letter of your username will represent your posts, with a random color to distinguish it from other users with the same first letter."
+            link = 'https://rjmnetwork.herokuapp.com/'
         }
 
 
