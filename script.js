@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function(){
   
   new_bid.addEventListener("keypress", function(event) {
     
-    console.log(event.key);
+    // console.log(event.key);
+    alert(event.key);
     // if (event.key === "Enter") {
     //     event.preventDefault();
     //     handleModal()
