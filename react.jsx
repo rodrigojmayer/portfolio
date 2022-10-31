@@ -176,7 +176,14 @@ function Modal(){
                     <ul class={'slides-' + projects}>
                         {images.map((image, index) => (
                             <li class={index == 0 ? 'slide slide-' + project : 'slide slide-' + project + ' hide' } id={'image_' + projects + '_' + index}>
-                                <img class="avatar" src={'assets/' + folder + '/' + image.src + '.gif'} alt={'Project ' + title + ' ' + index+1}/>
+                                {/* <img class="avatar" src={'assets/' + folder + '/' + image.src + '.gif'} alt={'Project ' + title + ' ' + index+1}/> */}
+                                <video class="avatar" src={'assets/' + folder + '/' + image.src + '.webm'} alt={'Project ' + title + ' ' + index+1} controls>
+                                    <source src={'assets/' + folder + '/' + image.src + '.webm'} type="video/webm"/>
+                                </video>
+                                {/* <img class="avatar" src={'assets/' + folder + '/' + image.src +  (index == 0 ? '.webm' : '.gif')} alt={'Project ' + title + ' ' + index+1}/> */}
+
+
+
                                 <h4 class="text-first-color">{image.h4}</h4>
                                 <h5>{image.h5}</h5>
                             </li>
