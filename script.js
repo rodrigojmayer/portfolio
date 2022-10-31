@@ -21,6 +21,30 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
   // newurl = url.split('#');
+    // console.log('location changed!');
+  // window.addEventListener('locationchange', function () {
+  //   console.log('location changed!');
+  // });
+  // document.addEventListener('change', function(){
+  //   console.log(location.hash)
+  // })
+  // window.addEventListener('hashchange', function() { 
+  //   //code  
+  //   console.log('location changed!');
+  // });
+  
+  window.addEventListener('popstate', function() { 
+    //code  
+    console.log('location changed!');
+      
+      if (location.hash.substring(0,8) != '#project'){
+        console.log(location.hash)
+        console.log(location.hash.substring(0,8))
+
+        unLockScroll()
+      }
+  });
+
   if (performance.getEntriesByType("navigation")[0].type == "reload") {
     // window.location.href = newurl.at(0)
 //////////////////////////////////////////////////////////  CHANGE THIS AFTER FINISH EDITION PROJECTS///////////////////////////////////////////////////////////////////////////////
