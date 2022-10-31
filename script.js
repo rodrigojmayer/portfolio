@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function(){
 //     e = e || window.event;
 //     // use e.keyCode
 // };
-  document.addEventListener("keypress", function(event) {
+  // document.addEventListener("keypress", function(event) {
     
     // console.log(event.key);
-    alert(event.key);
+    // alert(event.key);
     // if (event.key === "Enter") {
     //     event.preventDefault();
     //     handleModal()
     // }
-    });
+    // });
 
   // newurl = url.split('#');
     // console.log('location changed!');
@@ -32,14 +32,25 @@ document.addEventListener('DOMContentLoaded', function(){
   //   //code  
   //   console.log('location changed!');
   // });
-  
+
+
+  // window.addEventListener('load', async () => {
+  //   let video = document.querySelector('video[muted][autoplay]');
+  //   try {
+  //     await video.play();
+  //   } catch (err) {
+  //     video.controls = true;
+  //   }
+  // });
+
+
   window.addEventListener('popstate', function() { 
     //code  
-    console.log('location changed!');
+    // console.log('location changed!');
       
       if (location.hash.substring(0,8) != '#project'){
-        console.log(location.hash)
-        console.log(location.hash.substring(0,8))
+        // console.log(location.hash)
+        // console.log(location.hash.substring(0,8))
 
         unLockScroll()
       }
@@ -180,8 +191,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
         arrow_next_prjct.addEventListener("click", ()=> {
           console.log('last_radio')
+          console.log('last_radiossssssssssssssssssssssssssssssss')
           console.log(last_radio)
           var_radio = last_radio + 1
+          // document.getElementById(`vid-${var_radio}`).play();
           option[var_radio].click();
         })
 
@@ -200,6 +213,8 @@ document.addEventListener('DOMContentLoaded', function(){
           option[last_radio].checked = false;
           option[id_slide].checked = true;
   
+          document.getElementById(`vid-${id_slide}`).play();
+
           for(var j = 0; j < slide.length; j++){
             if(id_slide == j)
               show(slide[j])

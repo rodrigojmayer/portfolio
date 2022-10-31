@@ -9,19 +9,24 @@ let prev_project4 = document.getElementById("prev_project_4") // network
 prev_project1.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-1")
     ReactDOM.render(<Modal />, modal);
+    document.getElementById('vid-0').play();
 }, { once: true })
 prev_project2.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-2")
     ReactDOM.render(<Modal />, modal);
+    document.getElementById('vid-0').play();
 }, { once: true })
 prev_project3.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-3")
     ReactDOM.render(<Modal />, modal);
+    document.getElementById('vid-0').play();
 }, { once: true })
 
 prev_project4.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-4")
     ReactDOM.render(<Modal />, modal);
+    
+    document.getElementById('vid-0').play();
 }, { once: true })       
 
 function Modal(){
@@ -177,8 +182,8 @@ function Modal(){
                         {images.map((image, index) => (
                             <li class={index == 0 ? 'slide slide-' + project : 'slide slide-' + project + ' hide' } id={'image_' + projects + '_' + index}>
                                 {/* <img class="avatar" src={'assets/' + folder + '/' + image.src + '.gif'} alt={'Project ' + title + ' ' + index+1}/> */}
-                                <video class="avatar" src={'assets/' + folder + '/' + image.src + '.webm'} alt={'Project ' + title + ' ' + index+1} controls>
-                                    <source src={'assets/' + folder + '/' + image.src + '.webm'} type="video/webm"/>
+                                <video id={'vid-' + index} class="avatar" src={'assets/' + folder + '/' + image.src + '.webm'} alt={'Project ' + title + ' ' + index+1}   controls playsinline autoplay muted loop >
+                                    <source src={'assets/' + folder + '/' + image.src + '.webm'} type="video/webm" />
                                 </video>
                                 {/* <img class="avatar" src={'assets/' + folder + '/' + image.src +  (index == 0 ? '.webm' : '.gif')} alt={'Project ' + title + ' ' + index+1}/> */}
 
