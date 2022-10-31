@@ -6,8 +6,11 @@ let url = window.location.href;
 document.addEventListener('DOMContentLoaded', function(){
   
   // KEYCODE_BACK = 4 
-  
-  new_bid.addEventListener("keypress", function(event) {
+//   .onkeypress = function (e) {
+//     e = e || window.event;
+//     // use e.keyCode
+// };
+  document.addEventListener("keypress", function(event) {
     
     // console.log(event.key);
     alert(event.key);
