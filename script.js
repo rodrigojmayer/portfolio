@@ -5,6 +5,16 @@ let url = window.location.href;
 
 document.addEventListener('DOMContentLoaded', function(){
   
+  // KEYCODE_BACK = 4 
+  
+  new_bid.addEventListener("keypress", function(event) {
+    
+    console.log(event.key);
+    // if (event.key === "Enter") {
+    //     event.preventDefault();
+    //     handleModal()
+    // }
+    });
 
   // newurl = url.split('#');
   if (performance.getEntriesByType("navigation")[0].type == "reload") {
