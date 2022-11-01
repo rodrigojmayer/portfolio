@@ -212,8 +212,10 @@ document.addEventListener('DOMContentLoaded', function(){
           parseInt(id_slide)
           option[last_radio].checked = false;
           option[id_slide].checked = true;
-  
-          document.getElementById(`vid-${id_slide}`).play();
+          
+          console.log("prjct")
+          console.log(prjct)
+          document.getElementById(`vid-${prjct}${id_slide}`).play();
 
           for(var j = 0; j < slide.length; j++){
             if(id_slide == j)

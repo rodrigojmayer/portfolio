@@ -9,24 +9,23 @@ let prev_project4 = document.getElementById("prev_project_4") // network
 prev_project1.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-1")
     ReactDOM.render(<Modal />, modal);
-    document.getElementById('vid-0').play();
+    document.getElementById('vid-wiki0').play();
 }, { once: true })
 prev_project2.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-2")
     ReactDOM.render(<Modal />, modal);
-    document.getElementById('vid-0').play();
+    document.getElementById('vid-auction0').play();
 }, { once: true })
 prev_project3.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-3")
     ReactDOM.render(<Modal />, modal);
-    document.getElementById('vid-0').play();
+    document.getElementById('vid-mail0').play();
 }, { once: true })
 
 prev_project4.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-4")
     ReactDOM.render(<Modal />, modal);
-    
-    document.getElementById('vid-0').play();
+    document.getElementById('vid-network0').play();
 }, { once: true })       
 
 function Modal(){
@@ -116,10 +115,10 @@ function Modal(){
             folder = "RJMNetwork"
             images = [
                 { src: '01-Main_page_unlogged', h4: 'Main Page Unlogged', h5: 'Home page before logging in. You can view all existing posts, but not interact with them.' },
-                { src: '02-Sign_up', h4: 'Sign Up Page', h5: 'It allows users to register and gain access to the network.' },
-                { src: '03-Main_page_logged', h4: 'Main Page Logged', h5: 'Home page after logging in. Now you can interact with all the posts.' },
-                { src: '04-Create_new_post', h4: 'Create New Post', h5: 'Modal to create a post.' },
-                { src: '05-Profile_logged', h4: 'Profile Logged View Page', h5: 'Here you can see all your posts, the number of followers and followings you have, and acces to edit your profile.' },
+                { src: '02-Sign_up',            h4: 'Sign Up Page', h5: 'It allows users to register and gain access to the network.' },
+                { src: '03-Main_page_logged',   h4: 'Main Page Logged', h5: 'Home page after logging in. Now you can interact with all the posts.' },
+                { src: '04-Create_new_post',    h4: 'Create New Post', h5: 'Modal to create a post.' },
+                { src: '05-Profile_logged',     h4: 'Profile Logged View Page', h5: 'Here you can see all your posts, the number of followers and followings you have, and acces to edit your profile.' },
                 { src: '06-Edit_profile', h4: 'Edit Profile Logged', h5: 'Modal to change username, email address, password and the profile picture.' },
                 { src: '07-Edit_post', h4: 'Edit Post', h5: 'You can edit your own posts.' },
                 { src: '08-Users_difference', h4: 'Users Difference', h5: 'Users with the same first letter will have a different profile picture by default.' },
@@ -182,7 +181,7 @@ function Modal(){
                         {images.map((image, index) => (
                             <li class={index == 0 ? 'slide slide-' + project : 'slide slide-' + project + ' hide' } id={'image_' + projects + '_' + index}>
                                 {/* <img class="avatar" src={'assets/' + folder + '/' + image.src + '.gif'} alt={'Project ' + title + ' ' + index+1}/> */}
-                                <video id={'vid-' + index} class="avatar" src={'assets/' + folder + '/' + image.src + '.webm'} alt={'Project ' + title + ' ' + index+1}   controls playsinline autoplay muted loop >
+                                <video id={'vid-' + project + index} class="avatar" src={'assets/' + folder + '/' + image.src + '.webm'} alt={'Project ' + title + ' ' + index+1}   controls playsinline autoplay muted loop >
                                     <source src={'assets/' + folder + '/' + image.src + '.webm'} type="video/webm" />
                                 </video>
                                 {/* <img class="avatar" src={'assets/' + folder + '/' + image.src +  (index == 0 ? '.webm' : '.gif')} alt={'Project ' + title + ' ' + index+1}/> */}
