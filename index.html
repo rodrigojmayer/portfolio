@@ -53,11 +53,20 @@
         </svg>
       </button>
       <nav class="menu">
-        <a href="#inicio">Home</a>
-        <a href="#acerca">About</a>
-        <a href="#servicios">Services</a>
-        <a href="#portafolio">Projects</a>
-        <a href="#contacto">Contact</a>
+        <a href="#inicio" class="english hide">Home</a>
+        <a href="#inicio" class="espaniol">Inicio</a>
+        <a href="#acerca" class="english hide">About</a>
+        <a href="#acerca" class="espaniol">Acerca</a>
+        <a href="#servicios" class="english hide">Services</a>
+        <a href="#servicios" class="espaniol">Servicios</a>
+        <a href="#portafolio" class="english hide">Projects</a>
+        <a href="#portafolio" class="espaniol">Proyectos</a>
+        <a href="#contacto" class="english hide">Contact</a>
+        <a href="#contacto" class="espaniol">Contacto</a>
+        <div>
+          <a href="#esp" id="esp_flag" ><img class="language-flag" src="assets/emojione_flag-for-ceuta-and-melilla.png" alt=""></a>
+          <a href="#eng" id="eng_flag" ><img id="eng_flag" class="language-flag" src="assets/emojione_flag-for-united-kingdom.png" alt=""></a>
+        </div>
       </nav>
     </section>
   </header>
@@ -67,11 +76,15 @@
       --hero-attachment: fixed;">
       <aside class="hero-image-opacity" style="--hero-opacity-color: var(--black-alpha-color)" ;>
         <div class="hero-image-content">
-          <h2 class="hero-image-title" style="--hero-text-color: var(--white-color)">
+          <h2 class="hero-image-title english hide" style="--hero-text-color: var(--white-color)">
             Hi <br>I am Rodrigo Mayer <br>Welcome to my website
           </h2>
+          <h2 class="hero-image-title espaniol" style="--hero-text-color: var(--white-color)">
+            Hola <br>Soy Rodrigo Mayer <br>Bienvenido a mi sitio web
+          </h2>
           <article class="center-content">
-            <a href="#contacto" class="btn">Contact me!</a>
+            <a href="#contacto" class="btn english hide">Contact me!</a>
+            <a href="#contacto" class="btn espaniol">Contáctame!</a>
           </article>
         </div>
       </aside>
@@ -84,21 +97,30 @@
     <section class="container center-content">
       <article>
         <aside class=" text-center">
-          <h1>Full Stack Web Developer</h1>
+          <h1 class="english hide">Full Stack Web Developer</h1>
+          <h1 class="espaniol">Desarrollador Web Full Stack</h1>
         </aside>
       </article>
       <section id="acerca" class="about-columns">
         <article class=" text-center text-lg-right">
-          <p>Experience developing websites, mobile first and responsive designs, both Front-end and Back-end. 
+          <p class="english hide">
+            Experience developing websites, mobile first and responsive designs, both Front-end and Back-end. 
             Looking for new challenges that put my skills to the test. 
-            My biggest hobby is using logic to simplify and automate processes that solve problems.</p>
+            My biggest hobby is using logic to simplify and automate processes that solve problems.
+          </p>
+          <p class="espaniol">
+            Experiencia  desarrollando  sitios  web,  mobile  first  y  diseños responsivos, tanto Front-end como Back-end.
+            En busca de nuevos desafíos que pongan a prueba mis habilidades.
+            Mi mayor afición es usar la lógica para simplificar y automatizar procesos que resuelvan problemas.
+          </p>
         </article>
         <article class="center-content">
           <img class="gray-scale " src="assets/rodrigojmayer.png" alt="rodrigojmayer">
         </article>
       </section>
       <div>
-        <a class="btn" href="https://mega.nz/file/TlQ0BQYQ#2yKI690M9xgIipUu9ZnmcPyxjtc-uwaIhqwAZbD2lew" target="_blank" rel="noopen">Download my CV</a>
+        <a class="btn english hide" href="https://mega.nz/file/TlQ0BQYQ#2yKI690M9xgIipUu9ZnmcPyxjtc-uwaIhqwAZbD2lew" target="_blank" rel="noopen">Download my CV</a>
+        <a class="btn espaniol" href="https://mega.nz/file/TlQ0BQYQ#2yKI690M9xgIipUu9ZnmcPyxjtc-uwaIhqwAZbD2lew" target="_blank" rel="noopen">Descarga mi CV</a>
       </div>
     </section>
   </section>
@@ -107,7 +129,8 @@
 
   <section id="servicios" class="services section ">
     <div class="container full-lg-screen">
-      <h2 class="section-title">Services</h2>
+      <h2 class="section-title english hide">Services</h2>
+      <h2 class="section-title espaniol">Servicios</h2>
       <article class="service-card">
         <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -115,17 +138,20 @@
           <path
             d="M12.3907 12.3907L7.448 17.3333L12.3907 22.276L14.276 20.3907L11.2187 17.3333L14.276 14.276L12.3907 12.3907ZM19.6093 12.3907L17.724 14.276L20.7813 17.3333L17.724 20.3907L19.6093 22.276L24.552 17.3333L19.6093 12.3907Z" />
         </svg>
-        <h3>Web Programming</h3>
-        <p> Development of sites and applications for Web platforms. Frontend, Backend and Database.</p>
+        <h3 class="english hide">Web Programming</h3>
+        <h3 class="espaniol">Programación Web</h3>
+        <p class="english hide"> Development of sites and applications for Web platforms. Frontend, Backend and Database.</p>
+        <p class="espaniol"> Desarrollo de sitios y aplicaciones para plataformas Web. Frontend, Backend y Base de datos.</p>
       </article>
       <article class="service-card">
         <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M26.6666 4H9.33329C7.86263 4 6.66663 5.196 6.66663 6.66667V9.33333H5.33329C3.86263 9.33333 2.66663 10.5293 2.66663 12V25.3333C2.66663 26.804 3.86263 28 5.33329 28H13.3333C14.804 28 16 26.804 16 25.3333H26.6666C28.1373 25.3333 29.3333 24.1373 29.3333 22.6667V6.66667C29.3333 5.196 28.1373 4 26.6666 4ZM7.99996 12H13.3333L13.3293 24H5.33329V12H7.99996ZM16 22.6667V12C16 10.5293 14.804 9.33333 13.3333 9.33333H9.33329V6.66667H24V22.6667H16Z" />
         </svg>
-        <h3>Web Design</h3>
-        <p> I prototype and layout static designs and convert them into responsive, optimal and accessible web sites and
-          applications.</p>
+        <h3 class="english hide">Web Design</h3>
+        <h3 class="espaniol">Diseño web</h3>
+        <p class="english hide"> I prototype and layout static designs and convert them into responsive, optimal and accessible web sites and applications.</p>
+        <p class="espaniol"> Prototipo y maquetación de diseños estáticos y los convierto en aplicaciones y sitios web receptivos, óptimos y accesibles.</p>
       </article>
       <article class="service-card">
         <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -146,8 +172,10 @@
           <path
             d="M23.5426 26.2107C25.0154 26.2107 26.2093 25.0168 26.2093 23.544C26.2093 22.0712 25.0154 20.8773 23.5426 20.8773C22.0699 20.8773 20.876 22.0712 20.876 23.544C20.876 25.0168 22.0699 26.2107 23.5426 26.2107Z" />
         </svg>
-        <h3>WPO</h3>
-        <p> Web Performance Optimization, improve loading and response time of websites and web applications.</p>
+        <h3 class="english hide">WPO</h3>
+        <h3 class="espaniol">WPO</h3>
+        <p class="english hide"> Web Performance Optimization, improve loading and response time of websites and web applications.</p>
+        <p class="espaniol"> Optimización del rendimiento web, mejora el tiempo de carga y respuesta de sitios y aplicaciones web.</p>
       </article>
       <article class="service-card">
         <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -156,9 +184,10 @@
           <path
             d="M15.216 11.448C15.7213 11.9547 16 12.624 16 13.3333H18.6666C18.6678 12.6326 18.5301 11.9385 18.2614 11.2913C17.9927 10.6441 17.5984 10.0566 17.1013 9.56267C15.0826 7.54667 11.5826 7.54667 9.56531 9.56267L11.448 11.4507C12.4613 10.44 14.208 10.4427 15.216 11.448Z" />
         </svg>
-        <h3>SEO</h3>
-        <p> Search Engine Optimization, Optimize websites and web applications to improve search engine position
-          organically.</p>
+        <h3 class="english hide">SEO</h3>
+        <h3 class="espaniol">SEO</h3>
+        <p class="english hide"> Search Engine Optimization, Optimize websites and web applications to improve search engine position organically.</p>
+        <p class="espaniol"> Optimización de motores de búsqueda, optimizar sitios web y aplicaciones web para mejorar la posición en los motores de búsqueda orgánicamente.</p>
       </article>
       <article class="service-card">
         <svg width="57" height="57" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -167,8 +196,10 @@
           <path
             d="M22.6667 8H25.3334V10.6667H22.6667V8ZM18.6667 8H21.3334V10.6667H18.6667V8ZM22.6667 21.3333H25.3334V24H22.6667V21.3333ZM18.6667 21.3333H21.3334V24H18.6667V21.3333Z" />
         </svg>
-        <h3>Web Hosting</h3>
-        <p> Configuration and maintenance of domain service and web hosting.</p>
+        <h3 class="english hide">Web Hosting</h3>
+        <h3 class="espaniol">Alojamiento Web</h3>
+        <p class="english hide"> Configuration and maintenance of domain service and web hosting.</p>
+        <p class="espaniol"> Configuración y mantenimiento del servicio de dominio y alojamiento web.</p>
       </article>
     </div>
   </section>
@@ -177,15 +208,22 @@
 
   <section id="portafolio" class="portfolio section  bg-gray-dark">
     <div class="container full-lg-screen-portfolio">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title english hide">Projects</h2>
+      <h2 class="section-title espaniol">Proyectos</h2>
       <div onclick="lockScroll();">
         <a href="#project-2" id="prev_project_2" class="portfolio-card">
           <img src="assets/Frame project 2 - Commerce.png" alt="Project Auctions">
           <aside class="portfolio-card-info">
             <div>
               <h3>Auctions</h3>
-              <p>Design of an eBay-like e-commerce auction site that allows users to post auction listings,
-                bid on listings, comment on those listings, and add listings to a "watch list".</p>
+              <p class="english hide">
+                Design of an e-commerce auction site similar to eBay, which allows users to auction and buy items,
+                perform queries and save to favorites.
+              </p>
+              <p class="espaniol">
+                Diseño de un Sitio de subastas de comercio electrónico similar a eBay, que permite a los usuarios subastar y comprar artículos, 
+                realizar consultas y guardar en favoritos.
+              </p>
             </div>
           </aside>
         </a>
@@ -196,7 +234,8 @@
           <aside class="portfolio-card-info">
             <div>
               <h3>Network</h3>
-              <p>Design of a Twitter-like social network website for making posts and following users.</p>
+              <p class="english hide">Design of a Twitter-like social network website for making posts and following users.</p>
+              <p class="espaniol">Diseño de un sitio web Red social simil Twitter para hacer publicaciones, seguir usuarios y editar perfiles</p>
             </div>
           </aside>
         </a>
@@ -207,7 +246,8 @@
           <aside class="portfolio-card-info">
             <div>
               <h3>Mail</h3>
-              <p>Design of a front-end for an email client that makes API calls to send and receive internal emails.</p>
+              <p class="english hide">Design of a front-end for an email client that makes API calls to send and receive internal emails.</p>
+              <p class="espaniol">Diseño de un front-end y back-end de correo electrónico de uso interno, que utiliza llamados a APIs.</p>
             </div>
           </aside>
         </a>
@@ -218,7 +258,8 @@
           <aside class="portfolio-card-info">
             <div>
               <h3>Wiki</h3>
-              <p>Design of a Wikipedia-like online encyclopedia that anyone can edit.</p>
+              <p class="english hide">Design of a Wikipedia-like online encyclopedia that anyone can edit.</p>
+              <p class="espaniol">Diseño de una enciclopedia en línea de estilo Wikipedia, en la que uno puede cargar, editar y buscar información.</p>
             </div>
           </aside>
         </a>
@@ -243,22 +284,26 @@
 
   <section id="contacto" class="contact section full-lg-screen">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title english hide">Contact</h2>
+      <h2 class="section-title espaniol">Contacto</h2>
       <article class="contact-cards">
         <aside class="contact-card box-shadow-1">
           <svg width="37" height="28" viewBox="0 0 37 28" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M18.5 7.3125L7 16.8125V27C7 27.5625 7.4375 28 8 28H15C15.5 28 15.9375 27.5625 15.9375 27V21C15.9375 20.5 16.4375 20 16.9375 20H20.9375C21.5 20 21.9375 20.5 21.9375 21V27C21.9375 27.5625 22.4375 28 22.9375 28H30C30.5 28 31 27.5625 31 27V16.75L19.4375 7.3125C19.3125 7.1875 19.125 7.125 19 7.125C18.8125 7.125 18.625 7.1875 18.5 7.3125ZM36.6875 13.75L31.5 9.4375V0.8125C31.5 0.375 31.125 0.0625 30.75 0.0625H27.25C26.8125 0.0625 26.5 0.375 26.5 0.8125V5.3125L20.875 0.6875C20.375 0.3125 19.6875 0.0625 19 0.0625C18.25 0.0625 17.5625 0.3125 17.0625 0.6875L1.25 13.75C1.0625 13.875 0.9375 14.125 0.9375 14.3125C0.9375 14.5 1.0625 14.6875 1.125 14.8125L2.75 16.75C2.875 16.9375 3.0625 17 3.3125 17C3.5 17 3.6875 16.9375 3.8125 16.8125L18.5 4.75C18.625 4.625 18.8125 4.5625 19 4.5625C19.125 4.5625 19.3125 4.625 19.4375 4.75L34.125 16.8125C34.25 16.9375 34.4375 17 34.625 17C34.875 17 35.0625 16.9375 35.1875 16.75L36.8125 14.8125C36.9375 14.6875 37 14.5 37 14.3125C37 14.125 36.875 13.875 36.6875 13.75Z" />
           </svg>
-          <h5>LOCATION</h5>
-            Alicante, Spain
+          <h5 class="english hide">LOCATION</h5>
+          <h5 class="espaniol">UBICACIÓN</h5>
+            <div class="english hide">Alicante, Spain</div>
+            <div class="espaniol">Alicante, España</div>
         </aside>
         <aside class="contact-card box-shadow-1">
           <svg width="32" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M31.375 7.9375C29.9375 9.0625 28.125 10.4375 21.75 15.0625C20.5 16 18.1875 18.0625 16 18.0625C13.75 18.0625 11.5 16 10.1875 15.0625C3.8125 10.4375 2 9.0625 0.5625 7.9375C0.3125 7.75 0 7.9375 0 8.25V21C0 22.6875 1.3125 24 3 24H29C30.625 24 32 22.6875 32 21V8.25C32 7.9375 31.625 7.75 31.375 7.9375ZM16 16C17.4375 16.0625 19.5 14.1875 20.5625 13.4375C28.875 7.4375 29.5 6.875 31.375 5.375C31.75 5.125 32 4.6875 32 4.1875V3C32 1.375 30.625 0 29 0H3C1.3125 0 0 1.375 0 3V4.1875C0 4.6875 0.1875 5.125 0.5625 5.375C2.4375 6.875 3.0625 7.4375 11.375 13.4375C12.4375 14.1875 14.5 16.0625 16 16Z" />
           </svg>
-          <h5>EMAIL</h5>
+          <h5 class="english hide">EMAIL</h5>
+          <h5 class="espaniol">CORREO ELECTRÓNICO</h5>
             rodrigojmayer@gmail.com
         </aside>
         <aside class="contact-card box-shadow-1">
@@ -266,7 +311,8 @@
             <path
               d="M28.5 9.4375L28.9375 6.9375C29.0625 6.4375 28.6875 6 28.1875 6H23.5625L24.4375 0.9375C24.5625 0.4375 24.1875 0 23.6875 0H21.1875C20.8125 0 20.5 0.3125 20.4375 0.625L19.5 6H13.3125L14.25 0.9375C14.3125 0.4375 13.9375 0 13.5 0H10.9375C10.5625 0 10.25 0.3125 10.1875 0.625L9.25 6H4.3125C3.9375 6 3.625 6.3125 3.5625 6.625L3.125 9.125C3.0625 9.625 3.375 10 3.875 10H8.5625L7.125 18H2.1875C1.8125 18 1.5 18.3125 1.4375 18.625L1 21.125C0.875 21.625 1.25 22 1.75 22H6.375L5.5 27.125C5.375 27.625 5.75 28 6.25 28H8.75C9.125 28 9.4375 27.75 9.5 27.4375L10.4375 22H16.625L15.6875 27.125C15.625 27.625 16 28 16.4375 28H19C19.375 28 19.6875 27.75 19.75 27.4375L20.6875 22H25.625C26 22 26.3125 21.75 26.375 21.4375L26.8125 18.9375C26.875 18.4375 26.5625 18 26.0625 18H21.375L22.8125 10H27.75C28.125 10 28.4375 9.75 28.5 9.4375ZM17.3125 18H11.1875L12.625 10H18.75L17.3125 18Z" />
           </svg>
-          <h5>SOCIAL MEDIA</h5>
+          <h5 class="english hide">SOCIAL MEDIA</h5>
+          <h5 class="espaniol">REDES SOCIALES</h5>
           <small class="social-media">
             <a href="https://www.linkedin.com/in/rodrigojmayer/" target="_blank" rel="noopener">
               <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,21 +341,27 @@
       <form action="https://formsubmit.co/confirm/11747a3fe0a60dc4fca342f2dff75e04" class="contact-form box-shadow-1"
         method="post">
         <input type="hidden" name="_url" value="http://127.0.0.1:5500/index.html">
-        <input type="text" name="name" placeholder="Enter Name *" title="Name"
-          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"><input type="email" name="email" placeholder="Enter Email *"
-          title="Email *">
-        <textarea name="comments" cols="50" rows="10" placeholder="Your Message *"></textarea>
+        <input class="english hide" type="text" name="name" placeholder="Enter Name *" title="Name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+        <input class="espaniol" type="text" name="name" placeholder="Ingrese Nombre *" title="Name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+        <input class="english hide" type="email" name="email" placeholder="Enter Email *" title="Email *">
+        <input class="espaniol" type="email" name="email" placeholder="Ingrese Correo Electrónico *" title="Email *">
+        <textarea class="english hide" name="comments" cols="50" rows="10" placeholder="Your Message *"></textarea>
+        <textarea class="espaniol" name="comments" cols="50" rows="10" placeholder="Su Mensaje *"></textarea>
         <div class="contact-form-loader text-center none">
-          Please wait a few seconds
+          <div class="english hide">Please wait a few seconds</div>
+          <div class="espaniol">Por favor, espere unos segundos</div>
           <br>
-          <img src="assets/loader.svg" alt="Sending...">
+          <img class="english hide" src="assets/loader.svg" alt="Sending...">
+          <img class="espaniol" src="assets/loader.svg" alt="Enviando...">
         </div>
-        <input type="submit" class="btn" value="Submit">
+        <input class="btn english hide" type="submit" value="Submit">
+        <input class="btn espaniol" type="submit" value="Enviar">
       </form>
       <article id="gracias" class="modal">
         <div class="modal-content">
           <article class="contact-form-response">
-            <h3>Thank you for <br> your comments</h3>
+            <h3 class="english hide">Thank you for <br> your comments</h3>
+            <h3 class="espaniol">Gracias por  <br> sus comentarios</h3>
             <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.6667 24C21 24 22.3333 18.6666 22.3333 18.6666H9C9 18.6666 10.3333 24 15.6667 24Z" />
               <path
@@ -323,9 +375,8 @@
     </div>
   </section>
   <footer class="footer">
-    <small>
-      Website designed by @rodrigojmayer
-    </small>
+    <small class="english hide">Website designed by @rodrigojmayer</small>
+    <small class="espaniol">Sitio web diseñado por @rodrigojmayer</small>
   </footer>
 </body>
 </html>

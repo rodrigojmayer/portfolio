@@ -6,10 +6,10 @@ let url = window.location.href;
 document.addEventListener('DOMContentLoaded', function(){
   
   // KEYCODE_BACK = 4 
-//   .onkeypress = function (e) {
-//     e = e || window.event;
-//     // use e.keyCode
-// };
+  //   .onkeypress = function (e) {
+  //     e = e || window.event;
+  //     // use e.keyCode
+  // };
   // document.addEventListener("keypress", function(event) {
     
     // console.log(event.key);
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   if (performance.getEntriesByType("navigation")[0].type == "reload") {
     // window.location.href = newurl.at(0)
-//////////////////////////////////////////////////////////  CHANGE THIS AFTER FINISH EDITION PROJECTS///////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////  CHANGE THIS AFTER FINISH EDITION PROJECTS///////////////////////////////////////////////////////////////////////////////
     // window.location.href = newurl.at(0)+"#portafolio"
     location.hash = "#portafolio"
     // location.hash = "#inicio"
@@ -255,6 +255,35 @@ document.addEventListener('DOMContentLoaded', function(){
       }
   }
 
+  let english_class = document.querySelectorAll(".english")
+  let espaniol_class = document.querySelectorAll(".espaniol")
+  let esp_flag = document.getElementById("esp_flag")
+
+  esp_flag.addEventListener("click",()=> {
+
+    english_class.forEach((english_obj) => {
+      hide(english_obj)
+    });
+    espaniol_class.forEach((espaniol_obj) => {
+      show(espaniol_obj)
+    });
+
+
+
+
+  })
+  let eng_flag = document.getElementById("eng_flag")
+  eng_flag.addEventListener("click",()=> {
+
+    english_class.forEach((english_obj) => {
+      show(english_obj)
+    });
+    espaniol_class.forEach((espaniol_obj) => {
+      hide(espaniol_obj)
+    });
+    
+
+  })
 
 });
 
