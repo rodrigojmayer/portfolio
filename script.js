@@ -255,12 +255,13 @@ document.addEventListener('DOMContentLoaded', function(){
       }
   }
 
-  let english_class = document.querySelectorAll(".english")
-  let espaniol_class = document.querySelectorAll(".espaniol")
+  let english_class
+  let espaniol_class
   let esp_flag = document.getElementById("esp_flag")
 
   esp_flag.addEventListener("click",()=> {
-
+    english_class = document.querySelectorAll(".english")
+    espaniol_class = document.querySelectorAll(".espaniol")
     english_class.forEach((english_obj) => {
       hide(english_obj)
     });
@@ -274,7 +275,8 @@ document.addEventListener('DOMContentLoaded', function(){
   })
   let eng_flag = document.getElementById("eng_flag")
   eng_flag.addEventListener("click",()=> {
-
+    english_class = document.querySelectorAll(".english")
+    espaniol_class = document.querySelectorAll(".espaniol")
     english_class.forEach((english_obj) => {
       show(english_obj)
     });

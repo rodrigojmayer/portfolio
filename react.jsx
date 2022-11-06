@@ -29,7 +29,7 @@ prev_project4.addEventListener("click", (e)=>{
 }, { once: true })       
 
 function Modal(){
-    let num_array = new Array, project = "", projects = "", folder = "", images = new Array, title = "", client = "", description = "", link = ""
+    let num_array = new Array, project = "", projects = "", folder = "", images = new Array, title = "", client = "", description_eng = "", description_esp = "", link = ""
 
         // do stuff here...
         // console.log(modal.id)
@@ -41,7 +41,7 @@ function Modal(){
             projects = "wiki"
             folder = "Wiki"
             images = [
-                { src: '01-Index_page', h4: 'Index Page', h5: 'User can click on any entry name to be taken directly to that entry page.' },
+                { src: '01-Index_page', h4_eng: 'Index Page', h5_eng: 'User can click on any entry name to be taken directly to that entry page.', h4_esp: 'Página de inicio',  h5_esp: 'El usuario puede hacer clic en cualquier nombre de entrada para ir directamente a esa página de entrada.' },
                 { src: '02-New_page', h4: 'New Page', h5: 'Form to enter the title and the content of the wiki page we want to create.' },
                 { src: '03-Entry_page', h4: 'Entry Page', h5: 'Should render a page that displays the contents of that encyclopedia entry.' },
                 { src: '04-Edit_page', h4: 'Edit Page', h5: 'The user can edit any entry page.' },
@@ -51,7 +51,8 @@ function Modal(){
             ]
             title = 'Wiki'
             client = 'CS50 Harvard'
-            description = 'Design of a Wikipedia-like online encyclopedia that anyone can edit. When entering the page we can see the options bar on the left. "Search Encyclopedia" to filter the names of the Entry-pages, and if you do not find what you are looking for, the option to load it. "Home" to return to the index page where we see the complete list of Entry-pages. To edit, we have to enter the one we want and there we will see the "Edit" option. "Create New Page" will allow us to load a new Entry-page. And finally, "Random Page" to randomly open one of these.'
+            description_eng = 'Design of a Wikipedia-like online encyclopedia that anyone can edit. When entering the page we can see the options bar on the left. "Search Encyclopedia" to filter the names of the Entry-pages, and if you do not find what you are looking for, the option to load it. "Home" to return to the index page where we see the complete list of Entry-pages. To edit, we have to enter the one we want and there we will see the "Edit" option. "Create New Page" will allow us to load a new Entry-page. And finally, "Random Page" to randomly open one of these.'
+            description_esp = 'Diseño de una enciclopedia en línea similar a Wikipedia que cualquiera puede editar. Al ingresar a la página podemos ver la barra de opciones a la izquierda. "Buscar en Enciclopedia" para filtrar los nombres de las Entry-pages, y si no encuentras lo que buscas, la opción de cargarlo. "Inicio" para volver a la página de índice donde vemos la lista completa de páginas de entrada. Para editar, tenemos que ingresar el que queramos y allí veremos la opción "Editar". "Crear nueva página" nos permitirá cargar una nueva página de entrada. Y finalmente, "Página aleatoria" para abrir aleatoriamente uno de estos.'
             link = 'https://rodrigojmayer.pythonanywhere.com/'
         }
         if (modal.id == "project-2") {
@@ -187,9 +188,11 @@ function Modal(){
                                 {/* <img class="avatar" src={'assets/' + folder + '/' + image.src +  (index == 0 ? '.webm' : '.gif')} alt={'Project ' + title + ' ' + index+1}/> */}
 
 
-
-                                <h4 class="text-first-color">{image.h4}</h4>
-                                <h5>{image.h5}</h5>
+ 
+                                <h4 class="text-first-color english hide">{image.h4_eng}</h4>
+                                <h4 class="text-first-color espaniol">{image.h4_esp}</h4>
+                                <h5 class="english hide">{image.h5_eng}</h5>
+                                <h5 class="espaniol">{image.h5_esp}</h5>
                             </li>
                         ))}
                     </ul>
@@ -203,10 +206,13 @@ function Modal(){
                 </article>
                 <div class="portfolio-info">
 
-                    <h3>Project {title}</h3>
-                    <p> {description} </p>
+                    <h3 class="english hide">Project {title}</h3>
+                    <h3 class="espaniol">Proyecto {title}</h3>
+                    <p class="english hide"> {description_eng} </p>
+                    <p class="espaniol"> {description_esp} </p>
                     <aside class="portfolio-details">
-                        <small class="b-small">Client: </small>
+                        <small class="b-small english hide">Client: </small>
+                        <small class="b-small espaniol">Cliente: </small>
                         <small>{client}</small>
                         <small class="b-small">Link: </small>
                         <small><a href={link} target="_blank"

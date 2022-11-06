@@ -1288,7 +1288,7 @@ height: fit-content;
 
 .portfolio-details {
   display: grid;
-  grid-template-columns: 3rem 70%;
+  grid-template-columns: 4rem 65%;
   grid-auto-rows: 1.3rem;
   column-gap: .5rem;
   /* text-overflow:  ellipsis; */
@@ -1587,7 +1587,8 @@ height: fit-content;
   }
 
   .portfolio-details {
-    grid-template-columns: 3.3rem 70%;
+    /* grid-template-columns: 3.3rem 70%; */
+    grid-template-columns: 4rem 65%;
     grid-auto-rows: 1.6rem;
   }
   .portfolio-info {
