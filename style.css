@@ -664,8 +664,10 @@ p {
 }
 
 .contact-form-response {
+  padding: 2rem 0;
   text-align: center;
   background-color: var(--white-color);
+  border-radius: 5px;
 }
 
 .contact-form-response svg {
