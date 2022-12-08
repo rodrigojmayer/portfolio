@@ -108,7 +108,7 @@ function Modal(){
             client = 'CS50 Harvard'
             description_eng = `Design of the front-end and back-end for an internal email client that makes API calls. Once you're signed in, you should see yourself taken to the Inbox page of the mail client, though this page is mostly blank (for now). Click the buttons to navigate to your Sent and Archived mailboxes, and notice how those, too, are currently blank. Click the “Compose” button, and you'll be taken to a form that will let you compose a new email. Each time you click a button, though, you're not being taken to a new route or making a new web request: instead, this entire application is just a single page, with JavaScript used to control the user interface.`
             description_esp = `Diseño del front-end y back-end de un correo electrónico de uso interno que funciona mediante utilizando APIs. Una vez que haya iniciado sesión, debería verse llevado a la página de la bandeja de entrada del cliente de correo, aunque esta página está casi en blanco (por ahora). Haga clic en los botones para navegar a sus buzones de correo Enviados y Archivados, y observe cómo estos también están actualmente en blanco. Haga clic en el botón "Redactar" y accederá a un formulario que le permitirá redactar un nuevo correo electrónico. Sin embargo, cada vez que hace clic en un botón, no lo llevan a una nueva ruta ni realiza una nueva solicitud web: en cambio, toda la aplicación es solo una página, con JavaScript utilizado para controlar la interfaz de usuario.`
-            link = 'https://rjmail.pythonanywhere.com/'
+            link = 'https://rjmail.pythonanywhere.com/login/'
         }
         if (modal.id == "project-4") {
             // const slides = new Array(15)
