@@ -192,10 +192,10 @@ function Modal(){
 
 
  
-                                <h4 class="text-first-color english hide">{image.h4_eng}</h4>
-                                <h4 class="text-first-color espaniol">{image.h4_esp}</h4>
-                                <h5 class="english hide">{image.h5_eng}</h5>
-                                <h5 class="espaniol">{image.h5_esp}</h5>
+                                <h4 class="text-first-color english">{image.h4_eng}</h4>
+                                <h4 class="text-first-color espaniol hide">{image.h4_esp}</h4>
+                                <h5 class="english">{image.h5_eng}</h5>
+                                <h5 class="espaniol hide">{image.h5_esp}</h5>
                             </li>
                         ))}
                     </ul>
@@ -209,13 +209,13 @@ function Modal(){
                 </article>
                 <div class="portfolio-info">
 
-                    <h3 class="english hide">Project {title}</h3>
-                    <h3 class="espaniol">Proyecto {title}</h3>
-                    <p class="english hide"> {description_eng} </p>
-                    <p class="espaniol"> {description_esp} </p>
+                    <h3 class="english">Project {title}</h3>
+                    <h3 class="espaniol hide">Proyecto {title}</h3>
+                    <p class="english"> {description_eng} </p>
+                    <p class="espaniol hide"> {description_esp} </p>
                     <aside class="portfolio-details">
-                        <small class="b-small english hide">Client: </small>
-                        <small class="b-small espaniol">Cliente: </small>
+                        <small class="b-small english">Client: </small>
+                        <small class="b-small espaniol hide">Cliente: </small>
                         <small>{client}</small>
                         <small class="b-small">Link: </small>
                         <small><a href={link} target="_blank"

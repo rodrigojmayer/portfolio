@@ -1535,25 +1535,18 @@ height: fit-content;
   }
 
 
-  ::-webkit-scrollbar {
-    /* width: 11px; */
-    /* margin-top: var(--header-height);
-    margin-bottom: var(--footer-height); */
+  /* ::-webkit-scrollbar {
+    margin-top: var(--header-height);
+    margin-bottom: var(--footer-height);
   }
   ::-webkit-scrollbar-track {
-    /* box-shadow: inset 0 0 5px grey; */
-    /* box-shadow: inset 0 0 5px var(--first-color); */
-    /* border-radius: 10px; */
-    /* margin-top: var(--header-height);
-    margin-bottom: var(--footer-height); */
+    margin-top: var(--header-height);
+    margin-bottom: var(--footer-height);
   }
   ::-webkit-scrollbar-thumb {
-    /* background: var(--gray-color); */
-    /* background: var(--first-alpha-color); */
-    /* border-radius: 10px; */
-    /* margin-top: var(--header-height);
-    margin-bottom: var(--footer-height); */
-  }
+    margin-top: var(--header-height);
+    margin-bottom: var(--footer-height);
+  } */
 
   .modal-content {
     height: 600px!important;

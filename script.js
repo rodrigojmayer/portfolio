@@ -98,6 +98,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
     $form.addEventListener("submit", (e) => {
       e.preventDefault();
+      
+      // Access the form data using FormData
+      const formData = new FormData(event.target);
+
+      // Iterate through the form data and access individual input values
+      for (const pair of formData.entries()) {
+        const [name, value] = pair; // Destructure the pair into name and value
+        console.log(`Input name: ${name}, Input value: ${value}`);
+      }
+      
       $loader.classList.remove("none");
       fetch("https://formsubmit.co/ajax/rodrigojmayer@gmail.com",{
         method: "POST",
@@ -105,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function(){
       })
       .then((res)=> (res.ok ? res.json() : Promise.reject(res)))
       .then((json)=> {
+        console.log("jsonjson");
         console.log(json);
         location.hash = "#gracias";
         $form.reset();
@@ -255,6 +266,13 @@ document.addEventListener('DOMContentLoaded', function(){
       }
   }
 
+  let selected_language = document.getElementById("selected_language")
+  console.log("selected_language: ", selected_language.value)
+  
+  let contact_form_name = document.getElementById("contact_form_name")
+  let contact_form_email = document.getElementById("contact_form_email")
+  let contact_form_comments = document.getElementById("contact_form_comments")
+
   let english_class
   let espaniol_class
   let esp_flag = document.getElementById("esp_flag")
@@ -262,6 +280,10 @@ document.addEventListener('DOMContentLoaded', function(){
   esp_flag.addEventListener("click",()=> {
     english_class = document.querySelectorAll(".english")
     espaniol_class = document.querySelectorAll(".espaniol")
+    selected_language.value = "espaniol"
+    contact_form_name.placeholder = "Ingrese Nombre *"
+    contact_form_email.placeholder = "Ingrese Correo Electrónico *"
+    contact_form_comments.placeholder = "Su Mensaje *"
     english_class.forEach((english_obj) => {
       hide(english_obj)
     });
@@ -277,6 +299,10 @@ document.addEventListener('DOMContentLoaded', function(){
   eng_flag.addEventListener("click",()=> {
     english_class = document.querySelectorAll(".english")
     espaniol_class = document.querySelectorAll(".espaniol")
+    selected_language.value = "english"
+    contact_form_name.placeholder = "Enter Name *"
+    contact_form_email.placeholder = "Enter Email *"
+    contact_form_comments.placeholder = "Your Message *"
     english_class.forEach((english_obj) => {
       show(english_obj)
     });

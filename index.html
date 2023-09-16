@@ -117,8 +117,8 @@
         <article class="center-content">
           <img class="gray-scale " src="assets/rodrigojmayer.png" alt="rodrigojmayer">
         </article>
-      </section>
-      <div>
+      </section>       
+      <div>          
         <a class="btn english" href="https://mega.nz/file/zoIV0JAD#twAgbmHkUIKqs5CZFHiwhI1_zKl7QTGZM2QUkYMMcIA" target="_blank" rel="noopen">Download my CV</a>
         <a class="btn espaniol hide" href="https://mega.nz/file/nkA3CDCC#n-x-1vKN7kMwcxdGh8F3K8m2uTnJiqaWe0U6Nw2DJXc" target="_blank" rel="noopen">Descarga mi CV</a>
       </div>
@@ -341,12 +341,9 @@
       <form action="https://formsubmit.co/confirm/11747a3fe0a60dc4fca342f2dff75e04" class="contact-form box-shadow-1"
         method="post">
         <input type="hidden" name="_url" value="http://127.0.0.1:5500/index.html">
-        <input class="english" type="text" name="name" placeholder="Enter Name *" title="Name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
-        <input class="espaniol hide" type="text" name="name" placeholder="Ingrese Nombre *" title="Name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
-        <input class="english" type="email" name="email" placeholder="Enter Email *" title="Email *">
-        <input class="espaniol hide" type="email" name="email" placeholder="Ingrese Correo Electrónico *" title="Email *">
-        <textarea class="english" name="comments" cols="50" rows="10" placeholder="Your Message *"></textarea>
-        <textarea class="espaniol hide" name="comments" cols="50" rows="10" placeholder="Su Mensaje *"></textarea>
+        <input  id="contact_form_name" type="text" name="name" placeholder="Enter Name *" title="Name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+        <input  id="contact_form_email" type="email" name="email" placeholder="Enter Email *" title="Email *">
+        <textarea  id="contact_form_comments" name="comments" cols="50" rows="10" placeholder="Your Message *"></textarea>
         <div class="contact-form-loader text-center none">
           <div class="english">Please wait a few seconds</div>
           <div class="espaniol hide">Por favor, espere unos segundos</div>
@@ -354,8 +351,7 @@
           <img class="english" src="assets/loader.svg" alt="Sending...">
           <img class="espaniol hide" src="assets/loader.svg" alt="Enviando...">
         </div>
-        <input class="btn english" type="submit" value="Submit">
-        <input class="btn espaniol hide" type="submit" value="Enviar">
+        <input class="btn " id="contact_form_btn" type="submit" value="Submit">
       </form>
       <article id="gracias" class="modal">
         <div class="modal-content">
@@ -372,11 +368,15 @@
           </article>
         </div>
       </article>
-    </div>
+      <div class="section-title" style="margin-top:75px">
+        <img src="assets/qrcode.png" alt="" width="200px" style="margin-top:3px">
+      </div>
+    </div>  
   </section>
   <footer class="footer">
     <small class="english">Website designed by @rodrigojmayer</small>
     <small class="espaniol hide">Sitio web diseñado por @rodrigojmayer</small>
   </footer>
+  <input type="hidden" id="selected_language" value="english">
 </body>
 </html>
