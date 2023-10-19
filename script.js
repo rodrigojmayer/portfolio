@@ -267,7 +267,6 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   let selected_language = document.getElementById("selected_language")
-  console.log("selected_language: ", selected_language.value)
   
   let contact_form_name = document.getElementById("contact_form_name")
   let contact_form_email = document.getElementById("contact_form_email")

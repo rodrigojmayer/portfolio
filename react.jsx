@@ -32,7 +32,17 @@ function Modal(){
     let num_array = new Array, project = "", projects = "", folder = "", images = new Array, title = "", client = "", description_eng = "", description_esp = "", link = ""
 
         // do stuff here...
-        // console.log(modal.id)
+        let selected_language = document.getElementById("selected_language").value
+        let class_esp, class_eng
+
+        if(selected_language === "english"){
+            class_esp="espaniol hide"
+            class_eng="english"
+        } else{
+            class_esp="espaniol"
+            class_eng="english hide"
+        }
+        // console.log("selected_language from react: ", selected_language.value)
         // console.log("entrando al react")
         if (modal.id == "project-1") {
             // const slides = new Array(15)
@@ -190,12 +200,10 @@ function Modal(){
                                 </video>
                                 {/* <img class="avatar" src={'assets/' + folder + '/' + image.src +  (index == 0 ? '.webm' : '.gif')} alt={'Project ' + title + ' ' + index+1}/> */}
 
-
- 
-                                <h4 class="text-first-color english">{image.h4_eng}</h4>
-                                <h4 class="text-first-color espaniol hide">{image.h4_esp}</h4>
-                                <h5 class="english">{image.h5_eng}</h5>
-                                <h5 class="espaniol hide">{image.h5_esp}</h5>
+                                <h4 class={`text-first-color ${class_eng}`}>{image.h4_eng}</h4>
+                                <h4 class={`text-first-color ${class_esp}`}>{image.h4_esp}</h4>
+                                <h5 class={class_eng}>{image.h5_eng}</h5>
+                                <h5 class={class_esp}>{image.h5_esp}</h5>
                             </li>
                         ))}
                     </ul>
@@ -209,13 +217,13 @@ function Modal(){
                 </article>
                 <div class="portfolio-info">
 
-                    <h3 class="english">Project {title}</h3>
-                    <h3 class="espaniol hide">Proyecto {title}</h3>
-                    <p class="english"> {description_eng} </p>
-                    <p class="espaniol hide"> {description_esp} </p>
+                    <h3 class={class_eng}>Project {title}</h3>
+                    <h3 class={class_esp}>Proyecto {title}</h3>
+                    <p class={class_eng}> {description_eng} </p>
+                    <p class={class_esp}> {description_esp} </p>
                     <aside class="portfolio-details">
-                        <small class="b-small english">Client: </small>
-                        <small class="b-small espaniol hide">Cliente: </small>
+                        <small class={`b-small ${class_eng}`}>Client: </small>
+                        <small class={`b-small ${class_esp}`}>Cliente: </small>
                         <small>{client}</small>
                         <small class="b-small">Link: </small>
                         <small><a href={link} target="_blank"
