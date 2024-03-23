@@ -1076,8 +1076,10 @@ height: fit-content;
 }
 
 .gray-scale {
+  filter: grayscale(1);
   margin: 1px;
   margin: 0;
+  border-radius: 50%;
   /* max-width: 100%; */
   /* max-width: 100%; */
   /* float:left;  */
@@ -1117,47 +1119,18 @@ height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  padding-top: 0;
+  padding: 0;
 }
 .text-container p {
-  /* flex: 1;  */
-  /* font-size: 1px !important; */
-  
-  font-size: 1.7rem !important;
-   /* padding-right: 20px; */
+  font-size: 1rem;
 }
 .image-container {
-  /* flex-shrink: 0; */
-  position:relative ;
-  width: 30%;
-  min-width: 200px;
-  /* overflow: hidden; */
-  float: right;
-  /* border-radius: 50%;  */
+  position:static ;
+  width: 20%;
+  min-width: 150px;
   shape-outside: circle();
-  /* margin: 0 0  30px 30px; */
-
-  /* width: 500px; */
-
+  margin: auto;
 }
-
-
-.gray-scale {
-  /* position:absolute; */
-  filter: grayscale(1);
-  border-radius: 50%;
-  margin: 90px 20px;
-  /* margin: 0; */
-  /* max-width: 100%; */
-  /* max-width: 100%; */
-  /* float:left;  */
-  /* margin-top: 150px; */
-}
-
-
-
-
 .contact .contact-card,
 .contact form {
   background-color: var(--white-color);
@@ -1372,6 +1345,46 @@ height: fit-content;
 }
 
 @media screen and (min-width: 768px) {
+  
+  .gray-scale {
+    /* position:absolute; */
+    /* filter: grayscale(1); */
+    border-radius: 50%;
+    margin: 90px 20px;
+    /* margin: 0; */
+    /* max-width: 100%; */
+    /* max-width: 100%; */
+    /* float:left;  */
+    /* margin-top: 150px; */
+  }
+  .text-container p {
+    /* flex: 1;  */
+    /* font-size: 1px !important; */
+    
+    font-size: 1.5rem !important;
+     padding-right: 0;
+  }
+  .center-content {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 2rem;
+    padding-top: 0;
+  }
+  .image-container {
+    /* flex-shrink: 0; */
+    position:relative ;
+    width: 20%;
+    min-width: 150px;
+    /* overflow: hidden; */
+    /* float: center; */
+  float: right;
+    /* border-radius: 50%;  */
+    /* margin: 0 0  30px 30px; */
+    /* width: 500px; */
+  
+  }
+
   .about p {
     font-size: 1.4rem;
   }
