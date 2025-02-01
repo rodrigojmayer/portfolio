@@ -5,6 +5,8 @@ let prev_project1 = document.getElementById("prev_project_1") // wiki
 let prev_project2 = document.getElementById("prev_project_2") // auction s
 let prev_project3 = document.getElementById("prev_project_3") // mail
 let prev_project4 = document.getElementById("prev_project_4") // network
+let prev_project5 = document.getElementById("prev_project_5") // expense control
+let prev_project6 = document.getElementById("prev_project_6") // stock pro
 
 prev_project1.addEventListener("click", (e)=>{     
     modal = document.getElementById("project-1")
@@ -26,6 +28,18 @@ prev_project4.addEventListener("click", (e)=>{
     modal = document.getElementById("project-4")
     ReactDOM.render(<Modal />, modal);
     document.getElementById('vid-network0').play();
+}, { once: true })       
+
+prev_project5.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-5")
+    ReactDOM.render(<Modal />, modal);
+    document.getElementById('vid-expensecontrol0').play();
+}, { once: true })       
+
+prev_project6.addEventListener("click", (e)=>{     
+    modal = document.getElementById("project-6")
+    ReactDOM.render(<Modal />, modal);
+    document.getElementById('vid-stockpro0').play();
 }, { once: true })       
 
 function Modal(){
@@ -128,7 +142,7 @@ function Modal(){
             folder = "RJMNetwork"
             images = [
                 { src: '01-Main_page_unlogged', h4_eng: 'Main page unlogged',   h5_eng: 'Home page before logging in. You can view all existing posts, but not interact with them.',                            h4_esp: 'Página principal sin inicio de sesión',    h5_esp: 'Página de inicio antes de iniciar sesión. Puede ver todas las publicaciones existentes, pero no interactuar con ellas.' },
-                { src: '02-Sign_up',            h4_eng: 'Sign up page',         h5_eng: 'It allows users to register and gain access to the network.',                                                          h4_esp: 'Página de registro',                       h5_esp: 'Permite a los usuarios registrarse y obtener acceso a la red social' },
+                { src: '02-Sign_up',            h4_eng: 'Sign up page',         h5_eng: 'It allows users to register and gain access to the network.',                                                          h4_esp: 'Página de registro',                       h5_esp: 'Permite a los usuarios registrarse y obtener acceso a la red social.' },
                 { src: '03-Main_page_logged',   h4_eng: 'Main page logged',     h5_eng: 'Home page after logging in. Now you can interact with all the posts.',                                                 h4_esp: 'Página principal iniciada sesión',         h5_esp: 'Página de inicio después de iniciar sesión. Ahora puedes interactuar con todas las publicaciones.' },
                 { src: '04-Create_new_post',    h4_eng: 'Create new post',      h5_eng: 'Modal to create a post.',                                                                                              h4_esp: 'Crear nueva publicación',                  h5_esp: 'Modal para crear una publicación.' },
                 { src: '05-Profile_logged',     h4_eng: 'User profile page',    h5_eng: 'Here you can see all your posts, the number of followers and followings you have, and acces to edit your profile.',    h4_esp: 'Página de perfil del usuario',             h5_esp: 'Aquí puedes ver todas tus publicaciones, el número de usuarios que te siguen y que sigues, y acceder a editar tu perfil.' },
@@ -148,22 +162,60 @@ function Modal(){
             description_esp = `Diseño de un sitio web de red social similar a Twitter para hacer publicaciones y seguir a los usuarios. Una vez que haya iniciado sesión, debería ver todas las publicaciones en la página principal. En la parte inferior tenemos la barra de menú con las cinco opciones (Inicio, Buscar, Siguiendo, Me gusta y Perfil). Sobre la barra de menú, flotando a la derecha de la página está el botón para crear publicaciones. Puede darle a me gusta a la publicación que quieras, así como seguir a los usuarios que prefieras, y así tendrás estas publicaciones en las páginas de Me Gusta y Siguiendo respectivamente. También puede editar sus publicaciones y los datos de su perfil. Puede seleccionar una imagen para su usuario, o dejar por defecto la primera letra de su nombre de usuario, con un color aleatorio para distinguirlo de otros usuarios que empiecen con la misma letra.`
             link = 'https://rjmnetwork.pythonanywhere.com/'
         }
-
-
-
-
-
-
-        // const images = []
-
-
-    // return (
-    //   <div>
-        // {animals.map(slides => (
-        //   <input>{slides}</input>
-        // ))}
-    //   </div>
-    // );
+        if (modal.id == "project-5") {
+            // const slides = new Array(15)
+            num_array = Array.from(Array(12).keys())
+            project = "expensecontrol"
+            projects = "expensecontrol"
+            folder = "ExpenseControl"
+            images = [
+                { src: '01-Start-page',             h4_eng: 'Start page',                   h5_eng: 'Allows the user to choose between the different customers.',                                           h4_esp: 'Página de inicio',             h5_esp: 'Permite al usuario elegir entre diferentes clientes.' },
+                { src: '02-Payment-method-page',    h4_eng: 'Payment method',               h5_eng: 'To select the payment method specified by the client.',                                                h4_esp: 'Método de pago',               h5_esp: 'Seleccionar el método de pago especificado por el cliente.' },
+                { src: '03-Articles-page',          h4_eng: 'Articles page',                h5_eng: 'Page to select the articles.',                                                                         h4_esp: 'Página de artículos',          h5_esp: 'Página para seleccionar los artículos.' },
+                { src: '04-Create-new-article',     h4_eng: 'Create new article',           h5_eng: 'Modal to create an article.',                                                                          h4_esp: 'Crear nuevo artículo',         h5_esp: 'Menú para crear un artículo.' },
+                { src: '05-Create-new-group',       h4_eng: 'Create new group',             h5_eng: 'Modal to create a group.',                                                                             h4_esp: 'Crear nuevo grupo',            h5_esp: 'Menú para crear un grupo.' },
+                { src: '06-Edit-article',           h4_eng: 'Edit article',                 h5_eng: 'Modal to change name, price, special price and group.',                                                h4_esp: 'Editar artículo',              h5_esp: 'Menú para cambiar el nombre, el precio, el precio especial y el grupo.' },
+                { src: '07-Delete-article',         h4_eng: 'Delete article',               h5_eng: 'Modal to delete an article.',                                                                          h4_esp: 'Eliminar artículo',            h5_esp: 'Menú para eliminar un artículo.' },
+                { src: '08-Edit-group',             h4_eng: 'Edit group',                   h5_eng: 'Modal to change the name.',                                                                            h4_esp: 'Editar grupo',                 h5_esp: 'Menú para cambiar el nombre.' },
+                { src: '09-Delete-group',           h4_eng: 'Delete group',                 h5_eng: 'Modal to delete a group.',                                                                             h4_esp: 'Eliminar grupo',               h5_esp: 'Menú para eliminar un grupo.' },
+                { src: '10-Select-articles',        h4_eng: 'Select articles',              h5_eng: 'Add to cart the desired articles.',                                                                    h4_esp: 'Seleccionar artículos',        h5_esp: 'Añadir al carrito los artículos deseados.' },
+                { src: '11-Cart-page',              h4_eng: 'Cart preview page',            h5_eng: 'To see the total expense. With the options to deselect some article and to export the transaction.',   h4_esp: 'Vista previa del carrito',     h5_esp: 'Ver el gasto total. Con opciones para deseleccionar artículos y exportar la transacción.' },
+                { src: '12-Export-transaction',     h4_eng: 'Export transaction',           h5_eng: 'Transaction exported to Google sheet history, split by customer.',                                     h4_esp: 'Exportar transacción',         h5_esp: 'Transacción exportada al historial de Google Sheets, separado por cliente.' },
+            ]
+            title = 'Expense Control'
+            client = 'CS50 Harvard'
+            description_eng = `Web application for tracking a business’s product and service sales.`
+            description_esp = `Aplicación web para el seguimiento de las ventas de productos y servicios de una empresa.`
+            link = 'https://expense-control-frontend.onrender.com/'
+        }
+        if (modal.id == "project-6") {
+            // const slides = new Array(15)
+            num_array = Array.from(Array(8).keys())
+            project = "stockpro"
+            projects = "stockpro"
+            folder = "StockPro"
+            images = [
+                // { src: '01-Main_page_unlogged', h4_eng: 'Main page unlogged',   h5_eng: 'Home page before logging in. You can view all existing posts, but not interact with them.',                            h4_esp: 'Página principal sin inicio de sesión',    h5_esp: 'Página de inicio antes de iniciar sesión. Puede ver todas las publicaciones existentes, pero no interactuar con ellas.' },
+                // { src: '02-Sign_up',            h4_eng: 'Sign up page',         h5_eng: 'It allows users to register and gain access to the network.',                                                          h4_esp: 'Página de registro',                       h5_esp: 'Permite a los usuarios registrarse y obtener acceso a la red social' },
+                { src: '03-Log-in-with-gmail',      h4_eng: 'Log in with Gmail',        h5_eng: 'It allows users to login with the Gmail account.',                     h4_esp: 'Iniciar sesión con Gmail',             h5_esp: 'Permite a los usuarios iniciar sesión con la cuenta de Gmail.' },
+                { src: '04-Create-stock',           h4_eng: 'Create new stock',         h5_eng: 'Modal to create a stock.',                                             h4_esp: 'Crear nuevo stock',                    h5_esp: 'Modal para crear un stock.' },
+                { src: '05-Update-amount',          h4_eng: 'Update amount',            h5_eng: 'Modal to add or subtract quantity.',                                   h4_esp: 'Actualizar cantidad',                  h5_esp: 'Modal para sumar o restar cantidad.' },
+                { src: '06-Edit-stock',             h4_eng: 'Edit stock',               h5_eng: 'Modal to edit a stock.',                                               h4_esp: 'Editar stock',                         h5_esp: 'Modal para editar un stock.' },
+                { src: '07-Delete-stock',           h4_eng: 'Delete stock',             h5_eng: 'Modal to delete a stock.',                                             h4_esp: 'Eliminar stock',                       h5_esp: 'Modal para eliminar un stock.' },
+                { src: '08-Massive-update-amount',  h4_eng: 'Massive update amount',    h5_eng: 'To add or subtract quantity to different stocks at the same time.',    h4_esp: 'Actualizacion masiva de cantidad',     h5_esp: 'Para agregar o restar cantidad a diferentes stocks al mismo tiempo.' },
+                { src: '09-Alert-by-amount',        h4_eng: 'Alert by amount',          h5_eng: 'Program alerts by quantity.',                                          h4_esp: 'Alerta por cantidad',                  h5_esp: 'Programar alertas por cantidad.' },
+                { src: '10-Alert-by-date',          h4_eng: 'Alert by date',            h5_eng: 'Program alerts by date like expiration.',                              h4_esp: 'Alerta por fecha',                     h5_esp: 'Programar alertas por fecha como vencimiento.' },
+                // { src: '11-Liked_posts',        h4_eng: 'Liked posts',          h5_eng: 'On this page you can see all the posts you liked.',                                                                    h4_esp: 'Publicaciones que han gustado',            h5_esp: 'En esta página puedes ver todas las publicaciones que te gustaron.' },
+                // { src: '12-Search',             h4_eng: 'Search',               h5_eng: 'Search will filter the posts you are looking for.',                                                                    h4_esp: 'Búsqueda',                                 h5_esp: 'Filtrará las publicaciones que está buscando.' },
+                // { src: '13-Tablet',             h4_eng: 'Tablet responsive',    h5_eng: 'The entire page adapts perfectly to the size of tablet screens.',                                                      h4_esp: 'Despliegue responsivo en tableta',         h5_esp: 'Toda la página se adapta perfectamente al tamaño de las pantallas de las tabletas.' },
+                // { src: '14-Mobile',             h4_eng: 'Mobile responsive',    h5_eng: 'The entire page adjusts perfectly to the size of mobile screens.',                                                     h4_esp: 'Despliegue responsivo en móvil',           h5_esp: 'Toda la página se ajusta perfectamente al tamaño de las pantallas de los móviles.' }
+            ]
+            title = 'StockPro'
+            client = 'Freelance project'
+            description_eng = `A versatile stock control tool designed for individuals and businesses. It offers customizable features for efficient inventory management, user-specific access levels and multilingual.`
+            description_esp = `Una herramienta versátil de control de inventario diseñada para particulares y empresas. Ofrece funciones personalizables para una gestión eficiente del inventario, niveles de acceso específicos para cada usuario y es multilingüe.`
+            link = 'https://stockpro-deploy.onrender.com/'
+        }
 
     return(
         <div class="modal-content">
@@ -191,15 +243,12 @@ function Modal(){
                         // <p>holi</p>
                     ))}
 
-                    <ul class={'slides-' + projects}>
+                    <ul class={'slides'}>
                         {images.map((image, index) => (
                             <li class={index == 0 ? 'slide slide-' + project : 'slide slide-' + project + ' hide' } id={'image_' + projects + '_' + index}>
-                                {/* <img class="avatar" src={'assets/' + folder + '/' + image.src + '.gif'} alt={'Project ' + title + ' ' + index+1}/> */}
                                 <video id={'vid-' + project + index} class="avatar" src={'assets/' + folder + '/' + image.src + '.webm'} alt={'Project ' + title + ' ' + index+1}   controls playsinline autoplay muted loop >
                                     <source src={'assets/' + folder + '/' + image.src + '.webm'} type="video/webm" />
                                 </video>
-                                {/* <img class="avatar" src={'assets/' + folder + '/' + image.src +  (index == 0 ? '.webm' : '.gif')} alt={'Project ' + title + ' ' + index+1}/> */}
-
                                 <h4 class={`text-first-color ${class_eng}`}>{image.h4_eng}</h4>
                                 <h4 class={`text-first-color ${class_esp}`}>{image.h4_esp}</h4>
                                 <h5 class={class_eng}>{image.h5_eng}</h5>
@@ -222,9 +271,9 @@ function Modal(){
                     <p class={class_eng}> {description_eng} </p>
                     <p class={class_esp}> {description_esp} </p>
                     <aside class="portfolio-details">
-                        <small class={`b-small ${class_eng}`}>Client: </small>
+                        {/* <small class={`b-small ${class_eng}`}>Client: </small>
                         <small class={`b-small ${class_esp}`}>Cliente: </small>
-                        <small>{client}</small>
+                        <small>{client}</small> */}
                         <small class="b-small">Link: </small>
                         <small><a href={link} target="_blank"
                             rel="noopener">{link}</a></small>

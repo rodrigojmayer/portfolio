@@ -155,6 +155,14 @@ document.addEventListener('DOMContentLoaded', function(){
   prev_project_4.addEventListener("click", changeImages, { once: true })
   prev_project_4.myParam = "network"
 
+  let prev_project_5 = document.getElementById("prev_project_5")
+  prev_project_5.addEventListener("click", changeImages, { once: true })
+  prev_project_5.myParam = "expensecontrol"
+
+  let prev_project_6 = document.getElementById("prev_project_6")
+  prev_project_6.addEventListener("click", changeImages, { once: true })
+  prev_project_6.myParam = "stockpro"
+
   // document.getElementById("prev_project_2").addEventListener("click", changeImages("auction"))
 
   // someInput.addEventListener('click', myFunc, false);
