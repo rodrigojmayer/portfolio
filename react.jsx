@@ -188,9 +188,9 @@ function Modal(){
             description_esp = `Aplicación web para el seguimiento de las ventas de productos y servicios de una empresa.`
             link = 'https://expense-control-frontend.onrender.com/'
         }
-        if (modal.id == "project-11") {
+        if (modal.id == "project-6") {
             // const slides = new Array(15)
-            num_array = Array.from(Array(8).keys())
+            num_array = Array.from(Array(11).keys())
             project = "stockpro"
             projects = "stockpro"
             folder = "StockPro"
