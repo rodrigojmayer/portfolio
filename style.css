@@ -256,7 +256,23 @@ p {
 #slide-stockpro-11:checked ~ .slides-nav label#dot-stockpro-11,
 #slide-stockpro-12:checked ~ .slides-nav label#dot-stockpro-12,
 #slide-stockpro-13:checked ~ .slides-nav label#dot-stockpro-13,
-#slide-stockpro-14:checked ~ .slides-nav label#dot-stockpro-14{
+#slide-stockpro-14:checked ~ .slides-nav label#dot-stockpro-14,
+#slide-stockpro-15:checked ~ .slides-nav label#dot-stockpro-15,
+#slide-stockpro-16:checked ~ .slides-nav label#dot-stockpro-16,
+#slide-stockpro-17:checked ~ .slides-nav label#dot-stockpro-17,
+#slide-stockpro-18:checked ~ .slides-nav label#dot-stockpro-18,
+#slide-stockpro-19:checked ~ .slides-nav label#dot-stockpro-19,
+#slide-stockpro-20:checked ~ .slides-nav label#dot-stockpro-20,
+#slide-stockpro-21:checked ~ .slides-nav label#dot-stockpro-21,
+#slide-stockpro-22:checked ~ .slides-nav label#dot-stockpro-22,
+#slide-stockpro-23:checked ~ .slides-nav label#dot-stockpro-23,
+#slide-stockpro-24:checked ~ .slides-nav label#dot-stockpro-24,
+#slide-stockpro-25:checked ~ .slides-nav label#dot-stockpro-25,
+#slide-stockpro-26:checked ~ .slides-nav label#dot-stockpro-26,
+#slide-stockpro-27:checked ~ .slides-nav label#dot-stockpro-27,
+#slide-stockpro-28:checked ~ .slides-nav label#dot-stockpro-28,
+#slide-stockpro-29:checked ~ .slides-nav label#dot-stockpro-29,
+#slide-stockpro-30:checked ~ .slides-nav label#dot-stockpro-30{
   background-color: var(--first-color);
   border-color: var(--first-color);
 }
