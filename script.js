@@ -109,7 +109,8 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       
       $loader.classList.remove("none");
-      fetch("https://formsubmit.co/ajax/rodrigojmayer@gmail.com",{
+      // fetch("https://formsubmit.co/ajax/rodrigojmayer@gmail.com",{
+      fetch("https://formsubmit.co/ajax/rodrigojmayerbackup@gmail.com",{
         method: "POST",
         body: new FormData(e.target),
       })
