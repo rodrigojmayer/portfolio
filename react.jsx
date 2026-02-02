@@ -77,7 +77,8 @@ function Modal(){
             client = 'CS50 Harvard'
             description_eng = `Design of a Wikipedia-like online encyclopedia that anyone can edit. When entering the page we can see the options bar on the left. "Search Encyclopedia" to filter the names of the Entry-pages, and if you do not find what you are looking for, the option to load it. "Home" to return to the index page where we see the complete list of Entry-pages. To edit, we have to enter the one we want and there we will see the "Edit" option. "Create New Page" will allow us to load a new Entry-page. And finally, "Random Page" to randomly open one of these.`
             description_esp = `Diseño de una enciclopedia en línea similar a Wikipedia que cualquiera puede editar. Al ingresar a la página podemos ver la barra de opciones a la izquierda. "Buscar en Enciclopedia" para filtrar los nombres de las Entry-pages, y si no encuentras lo que buscas, la opción de cargarlo. "Inicio" para volver a la página de índice donde vemos la lista completa de páginas de entrada. Para editar, tenemos que ingresar el que queramos y allí veremos la opción "Editar". "Crear nueva página" nos permitirá cargar una nueva página de entrada. Y finalmente, "Página aleatoria" para abrir aleatoriamente uno de estos.`
-            link = 'https://rodrigojmayer.pythonanywhere.com/'
+            // link = 'https://rodrigojmayer.pythonanywhere.com/'
+            link = 'https://wiki3-0-0yba.onrender.com/'
         }
         if (modal.id == "project-2") {
             // const slides = new Array(15)
