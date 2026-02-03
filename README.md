@@ -27,7 +27,7 @@ Here are some of the exciting projects featured in my portfolio:
 
 1. **Wiki**
    - Description: Design of a Wikipedia-like online encyclopedia that anyone can edit. When entering the page we can see the options bar on the left. "Search Encyclopedia" to filter the names of the Entry-pages, and if you do not find what you are looking for, the option to load it. "Home" to return to the index page where we see the complete list of Entry-pages. To edit, we have to enter the one we want and there we will see the "Edit" option. "Create New Page" will allow us to load a new Entry-page. And finally, "Random Page" to randomly open one of these.
-   - [Link to Project Wiki ](https://rodrigojmayer.pythonanywhere.com/)
+   - [Link to Project Wiki ](https://wiki3-0-0yba.onrender.com/)
 
 2. **Auction**
    - Description: Design of an eBay-like e-commerce auction site that allows users to post auction listings, bid on listings, comment on those listings, and add listings to a "watch list". Technologies used for this project Python/Django, JS/React, CSS/SASS.
