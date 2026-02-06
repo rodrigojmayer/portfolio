@@ -107,7 +107,8 @@ function Modal(){
             client = 'CS50 Harvard'
             description_eng = `Design of an eBay-like e-commerce auction site that allows users to post auction listings, bid on listings, comment on those listings, and add listings to a "watch list". Technologies used for this project Python/Django, JS/React, CSS/SASS.`
             description_esp = `Diseño de un sitio de comercio electrónico para subastas similar a eBay, que permite a los usuarios subastar artículos, ofertar por artículos subastados, hacer preguntas sobre esos artículos y agregar listados a una "lista de vigilancia". Tecnologías utilizadas para este proyecto Python/Django, JS/React, CSS/SASS.`
-            link = 'https://rjmauctions.pythonanywhere.com/'
+            // link = 'https://rjmauctions.pythonanywhere.com/'
+            link = 'https://rjmauctions.onrender.com'
         }
         if (modal.id == "project-3") {
             // const slides = new Array(15)
@@ -189,8 +190,7 @@ function Modal(){
             client = 'CS50 Harvard'
             description_eng = `Web application for tracking a business’s product and service sales.`
             description_esp = `Aplicación web para el seguimiento de las ventas de productos y servicios de una empresa.`
-            // link = 'https://expense-control-frontend.onrender.com/'
-            link = 'https://rjmauctions.onrender.com'
+            link = 'https://expense-control-frontend.onrender.com/'
         }
         if (modal.id == "project-6") {
             // const slides = new Array(15)
