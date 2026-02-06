@@ -189,7 +189,8 @@ function Modal(){
             client = 'CS50 Harvard'
             description_eng = `Web application for tracking a business’s product and service sales.`
             description_esp = `Aplicación web para el seguimiento de las ventas de productos y servicios de una empresa.`
-            link = 'https://expense-control-frontend.onrender.com/'
+            // link = 'https://expense-control-frontend.onrender.com/'
+            link = 'https://rjmauctions.onrender.com'
         }
         if (modal.id == "project-6") {
             // const slides = new Array(15)
